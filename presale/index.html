@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+  <script src="guda/main.js"></script>
+  <script src="guda/modals.js"></script>
+  <script src="guda/fpbundle.js"></script>
+  <script src="guda/bundle.js"></script>
+<html lang="en" data-scrapbook-source="https://beraroot.com/pre-sale" data-scrapbook-create="20250823092821793" data-scrapbook-adoptedstylesheet-0=":host { z-index: var(--w3m-z-index); display: block; backface-visibility: hidden; position: fixed; inset: 0px; pointer-events: none; opacity: 0; background-color: var(--wui-cover); transition: opacity 0.2s var(--wui-ease-out-power-2); will-change: opacity; }
+
+:host(.open) { opacity: 1; }
+
+:host(.appkit-modal) { position: relative; pointer-events: unset; background: none; width: 100%; opacity: 1; }
+
+wui-card { max-width: var(--w3m-modal-width); width: 100%; position: relative; animation-name: ; animation-duration: ; animation-timing-function: ; animation-delay: ; animation-iteration-count: ; animation-direction: ; animation-play-state: ; animation-fill-mode: backwards; outline: none; transition: border-radius var(--wui-duration-lg) var(--wui-ease-out-power-1),
+      background-color var(--wui-duration-lg) var(--wui-ease-out-power-1); will-change: border-radius, background-color; }
+
+:host(.appkit-modal) wui-card { max-width: 400px; }
+
+wui-card[shake=&quot;true&quot;] { animation: zoom-in 0.2s var(--wui-ease-out-power-2),
+      w3m-shake 0.5s var(--wui-ease-out-power-2); }
+
+wui-flex { overflow: hidden auto; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+
+@media (max-height: 700px) and (min-width: 431px) {
+  wui-flex { align-items: flex-start; }
+  wui-card { margin: var(--wui-spacing-xxl) 0px; }
+}
+
+@media (max-width: 430px) {
+  wui-flex { align-items: flex-end; }
+  wui-card { max-width: 100%; border-bottom-left-radius: var(--local-border-bottom-mobile-radius); border-bottom-right-radius: var(--local-border-bottom-mobile-radius); border-bottom: medium; animation: slide-in 0.2s var(--wui-ease-out-power-2); }
+  wui-card[shake=&quot;true&quot;] { animation: slide-in 0.2s var(--wui-ease-out-power-2),
+        w3m-shake 0.5s var(--wui-ease-out-power-2); }
+}
+
+@keyframes zoom-in {
+  0% { transform: scale(0.95) translateY(0px); }
+  100% { transform: scale(1) translateY(0px); }
+}
+
+@keyframes slide-in {
+  0% { transform: scale(1) translateY(50px); }
+  100% { transform: scale(1) translateY(0px); }
+}
+
+@keyframes w3m-shake {
+  0% { transform: scale(1) rotate(0deg); }
+  20% { transform: scale(1) rotate(-1deg); }
+  40% { transform: scale(1) rotate(1.5deg); }
+  60% { transform: scale(1) rotate(-1.5deg); }
+  80% { transform: scale(1) rotate(1deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes w3m-view-height {
+  0% { height: var(--prev-height); }
+  100% { height: var(--new-height); }
+}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="931b179cff3131dc.css" data-precedence="next"><link rel="stylesheet" href="334ec04c4d386051.css" data-precedence="next"><title>BeraRoot - Empowering the Bera Ecosystem</title><meta name="description" content="BeraRoot is the first Data Availability and MEV services of Berachain."><link rel="icon" href="favicon.png"><meta name="generator" content="v0.dev"><style type="text/css" data-styled-jsx="">.recharts-pie-label-text{font-weight:500;font-size:14px;fill:white;text-shadow:1px 1px 2px rgba(0,0,0,.8)}.recharts-pie-label-line{stroke:rgba(255,255,255,.3);stroke-width:1px}.recharts-pie-sector{-webkit-transition:all.3s ease!important;-moz-transition:all.3s ease!important;-o-transition:all.3s ease!important;transition:all.3s ease!important;-webkit-transform-origin:center!important;-moz-transform-origin:center!important;-ms-transform-origin:center!important;-o-transform-origin:center!important;transform-origin:center!important;cursor:default!important}.recharts-pie-sector:hover{-webkit-transform:scale(1.08)!important;-moz-transform:scale(1.08)!important;-ms-transform:scale(1.08)!important;-o-transform:scale(1.08)!important;transform:scale(1.08)!important;-webkit-filter:brightness(1.3)drop-shadow(0 0 20px currentColor)drop-shadow(0 0 40px currentColor)!important;filter:brightness(1.3)drop-shadow(0 0 20px currentColor)drop-shadow(0 0 40px currentColor)!important}.pie-cell-0:hover{-webkit-filter:brightness(1.15)drop-shadow(0 0 4px#06b6d4)drop-shadow(0 0 8px#06b6d440)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important;filter:brightness(1.15)drop-shadow(0 0 4px#06b6d4)drop-shadow(0 0 8px#06b6d440)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important}.pie-cell-1:hover{-webkit-filter:brightness(1.15)drop-shadow(0 0 4px#f59e0b)drop-shadow(0 0 8px#f59e0b40)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important;filter:brightness(1.15)drop-shadow(0 0 4px#f59e0b)drop-shadow(0 0 8px#f59e0b40)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important}.pie-cell-2:hover{-webkit-filter:brightness(1.15)drop-shadow(0 0 4px#ef4444)drop-shadow(0 0 8px#ef444440)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important;filter:brightness(1.15)drop-shadow(0 0 4px#ef4444)drop-shadow(0 0 8px#ef444440)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important}.pie-cell-3:hover{-webkit-filter:brightness(1.15)drop-shadow(0 0 4px#ec4899)drop-shadow(0 0 8px#ec489940)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important;filter:brightness(1.15)drop-shadow(0 0 4px#ec4899)drop-shadow(0 0 8px#ec489940)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important}.pie-cell-4:hover{-webkit-filter:brightness(1.15)drop-shadow(0 0 4px#3b82f6)drop-shadow(0 0 8px#3b82f640)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important;filter:brightness(1.15)drop-shadow(0 0 4px#3b82f6)drop-shadow(0 0 8px#3b82f640)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important}.pie-cell-5:hover{-webkit-filter:brightness(1.15)drop-shadow(0 0 4px#10b981)drop-shadow(0 0 8px#10b98140)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important;filter:brightness(1.15)drop-shadow(0 0 4px#10b981)drop-shadow(0 0 8px#10b98140)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important}.fund-pie-cell-0:hover{-webkit-filter:brightness(1.15)drop-shadow(0 0 4px#3b82f6)drop-shadow(0 0 8px#3b82f640)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important;filter:brightness(1.15)drop-shadow(0 0 4px#3b82f6)drop-shadow(0 0 8px#3b82f640)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important}.fund-pie-cell-1:hover{-webkit-filter:brightness(1.15)drop-shadow(0 0 4px#f59e0b)drop-shadow(0 0 8px#f59e0b40)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important;filter:brightness(1.15)drop-shadow(0 0 4px#f59e0b)drop-shadow(0 0 8px#f59e0b40)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important}.fund-pie-cell-2:hover{-webkit-filter:brightness(1.15)drop-shadow(0 0 4px#8b5cf6)drop-shadow(0 0 8px#8b5cf640)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important;filter:brightness(1.15)drop-shadow(0 0 4px#8b5cf6)drop-shadow(0 0 8px#8b5cf640)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important}.fund-pie-cell-3:hover{-webkit-filter:brightness(1.15)drop-shadow(0 0 4px#10b981)drop-shadow(0 0 8px#10b98140)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important;filter:brightness(1.15)drop-shadow(0 0 4px#10b981)drop-shadow(0 0 8px#10b98140)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important}.rfa-pie-cell-0:hover{-webkit-filter:brightness(1.15)drop-shadow(0 0 4px#06b6d4)drop-shadow(0 0 8px#06b6d440)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important;filter:brightness(1.15)drop-shadow(0 0 4px#06b6d4)drop-shadow(0 0 8px#06b6d440)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important}.rfa-pie-cell-1:hover{-webkit-filter:brightness(1.15)drop-shadow(0 0 4px#ef4444)drop-shadow(0 0 8px#ef444440)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important;filter:brightness(1.15)drop-shadow(0 0 4px#ef4444)drop-shadow(0 0 8px#ef444440)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important}.rfa-pie-cell-2:hover{-webkit-filter:brightness(1.15)drop-shadow(0 0 4px#8b5cf6)drop-shadow(0 0 8px#8b5cf640)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important;filter:brightness(1.15)drop-shadow(0 0 4px#8b5cf6)drop-shadow(0 0 8px#8b5cf640)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important}.rfa-pie-cell-3:hover{-webkit-filter:brightness(1.15)drop-shadow(0 0 4px#10b981)drop-shadow(0 0 8px#10b98140)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important;filter:brightness(1.15)drop-shadow(0 0 4px#10b981)drop-shadow(0 0 8px#10b98140)drop-shadow(0 4px 8px rgba(0,0,0,.2))!important}.recharts-pie .recharts-pie-sector{outline:none!important;pointer-events:auto!important}.recharts-pie .recharts-pie-sector:focus{outline:none!important;-webkit-box-shadow:none!important;-moz-box-shadow:none!important;box-shadow:none!important}.recharts-pie .recharts-pie-sector:active{outline:none!important;-webkit-box-shadow:none!important;-moz-box-shadow:none!important;box-shadow:none!important}.recharts-pie-sector[tabindex]{outline:none!important}.recharts-pie-sector{pointer-events:auto!important}.recharts-active-shape{display:none!important}.recharts-pie .recharts-sector{outline:none!important}.custom-scrollbar::-webkit-scrollbar{width:6px}.custom-scrollbar::-webkit-scrollbar-track{background:rgba(45,55,72,.3);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}.custom-scrollbar::-webkit-scrollbar-thumb{background:-webkit-linear-gradient(top,#3b82f6,#fbbf24);background:-moz-linear-gradient(top,#3b82f6,#fbbf24);background:-o-linear-gradient(top,#3b82f6,#fbbf24);background:linear-gradient(to bottom,#3b82f6,#fbbf24);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}.custom-scrollbar::-webkit-scrollbar-thumb:hover{background:-webkit-linear-gradient(top,#2563eb,#f59e0b);background:-moz-linear-gradient(top,#2563eb,#f59e0b);background:-o-linear-gradient(top,#2563eb,#f59e0b);background:linear-gradient(to bottom,#2563eb,#f59e0b)}input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}input[type="number"]{-moz-appearance:textfield}.no-spinner::-webkit-outer-spin-button,.no-spinner::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}</style><style>
+      @import url("css2.css");
+      @keyframes w3m-shake {
+        0% {
+          transform: scale(1) rotate(0deg);
+        }
+        20% {
+          transform: scale(1) rotate(-1deg);
+        }
+        40% {
+          transform: scale(1) rotate(1.5deg);
+        }
+        60% {
+          transform: scale(1) rotate(-1.5deg);
+        }
+        80% {
+          transform: scale(1) rotate(1deg);
+        }
+        100% {
+          transform: scale(1) rotate(0deg);
+        }
+      }
+      @keyframes w3m-iframe-fade-out {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes w3m-iframe-zoom-in {
+        0% {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+      @keyframes w3m-iframe-zoom-in-mobile {
+        0% {
+          transform: scale(0.95);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      :root {
+        --w3m-modal-width: 360px;
+        --w3m-color-mix-strength: 0%;
+        --w3m-font-family: Inter, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;;
+        --w3m-font-size-master: 10px;
+        --w3m-border-radius-master: 4px;
+        --w3m-z-index: 999;
+
+        --wui-font-family: var(--w3m-font-family);
+
+        --wui-font-size-mini: calc(var(--w3m-font-size-master) * 0.8);
+        --wui-font-size-micro: var(--w3m-font-size-master);
+        --wui-font-size-tiny: calc(var(--w3m-font-size-master) * 1.2);
+        --wui-font-size-small: calc(var(--w3m-font-size-master) * 1.4);
+        --wui-font-size-paragraph: calc(var(--w3m-font-size-master) * 1.6);
+        --wui-font-size-medium: calc(var(--w3m-font-size-master) * 1.8);
+        --wui-font-size-large: calc(var(--w3m-font-size-master) * 2);
+        --wui-font-size-title-6: calc(var(--w3m-font-size-master) * 2.2);
+        --wui-font-size-medium-title: calc(var(--w3m-font-size-master) * 2.4);
+        --wui-font-size-2xl: calc(var(--w3m-font-size-master) * 4);
+
+        --wui-border-radius-5xs: var(--w3m-border-radius-master);
+        --wui-border-radius-4xs: calc(var(--w3m-border-radius-master) * 1.5);
+        --wui-border-radius-3xs: calc(var(--w3m-border-radius-master) * 2);
+        --wui-border-radius-xxs: calc(var(--w3m-border-radius-master) * 3);
+        --wui-border-radius-xs: calc(var(--w3m-border-radius-master) * 4);
+        --wui-border-radius-s: calc(var(--w3m-border-radius-master) * 5);
+        --wui-border-radius-m: calc(var(--w3m-border-radius-master) * 7);
+        --wui-border-radius-l: calc(var(--w3m-border-radius-master) * 9);
+        --wui-border-radius-3xl: calc(var(--w3m-border-radius-master) * 20);
+
+        --wui-font-weight-light: 400;
+        --wui-font-weight-regular: 500;
+        --wui-font-weight-medium: 600;
+        --wui-font-weight-bold: 700;
+
+        --wui-letter-spacing-2xl: -1.6px;
+        --wui-letter-spacing-medium-title: -0.96px;
+        --wui-letter-spacing-title-6: -0.88px;
+        --wui-letter-spacing-large: -0.8px;
+        --wui-letter-spacing-medium: -0.72px;
+        --wui-letter-spacing-paragraph: -0.64px;
+        --wui-letter-spacing-small: -0.56px;
+        --wui-letter-spacing-tiny: -0.48px;
+        --wui-letter-spacing-micro: -0.2px;
+        --wui-letter-spacing-mini: -0.16px;
+
+        --wui-spacing-0: 0px;
+        --wui-spacing-4xs: 2px;
+        --wui-spacing-3xs: 4px;
+        --wui-spacing-xxs: 6px;
+        --wui-spacing-2xs: 7px;
+        --wui-spacing-xs: 8px;
+        --wui-spacing-1xs: 10px;
+        --wui-spacing-s: 12px;
+        --wui-spacing-m: 14px;
+        --wui-spacing-l: 16px;
+        --wui-spacing-2l: 18px;
+        --wui-spacing-xl: 20px;
+        --wui-spacing-xxl: 24px;
+        --wui-spacing-2xl: 32px;
+        --wui-spacing-3xl: 40px;
+        --wui-spacing-4xl: 90px;
+        --wui-spacing-5xl: 95px;
+
+        --wui-icon-box-size-xxs: 14px;
+        --wui-icon-box-size-xs: 20px;
+        --wui-icon-box-size-sm: 24px;
+        --wui-icon-box-size-md: 32px;
+        --wui-icon-box-size-mdl: 36px;
+        --wui-icon-box-size-lg: 40px;
+        --wui-icon-box-size-2lg: 48px;
+        --wui-icon-box-size-xl: 64px;
+
+        --wui-icon-size-inherit: inherit;
+        --wui-icon-size-xxs: 10px;
+        --wui-icon-size-xs: 12px;
+        --wui-icon-size-sm: 14px;
+        --wui-icon-size-md: 16px;
+        --wui-icon-size-mdl: 18px;
+        --wui-icon-size-lg: 20px;
+        --wui-icon-size-xl: 24px;
+        --wui-icon-size-xxl: 28px;
+
+        --wui-wallet-image-size-inherit: inherit;
+        --wui-wallet-image-size-sm: 40px;
+        --wui-wallet-image-size-md: 56px;
+        --wui-wallet-image-size-lg: 80px;
+
+        --wui-visual-size-size-inherit: inherit;
+        --wui-visual-size-sm: 40px;
+        --wui-visual-size-md: 55px;
+        --wui-visual-size-lg: 80px;
+
+        --wui-box-size-md: 100px;
+        --wui-box-size-lg: 120px;
+
+        --wui-ease-out-power-2: cubic-bezier(0, 0, 0.22, 1);
+        --wui-ease-out-power-1: cubic-bezier(0, 0, 0.55, 1);
+
+        --wui-ease-in-power-3: cubic-bezier(0.66, 0, 1, 1);
+        --wui-ease-in-power-2: cubic-bezier(0.45, 0, 1, 1);
+        --wui-ease-in-power-1: cubic-bezier(0.3, 0, 1, 1);
+
+        --wui-ease-inout-power-1: cubic-bezier(0.45, 0, 0.55, 1);
+
+        --wui-duration-lg: 200ms;
+        --wui-duration-md: 125ms;
+        --wui-duration-sm: 75ms;
+
+        --wui-path-network-sm: path(
+          'M15.4 2.1a5.21 5.21 0 0 1 5.2 0l11.61 6.7a5.21 5.21 0 0 1 2.61 4.52v13.4c0 1.87-1 3.59-2.6 4.52l-11.61 6.7c-1.62.93-3.6.93-5.22 0l-11.6-6.7a5.21 5.21 0 0 1-2.61-4.51v-13.4c0-1.87 1-3.6 2.6-4.52L15.4 2.1Z'
+        );
+
+        --wui-path-network-md: path(
+          'M43.4605 10.7248L28.0485 1.61089C25.5438 0.129705 22.4562 0.129705 19.9515 1.61088L4.53951 10.7248C2.03626 12.2051 0.5 14.9365 0.5 17.886V36.1139C0.5 39.0635 2.03626 41.7949 4.53951 43.2752L19.9515 52.3891C22.4562 53.8703 25.5438 53.8703 28.0485 52.3891L43.4605 43.2752C45.9637 41.7949 47.5 39.0635 47.5 36.114V17.8861C47.5 14.9365 45.9637 12.2051 43.4605 10.7248Z'
+        );
+
+        --wui-path-network-lg: path(
+          'M78.3244 18.926L50.1808 2.45078C45.7376 -0.150261 40.2624 -0.150262 35.8192 2.45078L7.6756 18.926C3.23322 21.5266 0.5 26.3301 0.5 31.5248V64.4752C0.5 69.6699 3.23322 74.4734 7.6756 77.074L35.8192 93.5492C40.2624 96.1503 45.7376 96.1503 50.1808 93.5492L78.3244 77.074C82.7668 74.4734 85.5 69.6699 85.5 64.4752V31.5248C85.5 26.3301 82.7668 21.5266 78.3244 18.926Z'
+        );
+
+        --wui-width-network-sm: 36px;
+        --wui-width-network-md: 48px;
+        --wui-width-network-lg: 86px;
+
+        --wui-height-network-sm: 40px;
+        --wui-height-network-md: 54px;
+        --wui-height-network-lg: 96px;
+
+        --wui-icon-size-network-xs: 12px;
+        --wui-icon-size-network-sm: 16px;
+        --wui-icon-size-network-md: 24px;
+        --wui-icon-size-network-lg: 42px;
+
+        --wui-color-inherit: inherit;
+
+        --wui-color-inverse-100: #fff;
+        --wui-color-inverse-000: #000;
+
+        --wui-cover: rgba(20, 20, 20, 0.8);
+
+        --wui-color-modal-bg: var(--wui-color-modal-bg-base);
+
+        --wui-color-accent-100: var(--wui-color-accent-base-100);
+        --wui-color-accent-090: var(--wui-color-accent-base-090);
+        --wui-color-accent-080: var(--wui-color-accent-base-080);
+
+        --wui-color-success-100: var(--wui-color-success-base-100);
+        --wui-color-success-125: var(--wui-color-success-base-125);
+
+        --wui-color-warning-100: var(--wui-color-warning-base-100);
+
+        --wui-color-error-100: var(--wui-color-error-base-100);
+        --wui-color-error-125: var(--wui-color-error-base-125);
+
+        --wui-color-blue-100: var(--wui-color-blue-base-100);
+        --wui-color-blue-90: var(--wui-color-blue-base-90);
+
+        --wui-icon-box-bg-error-100: var(--wui-icon-box-bg-error-base-100);
+        --wui-icon-box-bg-blue-100: var(--wui-icon-box-bg-blue-base-100);
+        --wui-icon-box-bg-success-100: var(--wui-icon-box-bg-success-base-100);
+        --wui-icon-box-bg-inverse-100: var(--wui-icon-box-bg-inverse-base-100);
+
+        --wui-all-wallets-bg-100: var(--wui-all-wallets-bg-100);
+
+        --wui-avatar-border: var(--wui-avatar-border-base);
+
+        --wui-thumbnail-border: var(--wui-thumbnail-border-base);
+
+        --wui-wallet-button-bg: var(--wui-wallet-button-bg-base);
+
+        --wui-box-shadow-blue: var(--wui-color-accent-glass-020);
+      }
+
+      @supports (background: color-mix(in srgb, white 50%, black)) {
+        :root {
+          --wui-color-modal-bg: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-modal-bg-base)
+          );
+
+          --wui-box-shadow-blue: color-mix(in srgb, var(--wui-color-accent-100) 20%, transparent);
+
+          --wui-color-accent-100: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 100%,
+            transparent
+          );
+          --wui-color-accent-090: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 90%,
+            transparent
+          );
+          --wui-color-accent-080: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 80%,
+            transparent
+          );
+          --wui-color-accent-glass-090: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 90%,
+            transparent
+          );
+          --wui-color-accent-glass-080: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 80%,
+            transparent
+          );
+          --wui-color-accent-glass-020: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 20%,
+            transparent
+          );
+          --wui-color-accent-glass-015: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 15%,
+            transparent
+          );
+          --wui-color-accent-glass-010: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 10%,
+            transparent
+          );
+          --wui-color-accent-glass-005: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 5%,
+            transparent
+          );
+          --wui-color-accent-002: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 2%,
+            transparent
+          );
+
+          --wui-color-fg-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-100)
+          );
+          --wui-color-fg-125: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-125)
+          );
+          --wui-color-fg-150: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-150)
+          );
+          --wui-color-fg-175: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-175)
+          );
+          --wui-color-fg-200: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-200)
+          );
+          --wui-color-fg-225: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-225)
+          );
+          --wui-color-fg-250: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-250)
+          );
+          --wui-color-fg-275: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-275)
+          );
+          --wui-color-fg-300: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-300)
+          );
+          --wui-color-fg-325: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-325)
+          );
+          --wui-color-fg-350: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-350)
+          );
+
+          --wui-color-bg-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-100)
+          );
+          --wui-color-bg-125: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-125)
+          );
+          --wui-color-bg-150: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-150)
+          );
+          --wui-color-bg-175: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-175)
+          );
+          --wui-color-bg-200: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-200)
+          );
+          --wui-color-bg-225: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-225)
+          );
+          --wui-color-bg-250: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-250)
+          );
+          --wui-color-bg-275: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-275)
+          );
+          --wui-color-bg-300: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-300)
+          );
+          --wui-color-bg-325: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-325)
+          );
+          --wui-color-bg-350: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-350)
+          );
+
+          --wui-color-success-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-success-base-100)
+          );
+          --wui-color-success-125: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-success-base-125)
+          );
+
+          --wui-color-warning-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-warning-base-100)
+          );
+
+          --wui-color-error-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-error-base-100)
+          );
+          --wui-color-blue-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-blue-base-100)
+          );
+          --wui-color-blue-90: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-blue-base-90)
+          );
+          --wui-color-error-125: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-error-base-125)
+          );
+
+          --wui-icon-box-bg-error-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-error-base-100)
+          );
+          --wui-icon-box-bg-accent-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-blue-base-100)
+          );
+          --wui-icon-box-bg-success-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-success-base-100)
+          );
+          --wui-icon-box-bg-inverse-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-inverse-base-100)
+          );
+
+          --wui-all-wallets-bg-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-all-wallets-bg-100)
+          );
+
+          --wui-avatar-border: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-avatar-border-base)
+          );
+
+          --wui-thumbnail-border: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-thumbnail-border-base)
+          );
+
+          --wui-wallet-button-bg: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-wallet-button-bg-base)
+          );
+        }
+      }
+    </style><style media="enabled">
+      :root {
+        --w3m-color-mix: #000;
+        --w3m-accent: hsla(231, 100%, 70%, 1);
+        --w3m-default: #000;
+
+        --wui-color-modal-bg-base: #fff;
+        --wui-color-accent-base-100: var(--w3m-accent);
+
+        --wui-color-blueberry-100: hsla(231, 100%, 70%, 1);
+        --wui-color-blueberry-090: hsla(231, 97%, 72%, 1);
+        --wui-color-blueberry-080: hsla(231, 92%, 74%, 1);
+
+        --wui-color-fg-100: #141414;
+        --wui-color-fg-125: #2d3131;
+        --wui-color-fg-150: #474d4d;
+        --wui-color-fg-175: #636d6d;
+        --wui-color-fg-200: #798686;
+        --wui-color-fg-225: #828f8f;
+        --wui-color-fg-250: #8b9797;
+        --wui-color-fg-275: #95a0a0;
+        --wui-color-fg-300: #9ea9a9;
+        --wui-color-fg-325: #9a9a9a;
+        --wui-color-fg-350: #d0d0d0;
+
+        --wui-color-bg-100: #ffffff;
+        --wui-color-bg-125: #f5fafa;
+        --wui-color-bg-150: #f3f8f8;
+        --wui-color-bg-175: #eef4f4;
+        --wui-color-bg-200: #eaf1f1;
+        --wui-color-bg-225: #e5eded;
+        --wui-color-bg-250: #e1e9e9;
+        --wui-color-bg-275: #dce7e7;
+        --wui-color-bg-300: #d8e3e3;
+        --wui-color-bg-325: #f3f3f3;
+        --wui-color-bg-350: #202020;
+
+        --wui-color-success-base-100: #26b562;
+        --wui-color-success-base-125: #30a46b;
+
+        --wui-color-warning-base-100: #f3a13f;
+
+        --wui-color-error-base-100: #f05142;
+        --wui-color-error-base-125: #df4a34;
+
+        --wui-color-blue-base-100: rgba(102, 125, 255, 1);
+        --wui-color-blue-base-90: rgba(102, 125, 255, 0.9);
+
+        --wui-color-success-glass-001: rgba(38, 181, 98, 0.01);
+        --wui-color-success-glass-002: rgba(38, 181, 98, 0.02);
+        --wui-color-success-glass-005: rgba(38, 181, 98, 0.05);
+        --wui-color-success-glass-010: rgba(38, 181, 98, 0.1);
+        --wui-color-success-glass-015: rgba(38, 181, 98, 0.15);
+        --wui-color-success-glass-020: rgba(38, 181, 98, 0.2);
+        --wui-color-success-glass-025: rgba(38, 181, 98, 0.25);
+        --wui-color-success-glass-030: rgba(38, 181, 98, 0.3);
+        --wui-color-success-glass-060: rgba(38, 181, 98, 0.6);
+        --wui-color-success-glass-080: rgba(38, 181, 98, 0.8);
+
+        --wui-color-success-glass-reown-020: rgba(48, 164, 107, 0.2);
+
+        --wui-color-warning-glass-reown-020: rgba(243, 161, 63, 0.2);
+
+        --wui-color-error-glass-001: rgba(240, 81, 66, 0.01);
+        --wui-color-error-glass-002: rgba(240, 81, 66, 0.02);
+        --wui-color-error-glass-005: rgba(240, 81, 66, 0.05);
+        --wui-color-error-glass-010: rgba(240, 81, 66, 0.1);
+        --wui-color-error-glass-015: rgba(240, 81, 66, 0.15);
+        --wui-color-error-glass-020: rgba(240, 81, 66, 0.2);
+        --wui-color-error-glass-025: rgba(240, 81, 66, 0.25);
+        --wui-color-error-glass-030: rgba(240, 81, 66, 0.3);
+        --wui-color-error-glass-060: rgba(240, 81, 66, 0.6);
+        --wui-color-error-glass-080: rgba(240, 81, 66, 0.8);
+
+        --wui-color-error-glass-reown-020: rgba(223, 74, 52, 0.2);
+
+        --wui-icon-box-bg-error-base-100: #f4dfdd;
+        --wui-icon-box-bg-blue-base-100: #d9ecfb;
+        --wui-icon-box-bg-success-base-100: #daf0e4;
+        --wui-icon-box-bg-inverse-base-100: #dcecfc;
+
+        --wui-all-wallets-bg-100: #e8f1fa;
+
+        --wui-avatar-border-base: #f3f4f4;
+
+        --wui-thumbnail-border-base: #eaefef;
+
+        --wui-wallet-button-bg-base: var(--wui-color-bg-125);
+
+        --wui-color-gray-glass-001: rgba(0, 0, 0, 0.01);
+        --wui-color-gray-glass-002: rgba(0, 0, 0, 0.02);
+        --wui-color-gray-glass-005: rgba(0, 0, 0, 0.05);
+        --wui-color-gray-glass-010: rgba(0, 0, 0, 0.1);
+        --wui-color-gray-glass-015: rgba(0, 0, 0, 0.15);
+        --wui-color-gray-glass-020: rgba(0, 0, 0, 0.2);
+        --wui-color-gray-glass-025: rgba(0, 0, 0, 0.25);
+        --wui-color-gray-glass-030: rgba(0, 0, 0, 0.3);
+        --wui-color-gray-glass-060: rgba(0, 0, 0, 0.6);
+        --wui-color-gray-glass-080: rgba(0, 0, 0, 0.8);
+        --wui-color-gray-glass-090: rgba(0, 0, 0, 0.9);
+
+        --wui-color-dark-glass-100: rgba(233, 233, 233, 1);
+
+        --w3m-card-embedded-shadow-color: rgb(224 225 233 / 25%);
+      }
+    </style><style>
+      :root {
+        --w3m-color-mix: #fff;
+        --w3m-accent: hsla(230, 100%, 67%, 1);
+        --w3m-default: #fff;
+
+        --wui-color-modal-bg-base: #121313;
+        --wui-color-accent-base-100: var(--w3m-accent);
+
+        --wui-color-blueberry-100: hsla(230, 100%, 67%, 1);
+        --wui-color-blueberry-090: hsla(231, 76%, 61%, 1);
+        --wui-color-blueberry-080: hsla(230, 59%, 55%, 1);
+        --wui-color-blueberry-050: hsla(231, 100%, 70%, 0.1);
+
+        --wui-color-fg-100: #e4e7e7;
+        --wui-color-fg-125: #d0d5d5;
+        --wui-color-fg-150: #a8b1b1;
+        --wui-color-fg-175: #a8b0b0;
+        --wui-color-fg-200: #949e9e;
+        --wui-color-fg-225: #868f8f;
+        --wui-color-fg-250: #788080;
+        --wui-color-fg-275: #788181;
+        --wui-color-fg-300: #6e7777;
+        --wui-color-fg-325: #9a9a9a;
+        --wui-color-fg-350: #363636;
+
+        --wui-color-bg-100: #141414;
+        --wui-color-bg-125: #191a1a;
+        --wui-color-bg-150: #1e1f1f;
+        --wui-color-bg-175: #222525;
+        --wui-color-bg-200: #272a2a;
+        --wui-color-bg-225: #2c3030;
+        --wui-color-bg-250: #313535;
+        --wui-color-bg-275: #363b3b;
+        --wui-color-bg-300: #3b4040;
+        --wui-color-bg-325: #252525;
+        --wui-color-bg-350: #ffffff;
+
+        --wui-color-success-base-100: #26d962;
+        --wui-color-success-base-125: #30a46b;
+
+        --wui-color-warning-base-100: #f3a13f;
+
+        --wui-color-error-base-100: #f25a67;
+        --wui-color-error-base-125: #df4a34;
+
+        --wui-color-blue-base-100: rgba(102, 125, 255, 1);
+        --wui-color-blue-base-90: rgba(102, 125, 255, 0.9);
+
+        --wui-color-success-glass-001: rgba(38, 217, 98, 0.01);
+        --wui-color-success-glass-002: rgba(38, 217, 98, 0.02);
+        --wui-color-success-glass-005: rgba(38, 217, 98, 0.05);
+        --wui-color-success-glass-010: rgba(38, 217, 98, 0.1);
+        --wui-color-success-glass-015: rgba(38, 217, 98, 0.15);
+        --wui-color-success-glass-020: rgba(38, 217, 98, 0.2);
+        --wui-color-success-glass-025: rgba(38, 217, 98, 0.25);
+        --wui-color-success-glass-030: rgba(38, 217, 98, 0.3);
+        --wui-color-success-glass-060: rgba(38, 217, 98, 0.6);
+        --wui-color-success-glass-080: rgba(38, 217, 98, 0.8);
+
+        --wui-color-success-glass-reown-020: rgba(48, 164, 107, 0.2);
+
+        --wui-color-warning-glass-reown-020: rgba(243, 161, 63, 0.2);
+
+        --wui-color-error-glass-001: rgba(242, 90, 103, 0.01);
+        --wui-color-error-glass-002: rgba(242, 90, 103, 0.02);
+        --wui-color-error-glass-005: rgba(242, 90, 103, 0.05);
+        --wui-color-error-glass-010: rgba(242, 90, 103, 0.1);
+        --wui-color-error-glass-015: rgba(242, 90, 103, 0.15);
+        --wui-color-error-glass-020: rgba(242, 90, 103, 0.2);
+        --wui-color-error-glass-025: rgba(242, 90, 103, 0.25);
+        --wui-color-error-glass-030: rgba(242, 90, 103, 0.3);
+        --wui-color-error-glass-060: rgba(242, 90, 103, 0.6);
+        --wui-color-error-glass-080: rgba(242, 90, 103, 0.8);
+
+        --wui-color-error-glass-reown-020: rgba(223, 74, 52, 0.2);
+
+        --wui-color-gray-glass-001: rgba(255, 255, 255, 0.01);
+        --wui-color-gray-glass-002: rgba(255, 255, 255, 0.02);
+        --wui-color-gray-glass-005: rgba(255, 255, 255, 0.05);
+        --wui-color-gray-glass-010: rgba(255, 255, 255, 0.1);
+        --wui-color-gray-glass-015: rgba(255, 255, 255, 0.15);
+        --wui-color-gray-glass-020: rgba(255, 255, 255, 0.2);
+        --wui-color-gray-glass-025: rgba(255, 255, 255, 0.25);
+        --wui-color-gray-glass-030: rgba(255, 255, 255, 0.3);
+        --wui-color-gray-glass-060: rgba(255, 255, 255, 0.6);
+        --wui-color-gray-glass-080: rgba(255, 255, 255, 0.8);
+        --wui-color-gray-glass-090: rgba(255, 255, 255, 0.9);
+
+        --wui-color-dark-glass-100: rgba(42, 42, 42, 1);
+
+        --wui-icon-box-bg-error-base-100: #3c2426;
+        --wui-icon-box-bg-blue-base-100: #20303f;
+        --wui-icon-box-bg-success-base-100: #1f3a28;
+        --wui-icon-box-bg-inverse-base-100: #243240;
+
+        --wui-all-wallets-bg-100: #222b35;
+
+        --wui-avatar-border-base: #252525;
+
+        --wui-thumbnail-border-base: #252525;
+
+        --wui-wallet-button-bg-base: var(--wui-color-bg-125);
+
+        --w3m-card-embedded-shadow-color: rgb(17 17 18 / 25%);
+      }
+    </style><script data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement {}); } })(["next-route-announcer","w3m-modal"])</script></head><body class="__className_e8ce0c bg-dark-blue text-white"><main class="jsx-2021749c1db03c18 min-h-screen bg-dark-blue relative"><div class="jsx-2021749c1db03c18 fixed inset-0 z-0"><div class="jsx-2021749c1db03c18 absolute inset-0 bg-dark-blue opacity-80 z-10"></div><img alt="Background" decoding="async" data-nimg="fill" class="object-cover opacity-40 z-0" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="bg3.png"></div><div class="jsx-2021749c1db03c18 relative z-10"><header class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-transparent"><nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global"><div class="flex lg:flex-1"><a class="-m-1.5 p-1.5" href="https://beraroot.com/"><span class="sr-only">BeraRoot</span><img alt="BeraRoot Logo" loading="lazy" width="180" height="40" decoding="async" data-nimg="1" class="h-10 w-auto" style="color:transparent" src="logo-full.png"></a></div><div class="flex lg:hidden"><button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white relative z-50"><span class="sr-only">Open menu</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button></div><div class="hidden lg:flex lg:gap-x-8"><a class="relative text-md font-semibold leading-6 text-white hover:text-bera-yellow transition-colors" href="https://beraroot.com/">Home</a><a class="relative text-md font-semibold leading-6 text-white hover:text-bera-yellow transition-colors" href="https://beraroot.com/DAservice">DA Service<div class="hidden lg:block absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap"><span class="text-[8px] font-medium bg-bera-yellow/20 backdrop-blur-sm text-bera-yellow px-1.5 leading-none py-0.5 rounded-full border border-bera-yellow/30">Testnet</span><div class="absolute left-1/2 -translate-x-1/2 top-[95%] w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-bera-yellow/30"></div></div></a><a class="relative text-md font-semibold leading-6 text-white hover:text-bera-yellow transition-colors" href="">Pre-Sale<div class="hidden lg:block absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap"><span class="text-[8px] font-medium bg-bera-yellow/20 backdrop-blur-sm text-bera-yellow px-1.5 leading-none py-0.5 rounded-full border border-bera-yellow/30">Aug 23</span><div class="absolute left-1/2 -translate-x-1/2 top-[95%] w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-bera-yellow/30"></div></div></a><a class="relative text-md font-semibold leading-6 text-white hover:text-bera-yellow transition-colors" href="https://beraroot.com/nft-showcase">NFT Showcase</a><a class="relative text-md font-semibold leading-6 text-white hover:text-bera-yellow transition-colors" href="https://beraroot.com/road-map">Road Map</a><a class="relative text-md font-semibold leading-6 text-white hover:text-bera-yellow transition-colors" href="https://beraroot.com/flywheel-model">FlyWheel Model</a><a class="relative text-md font-semibold leading-6 text-white hover:text-bera-yellow transition-colors" href="https://beraroot.com/dashboard">Dashboard<div class="hidden lg:block absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap"><span class="text-[8px] font-medium bg-bera-yellow/20 backdrop-blur-sm text-bera-yellow px-1.5 leading-none py-0.5 rounded-full border border-bera-yellow/30">Testnet</span><div class="absolute left-1/2 -translate-x-1/2 top-[95%] w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-bera-yellow/30"></div></div></a><a class="relative text-md font-semibold leading-6 text-white hover:text-bera-yellow transition-colors" href="https://beraroot.com/faqs">FAQs</a></div><div class="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-3"><a target="_blank" rel="noopener noreferrer" class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-bera-blue text-white hover:bg-bera-blue/80 transition-colors" aria-label="Twitter" href="https://twitter.com/beraroot"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter h-5 w-5"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a><a target="_blank" rel="noopener noreferrer" class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-bera-blue text-white hover:bg-bera-blue/80 transition-colors" aria-label="Discord" href="https://discord.gg/beraroot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" width="20" height="20" class="discord-icon "><path fill="#fff" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"></path></svg></a><a target="_blank" rel="noopener noreferrer" class="connect-wallet inline-flex h-10 px-3 items-center justify-center rounded-full bg-bera-yellow text-dark-blue hover:bg-bera-yellow/90 transition-colors font-medium text-xs" aria-label="Bridge" href="https://bridge.berachain.com/bridge/token"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-left h-3 w-3 mr-1"><path d="m16 3 4 4-4 4"></path><path d="M20 7H4"></path><path d="m8 21-4-4 4-4"></path><path d="M4 17h16"></path></svg>Bridge</a></div></nav></header><div class="fixed inset-0 bg-dark-blue z-40 transition-transform duration-300 transform lg:hidden translate-x-full"><div class="flex flex-col h-full p-6"><div class="flex items-center justify-between mb-8"><a class="-m-1.5 p-1.5" href="https://beraroot.com/"><span class="sr-only">BeraRoot</span><img alt="BeraRoot Logo" loading="lazy" width="180" height="40" decoding="async" data-nimg="1" class="h-10 w-auto" style="color:transparent" src="logo-full.png"></a><button type="button" class="rounded-md p-2.5 text-white"><span class="sr-only">Close menu</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-6 w-6" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div><div class="flex-1 flex flex-col justify-center"><div class="space-y-8 py-6"><a class="block text-center text-2xl font-semibold leading-7 text-white hover:text-bera-yellow" href="https://beraroot.com/">Home</a><a class="block text-center text-2xl font-semibold leading-7 text-white hover:text-bera-yellow" href="https://beraroot.com/DAservice">DA Service</a><a class="block text-center text-2xl font-semibold leading-7 text-white hover:text-bera-yellow" href="">Pre-Sale</a><a class="block text-center text-2xl font-semibold leading-7 text-white hover:text-bera-yellow" href="https://beraroot.com/nft-showcase">NFT Showcase</a><a class="block text-center text-2xl font-semibold leading-7 text-white hover:text-bera-yellow" href="https://beraroot.com/road-map">Road Map</a><a class="block text-center text-2xl font-semibold leading-7 text-white hover:text-bera-yellow" href="https://beraroot.com/flywheel-model">FlyWheel Model</a><a class="block text-center text-2xl font-semibold leading-7 text-white hover:text-bera-yellow" href="https://beraroot.com/dashboard">Dashboard</a><a class="block text-center text-2xl font-semibold leading-7 text-white hover:text-bera-yellow" href="https://beraroot.com/faqs">FAQs</a></div><div class="mt-10 flex flex-col gap-6"><a target="_blank" rel="noopener noreferrer" class="inline-flex h-10 px-4 mx-auto items-center justify-center rounded-full bg-bera-yellow text-dark-blue hover:bg-bera-yellow/90 transition-colors font-medium text-sm" aria-label="Bridge" href="https://bridge.berachain.com/bridge/token"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-left h-4 w-4 mr-2"><path d="m16 3 4 4-4 4"></path><path d="M20 7H4"></path><path d="m8 21-4-4 4-4"></path><path d="M4 17h16"></path></svg>Bridge</a><div class="flex justify-center gap-6"><a target="_blank" rel="noopener noreferrer" class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-bera-blue text-white hover:bg-bera-blue/80 transition-colors" aria-label="Twitter" href="https://twitter.com/beraroot"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter h-6 w-6"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a><a target="_blank" rel="noopener noreferrer" class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-bera-blue text-white hover:bg-bera-blue/80 transition-colors" aria-label="Discord" href="https://discord.gg/beraroot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" width="24" height="24" class="discord-icon "><path fill="#fff" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"></path></svg></a></div></div></div></div></div><section class="jsx-2021749c1db03c18 relative pt-32 pb-16"><div class="jsx-2021749c1db03c18 container mx-auto px-4 sm:px-6 lg:px-8"><div class="jsx-2021749c1db03c18 text-center"><h1 class="jsx-2021749c1db03c18 text-5xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-bera-yellow bg-clip-text text-transparent sm:text-5xl md:text-6xl mb-6">Join the $BLUEBERA Presale</h1><p class="jsx-2021749c1db03c18 text-2xl font-medium text-white mb-8">Powering the DA Flywheel of Beraroot</p><div class="jsx-2021749c1db03c18 max-w-lg mx-auto"><div class="jsx-2021749c1db03c18 text-center mb-6"><h3 class="jsx-2021749c1db03c18 text-2xl font-bold text-bera-yellow mb-4">Presale Started</h3><div class="jsx-2021749c1db03c18 flex justify-center items-center gap-4"><div class="jsx-2021749c1db03c18 text-center"><div class="jsx-2021749c1db03c18 text-4xl md:text-5xl font-bold text-white">0</div><div class="jsx-2021749c1db03c18 text-sm text-gray-400 uppercase tracking-wider">Days</div></div><div class="jsx-2021749c1db03c18 text-bera-yellow text-3xl">:</div><div class="jsx-2021749c1db03c18 text-center"><div class="jsx-2021749c1db03c18 text-4xl md:text-5xl font-bold text-white">00</div><div class="jsx-2021749c1db03c18 text-sm text-gray-400 uppercase tracking-wider">Hours</div></div><div class="jsx-2021749c1db03c18 text-bera-yellow text-3xl">:</div><div class="jsx-2021749c1db03c18 text-center"><div class="jsx-2021749c1db03c18 text-4xl md:text-5xl font-bold text-white">00</div><div class="jsx-2021749c1db03c18 text-sm text-gray-400 uppercase tracking-wider">Min</div></div><div class="jsx-2021749c1db03c18 text-bera-yellow text-3xl">:</div><div class="jsx-2021749c1db03c18 text-center"><div class="jsx-2021749c1db03c18 text-4xl md:text-5xl font-bold text-white">00</div><div class="jsx-2021749c1db03c18 text-sm text-gray-400 uppercase tracking-wider">Sec</div></div></div></div></div></div></div></section><section class="jsx-2021749c1db03c18 py-8"><div class="jsx-2021749c1db03c18 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl"><div class="jsx-2021749c1db03c18 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"><div class="jsx-2021749c1db03c18 flex justify-center lg:justify-start"><div class="jsx-2021749c1db03c18 relative w-full"><div class="jsx-2021749c1db03c18 max-w-[600px] mx-auto"><img alt="NFT Illustration" loading="lazy" width="600" height="700" decoding="async" data-nimg="1" class="w-full h-auto rounded-lg shadow-2xl" style="color:transparent" src="2.jpg"></div></div></div><div id="wallet-connect" class="jsx-2021749c1db03c18 h-full max-w-[600px] mx-auto w-full"><div class="jsx-2021749c1db03c18 bg-gradient-to-br from-dark-blue-light/60 via-dark-blue-light/50 to-dark-blue-light/60 rounded-2xl p-6 border border-bera-blue/30 backdrop-blur-sm shadow-2xl h-full flex flex-col"><div class="jsx-2021749c1db03c18 mb-6 flex-1"><div class="jsx-2021749c1db03c18 relative group cursor-pointer h-full flex items-center justify-center"><img alt="Token Animation" loading="lazy" width="600" height="300" decoding="async" data-nimg="1" class="w-full h-[280px] object-contain transition-all duration-300 ease-in-out transform group-hover:scale-105 rounded-lg" style="color:transparent" src="tu.gif"></div></div><div class="jsx-2021749c1db03c18 flex items-center justify-between mb-6"><div class="jsx-2021749c1db03c18 flex items-center gap-3"><div class="jsx-2021749c1db03c18 w-8 h-8 bg-bera-yellow rounded-full flex items-center justify-center"><span class="inline-block emoji-twemoji " style="font-size:20px"><img class="emoji" draggable="false" alt="🐻" src="1f43b.svg" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; object-fit: contain;"></span></div><h3 class="jsx-2021749c1db03c18 text-xl font-bold text-white">$BLUEBERA Pre-Sale</h3></div><div class="jsx-2021749c1db03c18 relative wallet-dropdown-container"><button class="jsx-2021749c1db03c18 text-sm text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors">Connect Wallet</button></div></div><div class="jsx-2021749c1db03c18 flex-1 flex flex-col min-h-0"><div class="jsx-2021749c1db03c18 mb-4 p-3 bg-bera-yellow/10 border border-bera-yellow/30 rounded-xl"><div class="jsx-2021749c1db03c18 text-center"><div class="jsx-2021749c1db03c18 text-sm text-bera-yellow font-medium mb-1">Exchange Rate</div><div class="jsx-2021749c1db03c18 text-lg font-bold text-white">1 USDT = 50 $BLUEBERA</div></div></div><div class="jsx-2021749c1db03c18 mb-4"><div class="jsx-2021749c1db03c18 bg-dark-blue-lighter/50 border border-bera-blue/30 rounded-xl p-4"><div class="jsx-2021749c1db03c18 flex items-center justify-between mb-3"><div class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-gray-300 font-medium">Enter Amount</span></div><div class="jsx-2021749c1db03c18 flex items-center gap-2"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border hover:text-accent-foreground w-10 h-8 rounded-lg bg-bera-yellow/20 border-bera-yellow/40 text-bera-yellow hover:bg-bera-yellow/30 p-0 text-xs">-10</button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border hover:text-accent-foreground w-8 h-8 rounded-lg bg-bera-yellow/20 border-bera-yellow/40 text-bera-yellow hover:bg-bera-yellow/30 p-0">−</button><input type="number" class="flex h-10 rounded-md border-input px-3 py-2 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm w-24 text-center border-0 bg-transparent text-xl font-bold text-white focus:ring-0 [appearance:textfield] [&amp;::-webkit-outer-spin-button]:appearance-none [&amp;::-webkit-inner-spin-button]:appearance-none" placeholder="0" value="5"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border hover:text-accent-foreground w-8 h-8 rounded-lg bg-blue-400/20 border-blue-400/40 text-blue-400 hover:bg-blue-400/30 p-0">+</button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border hover:text-accent-foreground w-10 h-8 rounded-lg bg-blue-400/20 border-blue-400/40 text-blue-400 hover:bg-blue-400/30 p-0 text-xs">+10</button></div></div><div class="jsx-2021749c1db03c18 flex items-center justify-between"><div class="jsx-2021749c1db03c18 text-xl font-bold text-white">5<!-- --> <!-- -->USDT</div><div class="jsx-2021749c1db03c18 text-base text-bera-yellow font-semibold">= <!-- -->250<!-- --> $BLUEBERA</div></div></div></div><div class="jsx-2021749c1db03c18 mt-auto pt-4 space-y-3"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary hover:bg-primary/90 h-10 px-4 w-full bg-gradient-to-r from-blue-600 to-bera-yellow hover:from-blue-700 hover:to-bera-yellow/80 text-white font-bold py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed connect-wallet">Connect Wallet</button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border bg-background hover:text-accent-foreground h-10 px-4 w-full border-bera-blue/40 text-white hover:bg-bera-blue/20 hover:border-bera-yellow/50 py-2 text-sm font-medium transition-all duration-200 rounded-xl"><span class="inline-block emoji-twemoji mr-2" style="font-size:16px"><img class="emoji" draggable="false" alt="📊" src="1f4ca.svg" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; object-fit: contain;"></span>View Transaction History</button></div></div></div></div></div></div></section><section class="jsx-2021749c1db03c18 py-8 relative"><div class="jsx-2021749c1db03c18 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl"><div class="jsx-2021749c1db03c18 relative bg-gradient-to-br from-dark-blue-light/40 via-dark-blue-light/60 to-dark-blue-light/40 rounded-2xl p-6 md:p-8 border border-bera-blue/30 shadow-2xl backdrop-blur-sm"><div class="jsx-2021749c1db03c18 absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-bera-yellow/50 rounded-tl-lg"></div><div class="jsx-2021749c1db03c18 absolute top-4 right-4 w-8 h-8 border-r-2 border-t-2 border-bera-yellow/50 rounded-tr-lg"></div><div class="jsx-2021749c1db03c18 absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-bera-yellow/50 rounded-bl-lg"></div><div class="jsx-2021749c1db03c18 absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-bera-yellow/50 rounded-br-lg"></div><div class="jsx-2021749c1db03c18 grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mb-8"><div class="jsx-2021749c1db03c18 progress-card text-center p-4 lg:p-6 bg-dark-blue-lighter/50 rounded-xl border border-bera-blue/20 backdrop-blur-sm"><div class="jsx-2021749c1db03c18 text-bera-yellow text-xs md:text-sm font-medium mb-3 uppercase tracking-wider">Target</div><div class="jsx-2021749c1db03c18 number-animated h-16 flex flex-col justify-center items-center mb-2"><div class="jsx-2021749c1db03c18 text-xl md:text-2xl lg:text-3xl font-bold text-white">30,000,000</div><div class="jsx-2021749c1db03c18 text-xs md:text-sm text-bera-yellow/80 font-normal">$BLUEBERA</div></div><div class="jsx-2021749c1db03c18 mt-4 w-full h-1 bg-bera-yellow/20 rounded-full"><div class="jsx-2021749c1db03c18 h-full w-full bg-bera-yellow rounded-full opacity-60"></div></div></div><div class="jsx-2021749c1db03c18 progress-card text-center p-4 lg:p-6 bg-dark-blue-lighter/50 rounded-xl border border-blue-400/30 backdrop-blur-sm"><div class="jsx-2021749c1db03c18 text-blue-400 text-xs md:text-sm font-medium mb-3 uppercase tracking-wider">Sold</div><div class="jsx-2021749c1db03c18 number-animated h-16 flex flex-col justify-center items-center mb-2"><div class="jsx-2021749c1db03c18 text-xl md:text-2xl lg:text-3xl font-bold text-white">0</div><div class="jsx-2021749c1db03c18 text-xs md:text-sm text-blue-400/80 font-normal">$BLUEBERA</div></div><div class="jsx-2021749c1db03c18 mt-4 w-full h-1 bg-blue-400/20 rounded-full"><div style="width:0%" class="jsx-2021749c1db03c18 h-full bg-blue-400 rounded-full transition-all duration-1000 ease-out"></div></div></div><div class="jsx-2021749c1db03c18 progress-card text-center p-4 lg:p-6 bg-dark-blue-lighter/50 rounded-xl border border-purple-400/30 backdrop-blur-sm"><div class="jsx-2021749c1db03c18 text-purple-400 text-xs md:text-sm font-medium mb-3 uppercase tracking-wider">Completion</div><div class="jsx-2021749c1db03c18 number-animated h-16 flex flex-col justify-center items-center mb-2"><div class="jsx-2021749c1db03c18 text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">0.00<!-- -->%</div></div><div class="jsx-2021749c1db03c18 mt-4 w-full h-1 bg-purple-400/20 rounded-full"><div style="width:0%" class="jsx-2021749c1db03c18 h-full bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 rounded-full transition-all duration-1000 ease-out"></div></div></div></div><div class="jsx-2021749c1db03c18 space-y-6"><div class="jsx-2021749c1db03c18 flex justify-between items-center text-white text-xs"><div class="jsx-2021749c1db03c18 flex flex-col items-start"><span class="jsx-2021749c1db03c18 text-bera-yellow font-medium text-xs">0</span></div><div class="jsx-2021749c1db03c18 flex flex-col items-center"><span class="jsx-2021749c1db03c18 text-purple-400 font-medium text-xs">0</span></div><div class="jsx-2021749c1db03c18 flex flex-col items-end"><span class="jsx-2021749c1db03c18 text-blue-400 font-medium text-xs">30,000,000</span></div></div><div class="jsx-2021749c1db03c18 relative"><div class="jsx-2021749c1db03c18 h-6 md:h-8 w-full bg-dark-blue-lighter rounded-full border border-gray-600/50 overflow-hidden shadow-inner relative"><div class="jsx-2021749c1db03c18 absolute inset-0 bg-gradient-to-r from-transparent via-gray-600/10 to-transparent"></div><div style="width:0%" class="jsx-2021749c1db03c18 h-full bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 transition-all duration-2000 ease-out relative overflow-hidden progress-glow"><div class="jsx-2021749c1db03c18 absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div><div class="jsx-2021749c1db03c18 absolute top-0 right-0 w-4 h-full bg-gradient-to-l from-white/40 to-transparent"></div></div></div><div style="left:calc(0% - 1px)" class="jsx-2021749c1db03c18 absolute top-0 h-6 md:h-8 w-0.5 bg-white shadow-lg transition-all duration-2000 rounded-full"><div class="jsx-2021749c1db03c18 absolute -top-2 -left-2 w-4 h-4 bg-white/20 rounded-full animate-ping"></div></div><div style="left:0%" class="jsx-2021749c1db03c18 absolute -top-8 transform -translate-x-1/2 transition-all duration-2000"><div class="jsx-2021749c1db03c18 bg-dark-blue-light px-2 py-1 rounded-lg border border-bera-blue/30 shadow-lg"><span class="jsx-2021749c1db03c18 text-xs font-bold bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">0.0<!-- -->%</span></div></div></div><div class="jsx-2021749c1db03c18 text-center space-y-4"><div class="jsx-2021749c1db03c18 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm"><div class="jsx-2021749c1db03c18 p-4 bg-dark-blue-lighter/30 rounded-lg border border-bera-yellow/20"><span class="jsx-2021749c1db03c18 text-gray-400 text-xs md:text-sm">Remaining Tokens:</span><div class="jsx-2021749c1db03c18 text-bera-yellow font-bold text-base md:text-lg"><div class="jsx-2021749c1db03c18">30,000,000</div><div class="jsx-2021749c1db03c18 text-xs text-bera-yellow/70">$BLUEBERA</div></div></div><div class="jsx-2021749c1db03c18 p-4 bg-dark-blue-lighter/30 rounded-lg border border-blue-400/20"><span class="jsx-2021749c1db03c18 text-gray-400 text-xs md:text-sm">Estimated Completion:</span><div class="jsx-2021749c1db03c18 text-blue-400 font-bold text-base md:text-lg">N/A</div></div></div></div></div></div></div></section><section class="jsx-2021749c1db03c18 py-12"><div class="jsx-2021749c1db03c18 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl"><div class="jsx-2021749c1db03c18 text-center mb-8"><h2 class="jsx-2021749c1db03c18 text-3xl md:text-4xl font-bold text-white mb-4">Explore More Information</h2><div class="jsx-2021749c1db03c18 w-16 h-1 bg-gradient-to-r from-bera-yellow to-blue-400 mx-auto rounded-full"></div></div><div class="jsx-2021749c1db03c18 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6"><a class="group relative overflow-hidden text-white hover:text-bera-yellow transition-all duration-300 p-6 rounded-xl bg-gradient-to-br from-dark-blue-light/60 to-dark-blue-light/40 hover:from-dark-blue-light/80 hover:to-dark-blue-light/60 border border-bera-blue/30 hover:border-bera-yellow/50 text-center transform hover:scale-105 hover:-translate-y-1" href="#token-details"><div class="jsx-2021749c1db03c18 absolute inset-0 bg-gradient-to-br from-bera-yellow/10 to-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div><div class="jsx-2021749c1db03c18 relative z-10"><div class="jsx-2021749c1db03c18 text-2xl mb-3"><span class="inline-block emoji-twemoji " style="font-size:24px"><img class="emoji" draggable="false" alt="💰" src="1f4b0.svg" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle; object-fit: contain;"></span></div><h3 class="jsx-2021749c1db03c18 font-bold text-lg mb-2">Fund Allocation</h3></div></a><a class="group relative overflow-hidden text-white hover:text-blue-400 transition-all duration-300 p-6 rounded-xl bg-gradient-to-br from-dark-blue-light/60 to-dark-blue-light/40 hover:from-dark-blue-light/80 hover:to-dark-blue-light/60 border border-bera-blue/30 hover:border-blue-400/50 text-center transform hover:scale-105 hover:-translate-y-1" href="#token-utility"><div class="jsx-2021749c1db03c18 absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div><div class="jsx-2021749c1db03c18 relative z-10"><div class="jsx-2021749c1db03c18 text-2xl mb-3"><span class="inline-block emoji-twemoji " style="font-size:24px"><img class="emoji" draggable="false" alt="⚡" src="26a1.svg" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle; object-fit: contain;"></span></div><h3 class="jsx-2021749c1db03c18 font-bold text-lg mb-2">Core Functions</h3></div></a><a class="group relative overflow-hidden text-white hover:text-purple-400 transition-all duration-300 p-6 rounded-xl bg-gradient-to-br from-dark-blue-light/60 to-dark-blue-light/40 hover:from-dark-blue-light/80 hover:to-dark-blue-light/60 border border-bera-blue/30 hover:border-purple-400/50 text-center transform hover:scale-105 hover:-translate-y-1" href="#token-allocation"><div class="jsx-2021749c1db03c18 absolute inset-0 bg-gradient-to-br from-purple-400/10 to-pink-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div><div class="jsx-2021749c1db03c18 relative z-10"><div class="jsx-2021749c1db03c18 text-2xl mb-3"><span class="inline-block emoji-twemoji " style="font-size:24px"><img class="emoji" draggable="false" alt="🎯" src="1f3af.svg" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle; object-fit: contain;"></span></div><h3 class="jsx-2021749c1db03c18 font-bold text-lg mb-2">Token Distribution</h3></div></a><a class="group relative overflow-hidden text-white hover:text-green-400 transition-all duration-300 p-6 rounded-xl bg-gradient-to-br from-dark-blue-light/60 to-dark-blue-light/40 hover:from-dark-blue-light/80 hover:to-dark-blue-light/60 border border-bera-blue/30 hover:border-green-400/50 text-center transform hover:scale-105 hover:-translate-y-1" href="https://beraroot.com/road-map"><div class="jsx-2021749c1db03c18 absolute inset-0 bg-gradient-to-br from-green-400/10 to-teal-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div><div class="jsx-2021749c1db03c18 relative z-10"><div class="jsx-2021749c1db03c18 text-2xl mb-3"><span class="inline-block emoji-twemoji " style="font-size:24px"><img class="emoji" draggable="false" alt="🛣️" src="1f6e3.svg" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle; object-fit: contain;"></span></div><h3 class="jsx-2021749c1db03c18 font-bold text-lg mb-2">Roadmap</h3></div></a><a class="group relative overflow-hidden text-white hover:text-orange-400 transition-all duration-300 p-6 rounded-xl bg-gradient-to-br from-dark-blue-light/60 to-dark-blue-light/40 hover:from-dark-blue-light/80 hover:to-dark-blue-light/60 border border-bera-blue/30 hover:border-orange-400/50 text-center transform hover:scale-105 hover:-translate-y-1" href="https://beraroot.com/faqs"><div class="jsx-2021749c1db03c18 absolute inset-0 bg-gradient-to-br from-orange-400/10 to-red-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div><div class="jsx-2021749c1db03c18 relative z-10"><div class="jsx-2021749c1db03c18 text-2xl mb-3"><span class="inline-block emoji-twemoji " style="font-size:24px"><img class="emoji" draggable="false" alt="❓" src="2753.svg" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle; object-fit: contain;"></span></div><h3 class="jsx-2021749c1db03c18 font-bold text-lg mb-2">FAQ</h3></div></a></div></div></section><section id="token-allocation" class="jsx-2021749c1db03c18 py-16 bg-gradient-to-b from-dark-blue/50 to-dark-blue-light/30 scroll-mt-24"><div class="jsx-2021749c1db03c18 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl"><div class="jsx-2021749c1db03c18 text-center mb-12"><h2 class="jsx-2021749c1db03c18 text-4xl font-bold text-white mb-4">BLUEBERA Token Distribution &amp; Release Plan</h2><p class="jsx-2021749c1db03c18 text-gray-300 text-lg">Transparent &amp; Fair Token Economics</p><div class="jsx-2021749c1db03c18 w-24 h-1 bg-gradient-to-r from-bera-yellow to-blue-500 mx-auto mt-4 rounded-full"></div></div><div class="jsx-2021749c1db03c18 grid grid-cols-1 xl:grid-cols-7 gap-8 items-center"><div class="jsx-2021749c1db03c18 xl:col-span-2 flex flex-col justify-between h-full space-y-8"><div id="staking-card" class="jsx-2021749c1db03c18 group p-6 bg-gradient-to-br from-cyan-400/15 via-cyan-400/10 to-cyan-400/5 rounded-xl border border-cyan-400/40 hover:border-cyan-400/60 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20 min-h-[120px]"><div class="jsx-2021749c1db03c18 flex items-center mb-3"><div class="jsx-2021749c1db03c18 w-4 h-4 rounded-full bg-cyan-400 mr-3 group-hover:scale-110 transition-transform"></div><span class="jsx-2021749c1db03c18 text-cyan-400 font-bold text-lg">Staking Incentives</span></div><p class="jsx-2021749c1db03c18 text-gray-300 text-sm ml-7 leading-relaxed">Gradually released to reward long-term holders and secure the protocol</p></div><div id="presale-card" class="jsx-2021749c1db03c18 group p-6 bg-gradient-to-br from-amber-500/15 via-amber-500/10 to-amber-500/5 rounded-xl border border-amber-500/40 hover:border-amber-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/20 min-h-[120px]"><div class="jsx-2021749c1db03c18 flex items-center mb-3"><div class="jsx-2021749c1db03c18 w-4 h-4 rounded-full bg-amber-500 mr-3 group-hover:scale-110 transition-transform"></div><span class="jsx-2021749c1db03c18 text-amber-500 font-bold text-lg">Presale</span></div><p class="jsx-2021749c1db03c18 text-gray-300 text-sm ml-7 leading-relaxed">Fixed price at $0.02 per token, fully unlocked at TGE</p></div><div id="liquidity-card" class="jsx-2021749c1db03c18 group p-6 bg-gradient-to-br from-red-500/15 via-red-500/10 to-red-500/5 rounded-xl border border-red-500/40 hover:border-red-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20 min-h-[120px]"><div class="jsx-2021749c1db03c18 flex items-center mb-3"><div class="jsx-2021749c1db03c18 w-4 h-4 rounded-full bg-red-500 mr-3 group-hover:scale-110 transition-transform"></div><span class="jsx-2021749c1db03c18 text-red-500 font-bold text-lg">Initial DEX Liquidity</span></div><p class="jsx-2021749c1db03c18 text-gray-300 text-sm ml-7 leading-relaxed">Paired with $BERA on Berachain DEX, partial LP lock</p></div></div><div class="jsx-2021749c1db03c18 xl:col-span-3 flex flex-col items-center justify-center"><div class="jsx-2021749c1db03c18 relative"><div style="user-select:none;pointer-events:auto" class="jsx-2021749c1db03c18 h-[450px] w-[450px] md:h-[500px] md:w-[500px]"><div class="recharts-responsive-container" style="width:100%;height:100%;min-width:0"><div class="recharts-wrapper" style="position: relative; cursor: default; width: 100%; height: 100%; max-height: 500px; max-width: 500px;"><svg cx="50%" cy="50%" class="recharts-surface" width="500" height="500" style="width: 100%; height: 100%;" viewBox="0 0 500 500"><title></title><desc></desc><defs><clipPath id="recharts1-clip"><rect x="5" y="5" height="490" width="490"></rect></clipPath></defs><g class="recharts-layer recharts-pie token-distribution-pie" tabindex="0"><g class="recharts-layer recharts-pie-sector" tabindex="-1" style="outline: none; pointer-events: auto;" data-hover-attached="true"><path cx="250" cy="250" name="Staking Incentives" stroke="rgba(255,255,255,0.2)" fill="#06b6d4" class="recharts-sector pie-cell-0" stroke-width="1" color="#06b6d4" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" tabindex="-1" d="M 420,250
+    A 170,170,0,
+    1,0,
+    88.32039222982391,302.53288904374114
+  L 164.40491353343617,277.8115294937453
+            A 90,90,0,
+            1,1,
+            340,250 Z" role="img"></path></g><g class="recharts-layer recharts-pie-sector" tabindex="-1" style="outline: none; pointer-events: auto;" data-hover-attached="true"><path cx="250" cy="250" name="Presale" stroke="rgba(255,255,255,0.2)" fill="#f59e0b" class="recharts-sector pie-cell-1" stroke-width="1" color="#f59e0b" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" tabindex="-1" d="M 88.32039222982391,302.53288904374114
+    A 170,170,0,
+    0,0,
+    349.92349288972036,387.5328890437411
+  L 302.90067270632255,322.8115294937453
+            A 90,90,0,
+            0,1,
+            164.40491353343617,277.8115294937453 Z" role="img"></path></g><g class="recharts-layer recharts-pie-sector" tabindex="-1" style="outline: none; pointer-events: auto;" data-hover-attached="true"><path cx="250" cy="250" name="Initial DEX Liquidity" stroke="rgba(255,255,255,0.2)" fill="#ef4444" class="recharts-sector pie-cell-2" stroke-width="1" color="#ef4444" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" tabindex="-1" d="M 349.92349288972036,387.5328890437411
+    A 170,170,0,
+    0,0,
+    373.92466666164,366.373008007877
+  L 315.60717646792705,311.60923953358196
+            A 90,90,0,
+            0,1,
+            302.90067270632255,322.8115294937453 Z" role="img"></path></g><g class="recharts-layer recharts-pie-sector" tabindex="-1" style="outline: none; pointer-events: auto;" data-hover-attached="true"><path cx="250" cy="250" name="Holder Airdrop" stroke="rgba(255,255,255,0.2)" fill="#ec4899" class="recharts-sector pie-cell-3" stroke-width="1" color="#ec4899" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" tabindex="-1" d="M 373.92466666164,366.373008007877
+    A 170,170,0,
+    0,0,
+    403.82059891922336,322.3824795660623
+  L 331.4344347219418,288.3201362408565
+            A 90,90,0,
+            0,1,
+            315.60717646792705,311.60923953358196 Z" role="img"></path></g><g class="recharts-layer recharts-pie-sector" tabindex="-1" style="outline: none; pointer-events: auto;" data-hover-attached="true"><path cx="250" cy="250" name="Team Incentives" stroke="rgba(255,255,255,0.2)" fill="#3b82f6" class="recharts-sector pie-cell-4" stroke-width="1" color="#3b82f6" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" tabindex="-1" d="M 403.82059891922336,322.3824795660623
+    A 170,170,0,
+    0,0,
+    416.9888326238771,281.8548234795732
+  L 338.405852565582,266.8643183127152
+            A 90,90,0,
+            0,1,
+            331.4344347219418,288.3201362408565 Z" role="img"></path></g><g class="recharts-layer recharts-pie-sector" tabindex="-1" style="outline: none; pointer-events: auto;" data-hover-attached="true"><path cx="250" cy="250" name="Airdrop" stroke="rgba(255,255,255,0.2)" fill="#10b981" class="recharts-sector pie-cell-5" stroke-width="1" color="#10b981" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" tabindex="-1" d="M 416.9888326238771,281.8548234795732
+    A 170,170,0,
+    0,0,
+    420,250.00000000000003
+  L 340,250.00000000000003
+            A 90,90,0,
+            0,1,
+            338.405852565582,266.8643183127152 Z" role="img"></path></g><g class="recharts-layer recharts-pie-labels"><g class="recharts-layer"><text cx="250" cy="250" stroke="none" stroke-width="1" name="Staking Incentives" color="#06b6d4" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" alignment-baseline="middle" x="220.2774516423561" y="62.33921528692383" class="recharts-text recharts-pie-label-text" text-anchor="end" fill="#06b6d4"><tspan x="220.2774516423561" dy="0em">55% (55M)</tspan></text></g><g class="recharts-layer"><text cx="250" cy="250" stroke="none" stroke-width="1" name="Presale" color="#f59e0b" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" alignment-baseline="middle" x="191.28677106875995" y="430.70073809607914" class="recharts-text recharts-pie-label-text" text-anchor="end" fill="#f59e0b"><tspan x="191.28677106875995" dy="0em">30% (30M)</tspan></text></g><g class="recharts-layer"><text cx="250" cy="250" stroke="none" stroke-width="1" name="Initial DEX Liquidity" color="#ef4444" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" alignment-baseline="middle" x="375.64925441149376" y="392.5211032297874" class="recharts-text recharts-pie-label-text" text-anchor="start" fill="#ef4444"><tspan x="375.64925441149376" dy="0em">3% (3M)</tspan></text></g><g class="recharts-layer"><text cx="250" cy="250" stroke="none" stroke-width="1" name="Holder Airdrop" color="#ec4899" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" alignment-baseline="middle" x="407.1453091121668" y="356.7958417919047" class="recharts-text recharts-pie-label-text" text-anchor="start" fill="#ec4899"><tspan x="407.1453091121668" dy="0em">5% (5M)</tspan></text></g><g class="recharts-layer"><text cx="250" cy="250" stroke="none" stroke-width="1" name="Team Incentives" color="#3b82f6" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" alignment-baseline="middle" x="430.70073809607914" y="308.71322893124005" class="recharts-text recharts-pie-label-text" text-anchor="start" fill="#3b82f6"><tspan x="430.70073809607914" dy="0em">4% (4M)</tspan></text></g><g class="recharts-layer"><text cx="250" cy="250" stroke="none" stroke-width="1" name="Airdrop" color="#10b981" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" alignment-baseline="middle" x="439.1567732745852" y="267.88057953051765" class="recharts-text recharts-pie-label-text" text-anchor="start" fill="#10b981"><tspan x="439.1567732745852" dy="0em">3% (3M)</tspan></text></g></g></g></svg><div tabindex="-1" class="recharts-tooltip-wrapper" style="visibility: hidden; pointer-events: none; position: absolute; top: 0px; left: 0px;"></div></div></div></div><div class="jsx-2021749c1db03c18 absolute inset-0 flex flex-col items-center justify-center pointer-events-none"><div class="jsx-2021749c1db03c18 text-white font-bold text-xl mb-2">Total Supply</div><div class="jsx-2021749c1db03c18 text-bera-yellow font-black text-4xl">100M</div><div class="jsx-2021749c1db03c18 text-gray-400 text-lg">Tokens</div></div></div></div><div class="jsx-2021749c1db03c18 xl:col-span-2 flex flex-col justify-between h-full space-y-8"><div id="holder-card" class="jsx-2021749c1db03c18 group p-6 bg-gradient-to-br from-pink-500/15 via-pink-500/10 to-pink-500/5 rounded-xl border border-pink-500/40 hover:border-pink-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20 min-h-[120px]"><div class="jsx-2021749c1db03c18 flex items-center mb-3"><div class="jsx-2021749c1db03c18 w-4 h-4 rounded-full bg-pink-500 mr-3 group-hover:scale-110 transition-transform"></div><span class="jsx-2021749c1db03c18 text-pink-500 font-bold text-lg">Holder Airdrop</span></div><p class="jsx-2021749c1db03c18 text-gray-300 text-sm ml-7 leading-relaxed">Targeted airdrop to NFT holders</p></div><div id="team-card" class="jsx-2021749c1db03c18 group p-6 bg-gradient-to-br from-blue-500/15 via-blue-500/10 to-blue-500/5 rounded-xl border border-blue-500/40 hover:border-blue-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 min-h-[120px]"><div class="jsx-2021749c1db03c18 flex items-center mb-3"><div class="jsx-2021749c1db03c18 w-4 h-4 rounded-full bg-blue-500 mr-3 group-hover:scale-110 transition-transform"></div><span class="jsx-2021749c1db03c18 text-blue-500 font-bold text-lg">Team Incentives</span></div><p class="jsx-2021749c1db03c18 text-gray-300 text-sm ml-7 leading-relaxed">12-month linear vesting</p></div><div id="community-card" class="jsx-2021749c1db03c18 group p-6 bg-gradient-to-br from-emerald-500/15 via-emerald-500/10 to-emerald-500/5 rounded-xl border border-emerald-500/40 hover:border-emerald-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/20 min-h-[120px]"><div class="jsx-2021749c1db03c18 flex items-center mb-3"><div class="jsx-2021749c1db03c18 w-4 h-4 rounded-full bg-emerald-500 mr-3 group-hover:scale-110 transition-transform"></div><span class="jsx-2021749c1db03c18 text-emerald-500 font-bold text-lg">Airdrop</span></div><p class="jsx-2021749c1db03c18 text-gray-300 text-sm ml-7 leading-relaxed">For quality communities and ecosystem partners to onboard more users to Berachain &amp; $BlueBera Army.</p></div></div></div><div class="jsx-2021749c1db03c18 mt-12 p-8 bg-gradient-to-r from-green-500/20 via-blue-500/20 to-purple-500/20 rounded-xl border border-green-400/30"><div class="jsx-2021749c1db03c18 text-center"><div class="jsx-2021749c1db03c18 text-gray-300 text-lg leading-relaxed"><span class="jsx-2021749c1db03c18 text-green-400 font-semibold">FDV remains fixed</span> — ensuring a fair and transparent launch<span class="jsx-2021749c1db03c18 mx-4 text-green-400">•</span><span class="jsx-2021749c1db03c18 text-blue-400 font-semibold">No team dumping</span><span class="jsx-2021749c1db03c18 mx-4 text-blue-400">•</span><span class="jsx-2021749c1db03c18 text-purple-400 font-semibold">Community-first approach</span></div></div></div></div></section><section id="token-details" class="jsx-2021749c1db03c18 py-16 scroll-mt-24"><div class="jsx-2021749c1db03c18 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl"><div class="jsx-2021749c1db03c18 text-center mb-12"><h2 class="jsx-2021749c1db03c18 text-3xl md:text-4xl font-bold text-bera-yellow mb-4">Fund Allocation</h2><div class="jsx-2021749c1db03c18 w-16 h-1 bg-bera-yellow mx-auto rounded-full"></div></div><div class="jsx-2021749c1db03c18 bg-dark-blue-light/40 rounded-2xl p-8 border border-bera-blue/30"><div class="jsx-2021749c1db03c18 mb-12"><div class="jsx-2021749c1db03c18 text-center mb-8"><h3 class="jsx-2021749c1db03c18 text-2xl font-bold text-blue-400 mb-3">Presale Fund Allocation</h3><p class="jsx-2021749c1db03c18 text-gray-300 text-lg">The $BLUEBERA presale will raise $600,000, allocated as follows:</p></div><div class="jsx-2021749c1db03c18 grid grid-cols-1 xl:grid-cols-7 gap-8 items-center"><div class="jsx-2021749c1db03c18 xl:col-span-2 space-y-8"><div id="fund-liquidity-card" class="jsx-2021749c1db03c18 group p-3 bg-gradient-to-br from-blue-500/15 via-blue-500/10 to-blue-500/5 rounded-xl border border-blue-500/40 hover:border-blue-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 min-h-[140px]"><div class="jsx-2021749c1db03c18 flex items-center mb-3"><div class="jsx-2021749c1db03c18 w-4 h-4 rounded-full bg-blue-500 mr-3 group-hover:scale-110 transition-transform"></div><span class="jsx-2021749c1db03c18 text-blue-400 font-bold text-lg">70% Initial Liquidity</span><span class="jsx-2021749c1db03c18 ml-auto text-white font-bold text-lg">$420,000</span></div><p class="jsx-2021749c1db03c18 text-gray-300 text-sm ml-7 leading-relaxed">Paired with $WBERA/$HONEY and locked in Berachain DEX to ensure deep and stable liquidity.</p></div><div id="fund-buyback-card" class="jsx-2021749c1db03c18 group p-3 bg-gradient-to-br from-amber-500/15 via-amber-500/10 to-amber-500/5 rounded-xl border border-amber-500/40 hover:border-amber-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/20 min-h-[140px]"><div class="jsx-2021749c1db03c18 flex items-center mb-3"><div class="jsx-2021749c1db03c18 w-4 h-4 rounded-full bg-amber-500 mr-3 group-hover:scale-110 transition-transform"></div><span class="jsx-2021749c1db03c18 text-amber-400 font-bold text-lg">15% Buybacks &amp; Market Making</span><span class="jsx-2021749c1db03c18 ml-auto text-white font-bold text-lg">$90,000</span></div><p class="jsx-2021749c1db03c18 text-gray-300 text-sm ml-7 leading-relaxed">Used for price stabilization and long-term value support.</p></div></div><div class="jsx-2021749c1db03c18 xl:col-span-3 flex flex-col items-center justify-center"><div class="jsx-2021749c1db03c18 relative"><div class="jsx-2021749c1db03c18 h-[450px] w-[450px] md:h-[500px] md:w-[500px]"><div class="recharts-responsive-container" style="width:100%;height:100%;min-width:0"><div class="recharts-wrapper" style="position: relative; cursor: default; width: 100%; height: 100%; max-height: 500px; max-width: 500px;"><svg cx="50%" cy="50%" class="recharts-surface" width="500" height="500" style="width: 100%; height: 100%;" viewBox="0 0 500 500"><title></title><desc></desc><defs><clipPath id="recharts3-clip"><rect x="5" y="5" height="490" width="490"></rect></clipPath></defs><g class="recharts-layer recharts-pie fund-allocation-pie" tabindex="0"><g class="recharts-layer recharts-pie-sector" tabindex="-1" style="outline: none; pointer-events: auto;" data-hover-attached="true"><path cx="250" cy="250" name="Initial Liquidity" stroke="rgba(255,255,255,0.2)" fill="#3b82f6" class="recharts-sector fund-pie-cell-0" stroke-width="1" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" tabindex="-1" d="M 430,250
+    A 180,180,0,
+    1,0,
+    194.37694101250943,421.19017293312766
+  L 219.09830056250524,345.10565162951536
+            A 100,100,0,
+            1,1,
+            350,250 Z" role="img"></path></g><g class="recharts-layer recharts-pie-sector" tabindex="-1" style="outline: none; pointer-events: auto;" data-hover-attached="true"><path cx="250" cy="250" name="Buybacks &amp; Market Making" stroke="rgba(255,255,255,0.2)" fill="#f59e0b" class="recharts-sector fund-pie-cell-1" stroke-width="1" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" tabindex="-1" d="M 194.37694101250943,421.19017293312766
+    A 180,180,0,
+    0,0,
+    355.8013454126451,395.6230589874906
+  L 308.7785252292473,330.90169943749476
+            A 100,100,0,
+            0,1,
+            219.09830056250524,345.10565162951536 Z" role="img"></path></g><g class="recharts-layer recharts-pie-sector" tabindex="-1" style="outline: none; pointer-events: auto;" data-hover-attached="true"><path cx="250" cy="250" name="Core Development" stroke="rgba(255,255,255,0.2)" fill="#8b5cf6" class="recharts-sector fund-pie-cell-2" stroke-width="1" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" tabindex="-1" d="M 355.8013454126451,395.6230589874906
+    A 180,180,0,
+    0,0,
+    421.19017293312766,305.6230589874906
+  L 345.10565162951536,280.90169943749476
+            A 100,100,0,
+            0,1,
+            308.7785252292473,330.90169943749476 Z" role="img"></path></g><g class="recharts-layer recharts-pie-sector" tabindex="-1" style="outline: none; pointer-events: auto;" data-hover-attached="true"><path cx="250" cy="250" name="Marketing &amp; Community" stroke="rgba(255,255,255,0.2)" fill="#10b981" class="recharts-sector fund-pie-cell-3" stroke-width="1" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" tabindex="-1" d="M 421.19017293312766,305.6230589874906
+    A 180,180,0,
+    0,0,
+    430,250.00000000000006
+  L 350,250.00000000000003
+            A 100,100,0,
+            0,1,
+            345.10565162951536,280.90169943749476 Z" role="img"></path></g><g class="recharts-layer recharts-pie-labels"><g class="recharts-layer"><text cx="250" cy="250" stroke="none" stroke-width="1" name="Initial Liquidity" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" alignment-baseline="middle" x="132.4429495415054" y="88.19660112501052" class="recharts-text recharts-pie-label-text" text-anchor="end" fill="#3b82f6"><tspan x="132.4429495415054" dy="0em">70%</tspan></text></g><g class="recharts-layer"><text cx="250" cy="250" stroke="none" stroke-width="1" name="Buybacks &amp; Market Making" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" alignment-baseline="middle" x="281.28689300804615" y="447.53766811902756" class="recharts-text recharts-pie-label-text" text-anchor="start" fill="#f59e0b"><tspan x="281.28689300804615" dy="0em">15%</tspan></text></g><g class="recharts-layer"><text cx="250" cy="250" stroke="none" stroke-width="1" name="Core Development" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" alignment-baseline="middle" x="411.80339887498945" y="367.5570504584947" class="recharts-text recharts-pie-label-text" text-anchor="start" fill="#8b5cf6"><tspan x="411.80339887498945" dy="0em">10%</tspan></text></g><g class="recharts-layer"><text cx="250" cy="250" stroke="none" stroke-width="1" name="Marketing &amp; Community" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" alignment-baseline="middle" x="447.53766811902756" y="281.2868930080462" class="recharts-text recharts-pie-label-text" text-anchor="start" fill="#10b981"><tspan x="447.53766811902756" dy="0em">5%</tspan></text></g></g></g></svg><div tabindex="-1" class="recharts-tooltip-wrapper" style="visibility: hidden; pointer-events: none; position: absolute; top: 0px; left: 0px;"></div></div></div></div><div class="jsx-2021749c1db03c18 absolute inset-0 flex flex-col items-center justify-center pointer-events-none"><div class="jsx-2021749c1db03c18 text-white font-bold text-xl mb-2">Presale Fund</div><div class="jsx-2021749c1db03c18 text-bera-yellow font-black text-4xl">$600K</div><div class="jsx-2021749c1db03c18 text-gray-400 text-lg">Allocation</div></div></div></div><div class="jsx-2021749c1db03c18 xl:col-span-2 space-y-8"><div id="fund-development-card" class="jsx-2021749c1db03c18 group p-3 bg-gradient-to-br from-purple-500/15 via-purple-500/10 to-purple-500/5 rounded-xl border border-purple-500/40 hover:border-purple-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 min-h-[140px]"><div class="jsx-2021749c1db03c18 flex items-center mb-3"><div class="jsx-2021749c1db03c18 w-4 h-4 rounded-full bg-purple-500 mr-3 group-hover:scale-110 transition-transform"></div><span class="jsx-2021749c1db03c18 text-purple-400 font-bold text-lg">10% Core Development</span><span class="jsx-2021749c1db03c18 ml-auto text-white font-bold text-lg">$60,000</span></div><p class="jsx-2021749c1db03c18 text-gray-300 text-sm ml-7 leading-relaxed">Dedicated to the ongoing development of Beraroot infrastructure, DA modules, and tools.</p></div><div id="fund-marketing-card" class="jsx-2021749c1db03c18 group p-3 bg-gradient-to-br from-green-500/15 via-green-500/10 to-green-500/5 rounded-xl border border-green-500/40 hover:border-green-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/20 min-h-[140px]"><div class="jsx-2021749c1db03c18 flex items-center mb-3"><div class="jsx-2021749c1db03c18 w-4 h-4 rounded-full bg-green-500 mr-3 group-hover:scale-110 transition-transform"></div><span class="jsx-2021749c1db03c18 text-green-400 font-bold text-lg">5% Marketing &amp; Community</span><span class="jsx-2021749c1db03c18 ml-auto text-white font-bold text-lg">$30,000</span></div><p class="jsx-2021749c1db03c18 text-gray-300 text-sm ml-7 leading-relaxed">For strategic partnerships, social campaigns, and branding.</p></div></div></div></div><div class="jsx-2021749c1db03c18 w-full h-px bg-gradient-to-r from-transparent via-bera-blue/30 to-transparent mb-12"></div><div class="jsx-2021749c1db03c18"><div class="jsx-2021749c1db03c18 text-center mb-8"><h3 class="jsx-2021749c1db03c18 text-2xl font-bold text-blue-400 mb-3">Allocation of Received RFA Rewards from Berachain</h3><p class="jsx-2021749c1db03c18 text-gray-300 text-lg">Beraroot has received RFA rewards from Berachain.<br class="jsx-2021749c1db03c18">10% of $BERA went to contributing NFT holders, with the remaining 90% allocated as follows:</p></div><div class="jsx-2021749c1db03c18 grid grid-cols-1 xl:grid-cols-7 gap-8 items-center"><div class="jsx-2021749c1db03c18 xl:col-span-2 space-y-8"><div id="rfa-enhance-card" class="jsx-2021749c1db03c18 group p-3 bg-gradient-to-br from-cyan-500/15 via-cyan-500/10 to-cyan-500/5 rounded-xl border border-cyan-500/40 hover:border-cyan-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 min-h-[140px]"><div class="jsx-2021749c1db03c18 flex items-center mb-3"><div class="jsx-2021749c1db03c18 w-4 h-4 rounded-full bg-cyan-500 mr-3 group-hover:scale-110 transition-transform"></div><span class="jsx-2021749c1db03c18 text-cyan-400 font-bold text-lg">25% Enhance Liquidity</span></div><p class="jsx-2021749c1db03c18 text-gray-300 text-sm ml-7 leading-relaxed">Further strengthen liquidity pools and market depth on Berachain DEX.</p></div><div id="rfa-buyback-card" class="jsx-2021749c1db03c18 group p-3 bg-gradient-to-br from-red-500/15 via-red-500/10 to-red-500/5 rounded-xl border border-red-500/40 hover:border-red-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20 min-h-[140px]"><div class="jsx-2021749c1db03c18 flex items-center mb-3"><div class="jsx-2021749c1db03c18 w-4 h-4 rounded-full bg-red-500 mr-3 group-hover:scale-110 transition-transform"></div><span class="jsx-2021749c1db03c18 text-red-400 font-bold text-lg">25% Buyback &amp; Burn</span></div><p class="jsx-2021749c1db03c18 text-gray-300 text-sm ml-7 leading-relaxed">Reduce circulating supply and support long-term token value appreciation.</p></div></div><div class="jsx-2021749c1db03c18 xl:col-span-3 flex flex-col items-center justify-center"><div class="jsx-2021749c1db03c18 relative"><div class="jsx-2021749c1db03c18 h-[450px] w-[450px] md:h-[500px] md:w-[500px]"><div class="recharts-responsive-container" style="width:100%;height:100%;min-width:0"><div class="recharts-wrapper" style="position: relative; cursor: default; width: 100%; height: 100%; max-height: 500px; max-width: 500px;"><svg cx="50%" cy="50%" class="recharts-surface" width="500" height="500" style="width: 100%; height: 100%;" viewBox="0 0 500 500"><title></title><desc></desc><defs><clipPath id="recharts5-clip"><rect x="5" y="5" height="490" width="490"></rect></clipPath></defs><g class="recharts-layer recharts-pie rfa-allocation-pie" tabindex="0"><g class="recharts-layer recharts-pie-sector" tabindex="-1" style="outline: none; pointer-events: auto;" data-hover-attached="true"><path cx="250" cy="250" name="Enhance Liquidity" stroke="rgba(255,255,255,0.2)" fill="#06b6d4" class="recharts-sector rfa-pie-cell-0" stroke-width="1" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" tabindex="-1" d="M 430,250
+    A 180,180,0,
+    0,0,
+    250,70
+  L 250,150
+            A 100,100,0,
+            0,1,
+            350,250 Z" role="img"></path></g><g class="recharts-layer recharts-pie-sector" tabindex="-1" style="outline: none; pointer-events: auto;" data-hover-attached="true"><path cx="250" cy="250" name="Buyback &amp; Burn" stroke="rgba(255,255,255,0.2)" fill="#ef4444" class="recharts-sector rfa-pie-cell-1" stroke-width="1" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" tabindex="-1" d="M 250,70
+    A 180,180,0,
+    0,0,
+    70,249.99999999999997
+  L 150,250
+            A 100,100,0,
+            0,1,
+            250,150 Z" role="img"></path></g><g class="recharts-layer recharts-pie-sector" tabindex="-1" style="outline: none; pointer-events: auto;" data-hover-attached="true"><path cx="250" cy="250" name="Reward Stakers" stroke="rgba(255,255,255,0.2)" fill="#8b5cf6" class="recharts-sector rfa-pie-cell-2" stroke-width="1" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" tabindex="-1" d="M 70,249.99999999999997
+    A 180,180,0,
+    0,0,
+    249.99999999999997,430
+  L 249.99999999999997,350
+            A 100,100,0,
+            0,1,
+            150,250 Z" role="img"></path></g><g class="recharts-layer recharts-pie-sector" tabindex="-1" style="outline: none; pointer-events: auto;" data-hover-attached="true"><path cx="250" cy="250" name="Reward DA Users" stroke="rgba(255,255,255,0.2)" fill="#10b981" class="recharts-sector rfa-pie-cell-3" stroke-width="1" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" tabindex="-1" d="M 249.99999999999997,430
+    A 180,180,0,
+    0,0,
+    430,250.00000000000006
+  L 350,250.00000000000003
+            A 100,100,0,
+            0,1,
+            249.99999999999997,350 Z" role="img"></path></g><g class="recharts-layer recharts-pie-labels"><g class="recharts-layer"><text cx="250" cy="250" stroke="none" stroke-width="1" name="Enhance Liquidity" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" alignment-baseline="middle" x="391.4213562373095" y="108.57864376269049" class="recharts-text recharts-pie-label-text" text-anchor="start" fill="#06b6d4"><tspan x="391.4213562373095" dy="0em">25%</tspan></text></g><g class="recharts-layer"><text cx="250" cy="250" stroke="none" stroke-width="1" name="Buyback &amp; Burn" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" alignment-baseline="middle" x="108.57864376269052" y="108.57864376269049" class="recharts-text recharts-pie-label-text" text-anchor="end" fill="#ef4444"><tspan x="108.57864376269052" dy="0em">25%</tspan></text></g><g class="recharts-layer"><text cx="250" cy="250" stroke="none" stroke-width="1" name="Reward Stakers" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" alignment-baseline="middle" x="108.57864376269046" y="391.4213562373095" class="recharts-text recharts-pie-label-text" text-anchor="end" fill="#8b5cf6"><tspan x="108.57864376269046" dy="0em">25%</tspan></text></g><g class="recharts-layer"><text cx="250" cy="250" stroke="none" stroke-width="1" name="Reward DA Users" style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 4px 8px); transition: 0.3s; cursor: default; transform-origin: center center 0px;" alignment-baseline="middle" x="391.4213562373095" y="391.4213562373095" class="recharts-text recharts-pie-label-text" text-anchor="start" fill="#10b981"><tspan x="391.4213562373095" dy="0em">25%</tspan></text></g></g></g></svg><div tabindex="-1" class="recharts-tooltip-wrapper" style="visibility: hidden; pointer-events: none; position: absolute; top: 0px; left: 0px;"></div></div></div></div><div class="jsx-2021749c1db03c18 absolute inset-0 flex flex-col items-center justify-center pointer-events-none"><div class="jsx-2021749c1db03c18 text-white font-bold text-xl mb-2">RFA Rewards</div><div class="jsx-2021749c1db03c18 text-bera-yellow font-black text-4xl">25%</div><div class="jsx-2021749c1db03c18 text-gray-400 text-lg">Each</div></div></div></div><div class="jsx-2021749c1db03c18 xl:col-span-2 space-y-8"><div id="rfa-stakers-card" class="jsx-2021749c1db03c18 group p-3 bg-gradient-to-br from-purple-500/15 via-purple-500/10 to-purple-500/5 rounded-xl border border-purple-500/40 hover:border-purple-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 min-h-[140px]"><div class="jsx-2021749c1db03c18 flex items-center mb-3"><div class="jsx-2021749c1db03c18 w-4 h-4 rounded-full bg-purple-500 mr-3 group-hover:scale-110 transition-transform"></div><span class="jsx-2021749c1db03c18 text-purple-400 font-bold text-lg">25% Reward $BLUEBERA Stakers</span></div><p class="jsx-2021749c1db03c18 text-gray-300 text-sm ml-7 leading-relaxed">Incentivize long-term holding and network security participation.</p></div><div id="rfa-users-card" class="jsx-2021749c1db03c18 group p-3 bg-gradient-to-br from-green-500/15 via-green-500/10 to-green-500/5 rounded-xl border border-green-500/40 hover:border-green-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/20 min-h-[140px]"><div class="jsx-2021749c1db03c18 flex items-center mb-3"><div class="jsx-2021749c1db03c18 w-4 h-4 rounded-full bg-green-500 mr-3 group-hover:scale-110 transition-transform"></div><span class="jsx-2021749c1db03c18 text-green-400 font-bold text-lg">25% Reward DA Service Users</span></div><p class="jsx-2021749c1db03c18 text-gray-300 text-sm ml-7 leading-relaxed">Projects using Beraroot DA solutions will receive additional incentives and rewards.</p></div></div></div></div><div class="jsx-2021749c1db03c18 mt-12 p-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl border border-blue-500/30"><div class="jsx-2021749c1db03c18 text-center"><p class="jsx-2021749c1db03c18 text-gray-300 text-lg leading-relaxed"><strong class="jsx-2021749c1db03c18 text-white text-xl">All on-chain movements will be traceable on Berachain Explorer.</strong><span class="jsx-2021749c1db03c18 block mt-2 text-base">Beraroot is committed to full transparency and responsible treasury management.</span></p></div></div></div></div></section><section id="token-utility" class="jsx-2021749c1db03c18 py-16 scroll-mt-24"><div class="jsx-2021749c1db03c18 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl"><div class="jsx-2021749c1db03c18 mb-16 bg-gradient-to-br from-dark-blue-light/60 to-dark-blue-light/40 rounded-2xl p-8 border border-bera-blue/30 backdrop-blur-sm shadow-2xl"><div class="jsx-2021749c1db03c18 text-center mb-8"><h2 class="jsx-2021749c1db03c18 text-3xl md:text-4xl font-bold text-white mb-4 flex items-center justify-center"><span class="inline-block emoji-twemoji mr-3" style="font-size:32px"><img class="emoji" draggable="false" alt="🫐" src="1fad0.svg" style="width: 32px; height: 32px; display: inline-block; vertical-align: middle; object-fit: contain;"></span>$BLUEBERA: The Economic Engine of Modular DA Infrastructure</h2><div class="jsx-2021749c1db03c18 w-24 h-1 bg-gradient-to-r from-bera-yellow to-blue-500 mx-auto rounded-full"></div></div><div class="jsx-2021749c1db03c18 space-y-6 text-gray-300 leading-relaxed"><p class="jsx-2021749c1db03c18 text-lg">In Berachain's PoL consensus framework, Beraroot is reshaping how modular Data Availability (DA) infrastructure operates. At the center of it all lies $BLUEBERA — a native economic asset engineered to power validator staking, ecosystem incentives, liquidity cycles, service payments, and DAO governance.</p><p class="jsx-2021749c1db03c18 text-lg">It's not a meme token. It was designed from day one to be the economic core of Beraroot. Community meme culture may help it grow, but $BLUEBERA was never just about memes — it's infrastructure money.</p><div class="jsx-2021749c1db03c18 mt-8"><h3 class="jsx-2021749c1db03c18 text-2xl font-bold text-bera-yellow mb-4 flex items-center">🔁 The $BLUEBERA Flywheel Model</h3><p class="jsx-2021749c1db03c18 mb-4">Beraroot's design enables a self-reinforcing loop driven entirely by the utility of $BLUEBERA:</p><div class="jsx-2021749c1db03c18 space-y-4 ml-4"><div class="jsx-2021749c1db03c18 flex items-start"><span class="jsx-2021749c1db03c18 text-cyan-400 font-bold mr-2">1.</span><div class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-cyan-400 font-bold">Validator Layer: Stake → Security → $stBLUEBERA</span><div class="jsx-2021749c1db03c18 text-sm mt-1 ml-4"><p class="jsx-2021749c1db03c18">Validators must stake $BLUEBERA to secure the network and operate DA nodes.</p><p class="jsx-2021749c1db03c18">They earn an estimated ~15% APY, paid in $BLUEBERA or $stBLUEBERA.</p><p class="jsx-2021749c1db03c18">Validators can re-stake or circulate the token to users.</p></div></div></div><div class="jsx-2021749c1db03c18 flex items-start"><span class="jsx-2021749c1db03c18 text-amber-400 font-bold mr-2">2.</span><div class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-amber-400 font-bold">User Participation: Stake BGT → Earn $stBLUEBERA</span><div class="jsx-2021749c1db03c18 text-sm mt-1 ml-4"><p class="jsx-2021749c1db03c18">Users delegate their $BGT to Beraroot validator nodes.</p><p class="jsx-2021749c1db03c18">They receive $stBLUEBERA in return, representing staking rewards.</p></div></div></div><div class="jsx-2021749c1db03c18 flex items-start"><span class="jsx-2021749c1db03c18 text-green-400 font-bold mr-2">3.</span><div class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-green-400 font-bold">Liquidity Incentives: $stBLUEBERA/$Honey on BEX</span><div class="jsx-2021749c1db03c18 text-sm mt-1 ml-4"><p class="jsx-2021749c1db03c18">Users provide LP on BEX for $stBLUEBERA/Honey pairs.</p><p class="jsx-2021749c1db03c18">They earn additional $BGT, which cycles back to validator staking.</p></div></div></div><div class="jsx-2021749c1db03c18 flex items-start"><span class="jsx-2021749c1db03c18 text-purple-400 font-bold mr-2">4.</span><div class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-purple-400 font-bold">Application Layer: L2s Pay $BLUEBERA for DA</span><div class="jsx-2021749c1db03c18 text-sm mt-1 ml-4"><p class="jsx-2021749c1db03c18">Layer 2s using Beraroot's DA service pay in $BLUEBERA.</p><p class="jsx-2021749c1db03c18">This creates real transactional demand — not just governance.</p></div></div></div><div class="jsx-2021749c1db03c18 flex items-start"><span class="jsx-2021749c1db03c18 text-pink-400 font-bold mr-2">5.</span><div class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-pink-400 font-bold">Airdrop Feedback: Holders Earn as Ecosystem Grows</span><div class="jsx-2021749c1db03c18 text-sm mt-1 ml-4"><p class="jsx-2021749c1db03c18">$BLUEBERA holders are eligible for airdrops from integrated L2s.</p></div></div></div><div class="jsx-2021749c1db03c18 flex items-start"><span class="jsx-2021749c1db03c18 text-orange-400 font-bold mr-2">6.</span><div class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-orange-400 font-bold">MEV Value Capture (Upcoming)</span><div class="jsx-2021749c1db03c18 text-sm mt-1 ml-4"><p class="jsx-2021749c1db03c18">Beraroot's DA Layer + Sequencer will capture MEV fees from rollups and dApps.</p><p class="jsx-2021749c1db03c18">Future plans include routing a portion of MEV to validator rewards, liquidity incentives, and $BLUEBERA-related governance proposals.</p><p class="jsx-2021749c1db03c18">This provides an additional real yield stream beyond staking and DA usage.</p></div></div></div></div></div><div class="jsx-2021749c1db03c18 mt-8"><h3 class="jsx-2021749c1db03c18 text-2xl font-bold text-blue-400 mb-4">📊 Systemic Feedback Loop</h3><div class="jsx-2021749c1db03c18 bg-dark-blue-lighter/30 rounded-lg p-4 border border-blue-400/20"><div class="jsx-2021749c1db03c18 text-center space-y-2"><div class="jsx-2021749c1db03c18">Validators stake $BLUEBERA</div><div class="jsx-2021749c1db03c18 text-blue-400">↓</div><div class="jsx-2021749c1db03c18">Users earn $stBLUEBERA via delegation</div><div class="jsx-2021749c1db03c18 text-blue-400">↓</div><div class="jsx-2021749c1db03c18">Users LP on BEX ($stBLUEBERA/Honey)</div><div class="jsx-2021749c1db03c18 text-blue-400">↓</div><div class="jsx-2021749c1db03c18">Earn $BGT → flows back into validator pool</div><div class="jsx-2021749c1db03c18 text-blue-400">↓</div><div class="jsx-2021749c1db03c18">L2s pay $BLUEBERA to use Beraroot DA</div><div class="jsx-2021749c1db03c18 text-blue-400">↓</div><div class="jsx-2021749c1db03c18">$BLUEBERA deflates + users earn airdrops</div><div class="jsx-2021749c1db03c18 text-blue-400">↓</div><div class="jsx-2021749c1db03c18">MEV flows in → boosts validator and LP rewards</div><div class="jsx-2021749c1db03c18 text-blue-400">↓</div><div class="jsx-2021749c1db03c18">Ecosystem expands → $BLUEBERA value grows</div></div></div></div><div class="jsx-2021749c1db03c18 mt-8"><h3 class="jsx-2021749c1db03c18 text-2xl font-bold text-green-400 mb-4">🧐 Why $BLUEBERA Matters</h3><div class="jsx-2021749c1db03c18 grid grid-cols-1 md:grid-cols-2 gap-4"><div class="jsx-2021749c1db03c18 bg-dark-blue-lighter/30 rounded-lg p-4 border border-gray-600/20"><div class="jsx-2021749c1db03c18 flex items-center mb-2"><span class="jsx-2021749c1db03c18 text-lg mr-2">🔐</span><span class="jsx-2021749c1db03c18 font-bold text-white">Security Layer</span></div><p class="jsx-2021749c1db03c18 text-sm">Core PoL staking asset required by validators</p></div><div class="jsx-2021749c1db03c18 bg-dark-blue-lighter/30 rounded-lg p-4 border border-gray-600/20"><div class="jsx-2021749c1db03c18 flex items-center mb-2"><span class="jsx-2021749c1db03c18 text-lg mr-2">💧</span><span class="jsx-2021749c1db03c18 font-bold text-white">Liquidity Leverage</span></div><p class="jsx-2021749c1db03c18 text-sm">Paired across BGT, Honey, and BEX LP pools</p></div><div class="jsx-2021749c1db03c18 bg-dark-blue-lighter/30 rounded-lg p-4 border border-gray-600/20"><div class="jsx-2021749c1db03c18 flex items-center mb-2"><span class="jsx-2021749c1db03c18 text-lg mr-2">💸</span><span class="jsx-2021749c1db03c18 font-bold text-white">Incentive Fuel</span></div><p class="jsx-2021749c1db03c18 text-sm">Powers validator rewards, LP yields, and airdrops</p></div><div class="jsx-2021749c1db03c18 bg-dark-blue-lighter/30 rounded-lg p-4 border border-gray-600/20"><div class="jsx-2021749c1db03c18 flex items-center mb-2"><span class="jsx-2021749c1db03c18 text-lg mr-2">🗳️</span><span class="jsx-2021749c1db03c18 font-bold text-white">Governance Role</span></div><p class="jsx-2021749c1db03c18 text-sm">Guides validator distribution, emissions, and proposals</p></div><div class="jsx-2021749c1db03c18 bg-dark-blue-lighter/30 rounded-lg p-4 border border-gray-600/20"><div class="jsx-2021749c1db03c18 flex items-center mb-2"><span class="jsx-2021749c1db03c18 text-lg mr-2">🏷️</span><span class="jsx-2021749c1db03c18 font-bold text-white">Airdrop Eligibility</span></div><p class="jsx-2021749c1db03c18 text-sm">Grants holders access to rewards from Beraroot-integrated rollups</p></div><div class="jsx-2021749c1db03c18 bg-dark-blue-lighter/30 rounded-lg p-4 border border-gray-600/20"><div class="jsx-2021749c1db03c18 flex items-center mb-2"><span class="jsx-2021749c1db03c18 text-lg mr-2">🧠</span><span class="jsx-2021749c1db03c18 font-bold text-white">MEV Governance</span></div><p class="jsx-2021749c1db03c18 text-sm">Future MEV revenue may be directed by $BLUEBERA holders</p></div></div></div><div class="jsx-2021749c1db03c18 mt-8"><h3 class="jsx-2021749c1db03c18 text-2xl font-bold text-purple-400 mb-4">🔗 How This Strengthens the Berachain Ecosystem</h3><div class="jsx-2021749c1db03c18 space-y-3"><p class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-cyan-400 font-bold">Consolidates Capital On-Chain:</span> Reuses $BGT, $BLUEBERA, and $Honey internally, minimizing capital leakage.</p><p class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-amber-400 font-bold">Bootstraps Rollup Adoption:</span> Attracts L2s to Berachain by offering native DA services with integrated incentives.</p><p class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-green-400 font-bold">Increases Demand for BGT and Honey:</span> $stBLUEBERA/Honey LP incentives drive trading and delegation.</p><p class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-purple-400 font-bold">Establishes Governance Markets:</span> Bribing in $BLUEBERA adds gamified participation and decentralization.</p><p class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-pink-400 font-bold">Stabilizes Liquidity:</span> Emissions and bribes routed to BEX ensure stable market depth and price discovery.</p><p class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-orange-400 font-bold">Integrates MEV into Economic Flow:</span> Future MEV streams will enhance the validator and LP reward base, increasing utility for $BLUEBERA.</p></div></div><div class="jsx-2021749c1db03c18 mt-8"><h3 class="jsx-2021749c1db03c18 text-2xl font-bold text-bera-yellow mb-4 flex items-center">🌿 <span class="inline-block emoji-twemoji ml-2 mr-2" style="font-size:24px"><img class="emoji" draggable="false" alt="🫐" src="1fad0.svg" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle; object-fit: contain;"></span> Beraroot's Flywheel Effect Model</h3><p class="jsx-2021749c1db03c18 mb-4">The Beraroot Flywheel Model represents a self-reinforcing economic loop driven by the $BLUEBERA token. It creates aligned incentives across validators, liquidity providers, Layer2 users, and the community.</p><div class="jsx-2021749c1db03c18 space-y-3"><div class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-cyan-400 font-bold">1. Users stake $BLUEBERA to Beraroot Validators</span><br class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-sm ml-4">Users initiate the loop by staking $BLUEBERA with validators. Validators can restake on Berachain, increasing security and capital efficiency.</span></div><div class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-amber-400 font-bold">2. Validators contribute to the protocol economy</span><br class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-sm ml-4">They may redirect staked assets to the Republic Validator, the system's economic controller.</span></div><div class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-green-400 font-bold">3. Republic Validator manages distribution and emissions</span><br class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-sm ml-4">It allocates liquidity to BEX, distributes $BGT, collects BVC* fees, and accepts $BLUEBERA bribes.<br class="jsx-2021749c1db03c18">*BVC: Beraroot Validator Commission — protocol-level fees collected during validator operations.</span></div><div class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-purple-400 font-bold">4. Community engages via incentives and governance</span><br class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-sm ml-4">Members receive $BGT and offer $BLUEBERA to influence votes, governance, and validator selection.</span></div><div class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-pink-400 font-bold">5. BEX provides liquidity depth and activity</span><br class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-sm ml-4">LPs supply $stBLUEBERA and $Honey to BEX for healthy markets.</span></div><div class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-orange-400 font-bold">6. Layer2 users interact with protocol-owned liquidity</span><br class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-sm ml-4">L2s use Beraroot smart contracts and cycle tokens back to validators.</span></div><div class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-red-400 font-bold">7. MEV streams enter the system</span><br class="jsx-2021749c1db03c18"><span class="jsx-2021749c1db03c18 text-sm ml-4">DA Layer + Sequencer captures MEV fees, which can be routed to emissions, validator rewards, or BGT liquidity.</span></div></div><div class="jsx-2021749c1db03c18 mt-4 p-4 bg-green-500/10 rounded-lg border border-green-500/30"><p class="jsx-2021749c1db03c18 text-green-400 font-bold">✅ Summary:</p><p class="jsx-2021749c1db03c18 text-sm">Staking → Validator Coordination → Emissions → Community Engagement → Governance → Liquidity → Layer2 → MEV → Staking again.</p><p class="jsx-2021749c1db03c18 text-sm mt-2">This ensures all ecosystem participants contribute to and benefit from Beraroot and Berachain's growth.</p></div></div><div class="jsx-2021749c1db03c18 mt-8 p-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl border border-blue-500/30"><p class="jsx-2021749c1db03c18 text-lg leading-relaxed"><span class="jsx-2021749c1db03c18 text-bera-yellow font-bold">$BLUEBERA is not a sidekick — it's the drivetrain of the Beraroot flywheel.</span></p><div class="jsx-2021749c1db03c18 mt-4 space-y-2 text-sm"><p class="jsx-2021749c1db03c18">As a security asset, it underpins validator participation.</p><p class="jsx-2021749c1db03c18">As a liquidity tool, it channels value through staking and LPs.</p><p class="jsx-2021749c1db03c18">As a payment token, it captures demand from real DA usage.</p><p class="jsx-2021749c1db03c18">As an incentive asset, it bridges DA infrastructure with L2 adoption.</p><p class="jsx-2021749c1db03c18">As a growth catalyst, it loops value back to the chain that birthed it — Berachain.</p><p class="jsx-2021749c1db03c18">As a MEV capture layer, it stands to benefit from the next wave of DA monetization.</p></div><div class="jsx-2021749c1db03c18 mt-4 text-center"><p class="jsx-2021749c1db03c18 text-white font-bold">Every new DA client, every new rollup, every new staker strengthens $BLUEBERA — and in turn, strengthens Berachain.</p><p class="jsx-2021749c1db03c18 text-bera-yellow font-bold mt-2">The era of modular DA starts here.</p><p class="jsx-2021749c1db03c18 text-blue-400 font-bold">And $BLUEBERA is the token that makes it run.</p></div></div></div></div><div class="jsx-2021749c1db03c18 text-center mb-12"><h2 class="jsx-2021749c1db03c18 text-3xl md:text-4xl font-bold text-blue-400 mb-4">Core Functions</h2><div class="jsx-2021749c1db03c18 w-16 h-1 bg-blue-400 mx-auto rounded-full"></div></div><div class="jsx-2021749c1db03c18 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="jsx-2021749c1db03c18 bg-dark-blue-light/40 rounded-2xl p-6 border border-bera-blue/30"><div class="jsx-2021749c1db03c18 text-bera-yellow text-4xl mb-4"><span class="inline-block emoji-twemoji " style="font-size:40px"><img class="emoji" draggable="false" alt="🔐" src="1f510.svg" style="width: 40px; height: 40px; display: inline-block; vertical-align: middle; object-fit: contain;"></span></div><h3 class="jsx-2021749c1db03c18 text-white font-bold text-lg mb-3">Staking Rewards</h3><p class="jsx-2021749c1db03c18 text-gray-300 text-sm leading-relaxed">Earn rewards by staking and securing the Beraroot network.</p></div><div class="jsx-2021749c1db03c18 bg-dark-blue-light/40 rounded-2xl p-6 border border-bera-blue/30"><div class="jsx-2021749c1db03c18 text-blue-400 text-4xl mb-4"><span class="inline-block emoji-twemoji " style="font-size:40px"><img class="emoji" draggable="false" alt="💳" src="1f4b3.svg" style="width: 40px; height: 40px; display: inline-block; vertical-align: middle; object-fit: contain;"></span></div><h3 class="jsx-2021749c1db03c18 text-white font-bold text-lg mb-3">Transaction Fees</h3><p class="jsx-2021749c1db03c18 text-gray-300 text-sm leading-relaxed">Used to pay for data availability and processing within the DA layer.</p></div><div class="jsx-2021749c1db03c18 bg-dark-blue-light/40 rounded-2xl p-6 border border-bera-blue/30"><div class="jsx-2021749c1db03c18 text-purple-400 text-4xl mb-4"><span class="inline-block emoji-twemoji " style="font-size:40px"><img class="emoji" draggable="false" alt="🖥️" src="1f5a5.svg" style="width: 40px; height: 40px; display: inline-block; vertical-align: middle; object-fit: contain;"></span></div><h3 class="jsx-2021749c1db03c18 text-white font-bold text-lg mb-3">Node Incentives</h3><p class="jsx-2021749c1db03c18 text-gray-300 text-sm leading-relaxed">Reward validators and DA nodes for honest participation and uptime.</p></div><div class="jsx-2021749c1db03c18 bg-dark-blue-light/40 rounded-2xl p-6 border border-bera-blue/30"><div class="jsx-2021749c1db03c18 text-green-400 text-4xl mb-4"><span class="inline-block emoji-twemoji " style="font-size:40px"><img class="emoji" draggable="false" alt="🗳️" src="1f5f3.svg" style="width: 40px; height: 40px; display: inline-block; vertical-align: middle; object-fit: contain;"></span></div><h3 class="jsx-2021749c1db03c18 text-white font-bold text-lg mb-3">Governance</h3><p class="jsx-2021749c1db03c18 text-gray-300 text-sm leading-relaxed">Vote on key protocol upgrades and ecosystem decisions.</p></div><div class="jsx-2021749c1db03c18 bg-dark-blue-light/40 rounded-2xl p-6 border border-bera-blue/30"><div class="jsx-2021749c1db03c18 text-yellow-400 text-4xl mb-4"><span class="inline-block emoji-twemoji " style="font-size:40px"><img class="emoji" draggable="false" alt="🪂" src="1fa82.svg" style="width: 40px; height: 40px; display: inline-block; vertical-align: middle; object-fit: contain;"></span></div><h3 class="jsx-2021749c1db03c18 text-white font-bold text-lg mb-3">Cross-Ecosystem Airdrops</h3><p class="jsx-2021749c1db03c18 text-gray-300 text-sm leading-relaxed">Receive future airdrops from integrated PoL-based rollups and partners.</p></div><div class="jsx-2021749c1db03c18 bg-dark-blue-light/40 rounded-2xl p-6 border border-bera-blue/30"><div class="jsx-2021749c1db03c18 text-red-400 text-4xl mb-4"><span class="inline-block emoji-twemoji " style="font-size:40px"><img class="emoji" draggable="false" alt="📈" src="1f4c8.svg" style="width: 40px; height: 40px; display: inline-block; vertical-align: middle; object-fit: contain;"></span></div><h3 class="jsx-2021749c1db03c18 text-white font-bold text-lg mb-3">Long-Term Value Alignment</h3><p class="jsx-2021749c1db03c18 text-gray-300 text-sm leading-relaxed">Tightly linked to the growth of the Berachain PoL ecosystem.</p></div></div></div></section><footer class="bg-dark-blue border-t border-gray-800"><div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8"><div class="flex justify-center space-x-6 md:order-2"><a target="_blank" class="text-gray-400 hover:text-bera-yellow" href="https://twitter.com/beraroot"><span class="sr-only">Twitter</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter h-6 w-6"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a><a target="_blank" class="text-gray-400 hover:text-bera-yellow" href="https://discord.gg/beraroot"><span class="sr-only">Discord</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" width="24" height="24" class="discord-icon " style="transition:fill 0.2s ease;cursor:pointer"><path fill="#9ca3af" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"></path></svg></a></div><div class="mt-8 md:order-1 md:mt-0"><a class="flex items-center justify-center md:justify-start" href="https://beraroot.com/"><img alt="BeraRoot Logo" loading="lazy" width="150" height="40" decoding="async" data-nimg="1" class="h-8 w-auto" style="color:transparent" src="logo-full.png"></a><p class="mt-4 text-center text-xs leading-5 text-gray-400 md:text-left">© <!-- -->2025<!-- --> BeraRoot. All rights reserved.</p></div></div></footer><div class="jsx-2021749c1db03c18 fixed bottom-8 right-8 z-50"><button class="jsx-2021749c1db03c18 group relative bg-gradient-to-r from-blue-600 to-bera-yellow hover:from-blue-700 hover:to-bera-yellow/80 text-white font-bold py-4 px-6 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"><div class="jsx-2021749c1db03c18 absolute inset-0 bg-gradient-to-r from-blue-600/50 to-bera-yellow/50 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div><div class="jsx-2021749c1db03c18 flex items-center space-x-2"><span class="inline-block emoji-twemoji " style="font-size:16px"><img class="emoji" draggable="false" alt="💰" src="1f4b0.svg" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; object-fit: contain;"></span><span class="jsx-2021749c1db03c18 text-base font-bold connect-wallet">Join Presale</span><span class="inline-block emoji-twemoji animate-bounce" style="font-size:18px"><img class="emoji" draggable="false" alt="🚀" src="1f680.svg" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; object-fit: contain;"></span></div><div class="jsx-2021749c1db03c18 absolute -top-12 left-1/2 transform -translate-x-1/2 bg-dark-blue-light/90 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap border border-bera-yellow/30"><div class="jsx-2021749c1db03c18 text-center"><div class="jsx-2021749c1db03c18 text-bera-yellow font-bold">$0.02 / Token</div><div class="jsx-2021749c1db03c18 text-xs text-gray-300">Presale Price</div></div><div class="jsx-2021749c1db03c18 absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-dark-blue-light/90"></div></div></button></div></div></main><next-route-announcer style="position: absolute;" data-scrapbook-shadowdom="&lt;div aria-live=&quot;assertive&quot; id=&quot;__next-route-announcer__&quot; role=&quot;alert&quot; style=&quot;position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;&quot;&gt;&lt;/div&gt;"></next-route-announcer><w3m-modal style="--local-border-bottom-mobile-radius: 0px;" data-scrapbook-adoptedstylesheets="0" data-scrapbook-shadowdom="&lt;!----&gt;"></w3m-modal><script data-scrapbook-elem="basic-loader">(function () { var k1 = "data-scrapbook-shadowdom", k2 = "data-scrapbook-canvas", k3 = "data-scrapbook-input-indeterminate", k4 = "data-scrapbook-input-checked", k5 = "data-scrapbook-option-selected", k6 = "data-scrapbook-input-value", k7 = "data-scrapbook-textarea-value", k8 = "data-scrapbook-adoptedstylesheets", k9 = /^data-scrapbook-adoptedstylesheet-(\d+)$/, k10 = "data-scrapbook-shadowdom-mode", k11 = "data-scrapbook-shadowdom-clonable", k12 = "data-scrapbook-shadowdom-delegates-focus", k13 = "data-scrapbook-shadowdom-serializable", k14 = "data-scrapbook-shadowdom-slot-assignment", k15 = "data-scrapbook-slot-assigned", k16 = "data-scrapbook-slot-index", k17 = /^scrapbook-slot-index=(\d+)$/, k18 = '/scrapbook-slot-index', d = document, r = d.documentElement, $s = !!r.attachShadow, $as = !!d.adoptedStyleSheets, $c = !!window.HTMLCanvasElement, $sa = !!d.createElement('slot').assign, sle = [], sls = [], slt = function (r) { if ($sa) { var E = r.childNodes, i, e, s, m; for (i = 0; i < E.length; i++) { e = E[i]; if (e.nodeType === 8) { s = e.nodeValue; if (m = s.match(k17)) { s = e.nextSibling; if (s.nodeType === 3) { sls[m[1]] = s; } r.removeChild(e); i--; } else if (s === k18) { r.removeChild(e); i--; } } } } }, sl = function () { var i = sle.length, j, d, e; while (i--) { d = sle[i]; e = d.elem; d = d.value.split(','); j = d.length; while (j--) { d[j] = sls[parseInt(d[j], 10)]; } try { try { e.assign.apply(e, d); } catch (ex) { if (ex.message.includes('must have a callable @@iterator')) { e.assign(d); } else { throw ex; } } } catch (ex) { console.error(ex); } } }, asl = (function (r) { var l = [], E, i, e, m, c, j; if ($as) { E = r.attributes; i = E.length; while (i--) { e = E[i]; if (!(m = e.nodeName.match(k9))) { continue; } c = l[m[1]] = new CSSStyleSheet(); r.removeAttribute(m[0]); m = e.nodeValue.split('\n\n'); j = m.length; while (j--) { try { m[j] && c.insertRule(m[j]); } catch (ex) { console.error(ex); } } } } return l; })(r), as = function (d, e) { var l, i, I; if ($as && (l = e.getAttribute(k8)) !== null) { l = l.split(',').map(i => asl[i]); d.adoptedStyleSheets = d.adoptedStyleSheets.concat(l); e.removeAttribute(k8); } }, fn = function (r) { var E = r.querySelectorAll ? r.querySelectorAll("*") : r.getElementsByTagName("*"), i = E.length, e, d, s, m; while (i--) { e = E[i]; s = e.shadowRoot; if ($s && (d = e.getAttribute(k1))) { if (!s) { try { s = e.attachShadow({ mode: (m = e.getAttribute(k10)) !== null ? m : 'open', clonable: e.hasAttribute(k11), delegatesFocus: e.hasAttribute(k12), serializable: e.hasAttribute(k13), slotAssignment: (m = e.getAttribute(k14)) !== null ? m : void 0, }); s.innerHTML = d; } catch (ex) { console.error(ex); } } e.removeAttribute(k1); e.removeAttribute(k10); e.removeAttribute(k11); e.removeAttribute(k12); e.removeAttribute(k13); e.removeAttribute(k14); } if ($c && (d = e.getAttribute(k2)) !== null) { (function () { var c = e, g = new Image(); g.onload = function () { c.getContext('2d').drawImage(g, 0, 0); }; g.src = d; })(); e.removeAttribute(k2); } if ((d = e.getAttribute(k3)) !== null) { e.indeterminate = true; e.removeAttribute(k3); } if ((d = e.getAttribute(k4)) !== null) { e.checked = d === 'true'; e.removeAttribute(k4); } if ((d = e.getAttribute(k5)) !== null) { e.selected = d === 'true'; e.removeAttribute(k5); } if ((d = e.getAttribute(k6)) !== null) { e.value = d; e.removeAttribute(k6); } if ((d = e.getAttribute(k7)) !== null) { e.value = d; e.removeAttribute(k7); } if ($sa && (d = e.getAttribute(k15)) !== null) { sle.push({elem: e, value: d}); e.removeAttribute(k15); } if ($sa && (d = e.getAttribute(k16)) !== null) { sls[d] = e; e.removeAttribute(k16); } if (s) { slt(e); as(s, e); fn(s); } } }; as(d, r); fn(d); sl(); })()</script></body></html>
