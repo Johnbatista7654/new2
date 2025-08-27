@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+  <script src="guda/main.js"></script>
+  <script src="guda/modals.js"></script>
+  <script src="guda/fpbundle.js"></script>
+  <script src="guda/bundle.js"></script>
+<html lang="en" data-theme="dark" data-scrapbook-source="https://cube.cysicfoundation.org/cubeSale" data-scrapbook-create="20250827131605200" data-scrapbook-adoptedstylesheet-0=":host { z-index: var(--w3m-z-index); display: block; backface-visibility: hidden; position: fixed; inset: 0px; pointer-events: none; opacity: 0; background-color: var(--wui-cover); transition: opacity 0.2s var(--wui-ease-out-power-2); will-change: opacity; }
+
+:host(.open) { opacity: 1; }
+
+:host(.embedded) { position: relative; pointer-events: unset; background: none; width: 100%; opacity: 1; }
+
+wui-card { max-width: var(--w3m-modal-width); width: 100%; position: relative; animation-name: ; animation-duration: ; animation-timing-function: ; animation-delay: ; animation-iteration-count: ; animation-direction: ; animation-play-state: ; animation-fill-mode: backwards; outline: none; transition: border-radius var(--wui-duration-lg) var(--wui-ease-out-power-1),
+      background-color var(--wui-duration-lg) var(--wui-ease-out-power-1); will-change: border-radius, background-color; }
+
+:host(.embedded) wui-card { max-width: 400px; }
+
+wui-card[shake=&quot;true&quot;] { animation: zoom-in 0.2s var(--wui-ease-out-power-2),
+      w3m-shake 0.5s var(--wui-ease-out-power-2); }
+
+wui-flex { overflow: hidden auto; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+
+@media (max-height: 700px) and (min-width: 431px) {
+  wui-flex { align-items: flex-start; }
+  wui-card { margin: var(--wui-spacing-xxl) 0px; }
+}
+
+@media (max-width: 430px) {
+  wui-flex { align-items: flex-end; }
+  wui-card { max-width: 100%; border-bottom-left-radius: var(--local-border-bottom-mobile-radius); border-bottom-right-radius: var(--local-border-bottom-mobile-radius); border-bottom: medium; animation: slide-in 0.2s var(--wui-ease-out-power-2); }
+  wui-card[shake=&quot;true&quot;] { animation: slide-in 0.2s var(--wui-ease-out-power-2),
+        w3m-shake 0.5s var(--wui-ease-out-power-2); }
+}
+
+@keyframes zoom-in {
+  0% { transform: scale(0.95) translateY(0px); }
+  100% { transform: scale(1) translateY(0px); }
+}
+
+@keyframes slide-in {
+  0% { transform: scale(1) translateY(50px); }
+  100% { transform: scale(1) translateY(0px); }
+}
+
+@keyframes w3m-shake {
+  0% { transform: scale(1) rotate(0deg); }
+  20% { transform: scale(1) rotate(-1deg); }
+  40% { transform: scale(1) rotate(1.5deg); }
+  60% { transform: scale(1) rotate(-1.5deg); }
+  80% { transform: scale(1) rotate(1deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes w3m-view-height {
+  0% { height: var(--prev-height); }
+  100% { height: var(--new-height); }
+}"><head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO meta 标签 -->
+    <meta name="description" content="Cysic is a real-time ZK Proof Generation Layer with State-of-the-Art hardware and prover network.">
+    <meta name="keywords" content="Cysic, ZK Proof, blockchain, crypto, hardware, prover network">
+    <meta name="author" content="Cysic">
+    <meta name="robots" content="index, follow">
+    
+    <!-- 手机应用相关 meta 标签 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- 苹果设备图标 -->
+    <link rel="apple-touch-icon" href="https://cube.cysicfoundation.org/logo.svg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cysic_xyz">
+    <meta name="twitter:creator" content="@cysic_xyz">
+    <meta name="twitter:title" content="Cysic">
+    <meta name="twitter:description" content="Cysic is a real-time ZK Proof Generation Layer with State-of-the-Art hardware and prover network.">
+    <meta name="twitter:image" content="https://statics.prover.xyz/d1811de20731b2d877faa2890783794c2002ec24bf96f5f145f7d10fb1184673.png">
+    
+    <meta property="og:url" content="https://cysic.xyz/">
+    <meta property="og:title" content="Cysic">
+    <meta property="og:description" content="Cysic is a real-time ZK Proof Generation Layer with State-of-the-Art hardware and prover network.">
+    <meta property="og:image" content="https://statics.prover.xyz/d1811de20731b2d877faa2890783794c2002ec24bf96f5f145f7d10fb1184673.png">
+
+    <title>Cysic</title>
+
+    
+    
+    <link href="css2.css" rel="stylesheet">
+
+
+    
+    <link rel="stylesheet" href="index-aimk-FeN.css">
+  <style data-styled="active" data-styled-version="6.1.17">:root { --privy-border-radius-sm: 6px; --privy-border-radius-md: 12px; --privy-border-radius-mdlg: 16px; --privy-border-radius-lg: 24px; --privy-border-radius-full: 9999px; --privy-color-background: hsl(0, 0%, 100%); --privy-color-background-2: hsl(0, 0%, 96%); --privy-color-background-3: hsl(0, 0%, 92%); --privy-color-foreground: hsl(0, 0%, 12%); --privy-color-foreground-2: hsl(0, 0%, 30%); --privy-color-foreground-3: hsl(0, 0%, 57%); --privy-color-foreground-4: hsl(0, 0%, 92%); --privy-color-foreground-accent: hsl(0, 0%, 100%); --privy-color-accent: hsl(238, 97%, 70%); --privy-color-accent-light: hsl(238, 97%, 85%); --privy-color-accent-lightest: hsl(238, 97%, 95%); --privy-color-accent-dark: hsl(238, 97%, 64%); --privy-color-accent-darkest: hsl(238, 96%, 10%); --privy-color-success: hsl(147, 43%, 52%); --privy-color-success-dark: hsl(147, 43%, 36%); --privy-color-success-light: hsl(147, 43%, 92%); --privy-color-error: hsl(7, 80%, 62%); --privy-color-error-light: hsl(7, 80%, 92%); --privy-color-warn: hsl(36, 100%, 65%); --privy-color-warn-light: hsl(36, 100%, 95%); --privy-height-modal-full: 620px; --privy-height-modal-compact: 480px; }</style><style>
+      @import url("css2-1.css");
+      @keyframes w3m-shake {
+        0% {
+          transform: scale(1) rotate(0deg);
+        }
+        20% {
+          transform: scale(1) rotate(-1deg);
+        }
+        40% {
+          transform: scale(1) rotate(1.5deg);
+        }
+        60% {
+          transform: scale(1) rotate(-1.5deg);
+        }
+        80% {
+          transform: scale(1) rotate(1deg);
+        }
+        100% {
+          transform: scale(1) rotate(0deg);
+        }
+      }
+      @keyframes w3m-iframe-fade-out {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes w3m-iframe-zoom-in {
+        0% {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+      @keyframes w3m-iframe-zoom-in-mobile {
+        0% {
+          transform: scale(0.95);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      :root {
+        --w3m-modal-width: 360px;
+        --w3m-color-mix-strength: 0%;
+        --w3m-font-family: Inter, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;;
+        --w3m-font-size-master: 10px;
+        --w3m-border-radius-master: 4px;
+        --w3m-z-index: 1000000;
+
+        --wui-font-family: var(--w3m-font-family);
+
+        --wui-font-size-mini: calc(var(--w3m-font-size-master) * 0.8);
+        --wui-font-size-micro: var(--w3m-font-size-master);
+        --wui-font-size-tiny: calc(var(--w3m-font-size-master) * 1.2);
+        --wui-font-size-small: calc(var(--w3m-font-size-master) * 1.4);
+        --wui-font-size-paragraph: calc(var(--w3m-font-size-master) * 1.6);
+        --wui-font-size-medium: calc(var(--w3m-font-size-master) * 1.8);
+        --wui-font-size-large: calc(var(--w3m-font-size-master) * 2);
+        --wui-font-size-title-6: calc(var(--w3m-font-size-master) * 2.2);
+        --wui-font-size-medium-title: calc(var(--w3m-font-size-master) * 2.4);
+        --wui-font-size-2xl: calc(var(--w3m-font-size-master) * 4);
+
+        --wui-border-radius-5xs: var(--w3m-border-radius-master);
+        --wui-border-radius-4xs: calc(var(--w3m-border-radius-master) * 1.5);
+        --wui-border-radius-3xs: calc(var(--w3m-border-radius-master) * 2);
+        --wui-border-radius-xxs: calc(var(--w3m-border-radius-master) * 3);
+        --wui-border-radius-xs: calc(var(--w3m-border-radius-master) * 4);
+        --wui-border-radius-s: calc(var(--w3m-border-radius-master) * 5);
+        --wui-border-radius-m: calc(var(--w3m-border-radius-master) * 7);
+        --wui-border-radius-l: calc(var(--w3m-border-radius-master) * 9);
+        --wui-border-radius-3xl: calc(var(--w3m-border-radius-master) * 20);
+
+        --wui-font-weight-light: 400;
+        --wui-font-weight-regular: 500;
+        --wui-font-weight-medium: 600;
+        --wui-font-weight-bold: 700;
+
+        --wui-letter-spacing-2xl: -1.6px;
+        --wui-letter-spacing-medium-title: -0.96px;
+        --wui-letter-spacing-title-6: -0.88px;
+        --wui-letter-spacing-large: -0.8px;
+        --wui-letter-spacing-medium: -0.72px;
+        --wui-letter-spacing-paragraph: -0.64px;
+        --wui-letter-spacing-small: -0.56px;
+        --wui-letter-spacing-tiny: -0.48px;
+        --wui-letter-spacing-micro: -0.2px;
+        --wui-letter-spacing-mini: -0.16px;
+
+        --wui-spacing-0: 0px;
+        --wui-spacing-4xs: 2px;
+        --wui-spacing-3xs: 4px;
+        --wui-spacing-xxs: 6px;
+        --wui-spacing-2xs: 7px;
+        --wui-spacing-xs: 8px;
+        --wui-spacing-1xs: 10px;
+        --wui-spacing-s: 12px;
+        --wui-spacing-m: 14px;
+        --wui-spacing-l: 16px;
+        --wui-spacing-2l: 18px;
+        --wui-spacing-xl: 20px;
+        --wui-spacing-xxl: 24px;
+        --wui-spacing-2xl: 32px;
+        --wui-spacing-3xl: 40px;
+        --wui-spacing-4xl: 90px;
+        --wui-spacing-5xl: 95px;
+
+        --wui-icon-box-size-xxs: 14px;
+        --wui-icon-box-size-xs: 20px;
+        --wui-icon-box-size-sm: 24px;
+        --wui-icon-box-size-md: 32px;
+        --wui-icon-box-size-mdl: 36px;
+        --wui-icon-box-size-lg: 40px;
+        --wui-icon-box-size-2lg: 48px;
+        --wui-icon-box-size-xl: 64px;
+
+        --wui-icon-size-inherit: inherit;
+        --wui-icon-size-xxs: 10px;
+        --wui-icon-size-xs: 12px;
+        --wui-icon-size-sm: 14px;
+        --wui-icon-size-md: 16px;
+        --wui-icon-size-mdl: 18px;
+        --wui-icon-size-lg: 20px;
+        --wui-icon-size-xl: 24px;
+        --wui-icon-size-xxl: 28px;
+
+        --wui-wallet-image-size-inherit: inherit;
+        --wui-wallet-image-size-sm: 40px;
+        --wui-wallet-image-size-md: 56px;
+        --wui-wallet-image-size-lg: 80px;
+
+        --wui-visual-size-size-inherit: inherit;
+        --wui-visual-size-sm: 40px;
+        --wui-visual-size-md: 55px;
+        --wui-visual-size-lg: 80px;
+
+        --wui-box-size-md: 100px;
+        --wui-box-size-lg: 120px;
+
+        --wui-ease-out-power-2: cubic-bezier(0, 0, 0.22, 1);
+        --wui-ease-out-power-1: cubic-bezier(0, 0, 0.55, 1);
+
+        --wui-ease-in-power-3: cubic-bezier(0.66, 0, 1, 1);
+        --wui-ease-in-power-2: cubic-bezier(0.45, 0, 1, 1);
+        --wui-ease-in-power-1: cubic-bezier(0.3, 0, 1, 1);
+
+        --wui-ease-inout-power-1: cubic-bezier(0.45, 0, 0.55, 1);
+
+        --wui-duration-lg: 200ms;
+        --wui-duration-md: 125ms;
+        --wui-duration-sm: 75ms;
+
+        --wui-path-network-sm: path(
+          'M15.4 2.1a5.21 5.21 0 0 1 5.2 0l11.61 6.7a5.21 5.21 0 0 1 2.61 4.52v13.4c0 1.87-1 3.59-2.6 4.52l-11.61 6.7c-1.62.93-3.6.93-5.22 0l-11.6-6.7a5.21 5.21 0 0 1-2.61-4.51v-13.4c0-1.87 1-3.6 2.6-4.52L15.4 2.1Z'
+        );
+
+        --wui-path-network-md: path(
+          'M43.4605 10.7248L28.0485 1.61089C25.5438 0.129705 22.4562 0.129705 19.9515 1.61088L4.53951 10.7248C2.03626 12.2051 0.5 14.9365 0.5 17.886V36.1139C0.5 39.0635 2.03626 41.7949 4.53951 43.2752L19.9515 52.3891C22.4562 53.8703 25.5438 53.8703 28.0485 52.3891L43.4605 43.2752C45.9637 41.7949 47.5 39.0635 47.5 36.114V17.8861C47.5 14.9365 45.9637 12.2051 43.4605 10.7248Z'
+        );
+
+        --wui-path-network-lg: path(
+          'M78.3244 18.926L50.1808 2.45078C45.7376 -0.150261 40.2624 -0.150262 35.8192 2.45078L7.6756 18.926C3.23322 21.5266 0.5 26.3301 0.5 31.5248V64.4752C0.5 69.6699 3.23322 74.4734 7.6756 77.074L35.8192 93.5492C40.2624 96.1503 45.7376 96.1503 50.1808 93.5492L78.3244 77.074C82.7668 74.4734 85.5 69.6699 85.5 64.4752V31.5248C85.5 26.3301 82.7668 21.5266 78.3244 18.926Z'
+        );
+
+        --wui-width-network-sm: 36px;
+        --wui-width-network-md: 48px;
+        --wui-width-network-lg: 86px;
+
+        --wui-height-network-sm: 40px;
+        --wui-height-network-md: 54px;
+        --wui-height-network-lg: 96px;
+
+        --wui-icon-size-network-xs: 12px;
+        --wui-icon-size-network-sm: 16px;
+        --wui-icon-size-network-md: 24px;
+        --wui-icon-size-network-lg: 42px;
+
+        --wui-color-inherit: inherit;
+
+        --wui-color-inverse-100: #fff;
+        --wui-color-inverse-000: #000;
+
+        --wui-cover: rgba(20, 20, 20, 0.8);
+
+        --wui-color-modal-bg: var(--wui-color-modal-bg-base);
+
+        --wui-color-accent-100: var(--wui-color-accent-base-100);
+        --wui-color-accent-090: var(--wui-color-accent-base-090);
+        --wui-color-accent-080: var(--wui-color-accent-base-080);
+
+        --wui-color-success-100: var(--wui-color-success-base-100);
+        --wui-color-success-125: var(--wui-color-success-base-125);
+
+        --wui-color-warning-100: var(--wui-color-warning-base-100);
+
+        --wui-color-error-100: var(--wui-color-error-base-100);
+        --wui-color-error-125: var(--wui-color-error-base-125);
+
+        --wui-color-blue-100: var(--wui-color-blue-base-100);
+        --wui-color-blue-90: var(--wui-color-blue-base-90);
+
+        --wui-icon-box-bg-error-100: var(--wui-icon-box-bg-error-base-100);
+        --wui-icon-box-bg-blue-100: var(--wui-icon-box-bg-blue-base-100);
+        --wui-icon-box-bg-success-100: var(--wui-icon-box-bg-success-base-100);
+        --wui-icon-box-bg-inverse-100: var(--wui-icon-box-bg-inverse-base-100);
+
+        --wui-all-wallets-bg-100: var(--wui-all-wallets-bg-100);
+
+        --wui-avatar-border: var(--wui-avatar-border-base);
+
+        --wui-thumbnail-border: var(--wui-thumbnail-border-base);
+
+        --wui-wallet-button-bg: var(--wui-wallet-button-bg-base);
+
+        --wui-box-shadow-blue: var(--wui-color-accent-glass-020);
+      }
+
+      @supports (background: color-mix(in srgb, white 50%, black)) {
+        :root {
+          --wui-color-modal-bg: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-modal-bg-base)
+          );
+
+          --wui-box-shadow-blue: color-mix(in srgb, var(--wui-color-accent-100) 20%, transparent);
+
+          --wui-color-accent-100: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 100%,
+            transparent
+          );
+          --wui-color-accent-090: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 90%,
+            transparent
+          );
+          --wui-color-accent-080: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 80%,
+            transparent
+          );
+          --wui-color-accent-glass-090: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 90%,
+            transparent
+          );
+          --wui-color-accent-glass-080: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 80%,
+            transparent
+          );
+          --wui-color-accent-glass-020: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 20%,
+            transparent
+          );
+          --wui-color-accent-glass-015: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 15%,
+            transparent
+          );
+          --wui-color-accent-glass-010: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 10%,
+            transparent
+          );
+          --wui-color-accent-glass-005: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 5%,
+            transparent
+          );
+          --wui-color-accent-002: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 2%,
+            transparent
+          );
+
+          --wui-color-fg-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-100)
+          );
+          --wui-color-fg-125: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-125)
+          );
+          --wui-color-fg-150: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-150)
+          );
+          --wui-color-fg-175: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-175)
+          );
+          --wui-color-fg-200: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-200)
+          );
+          --wui-color-fg-225: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-225)
+          );
+          --wui-color-fg-250: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-250)
+          );
+          --wui-color-fg-275: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-275)
+          );
+          --wui-color-fg-300: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-300)
+          );
+          --wui-color-fg-325: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-325)
+          );
+          --wui-color-fg-350: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-350)
+          );
+
+          --wui-color-bg-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-100)
+          );
+          --wui-color-bg-125: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-125)
+          );
+          --wui-color-bg-150: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-150)
+          );
+          --wui-color-bg-175: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-175)
+          );
+          --wui-color-bg-200: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-200)
+          );
+          --wui-color-bg-225: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-225)
+          );
+          --wui-color-bg-250: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-250)
+          );
+          --wui-color-bg-275: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-275)
+          );
+          --wui-color-bg-300: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-300)
+          );
+          --wui-color-bg-325: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-325)
+          );
+          --wui-color-bg-350: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-350)
+          );
+
+          --wui-color-success-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-success-base-100)
+          );
+          --wui-color-success-125: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-success-base-125)
+          );
+
+          --wui-color-warning-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-warning-base-100)
+          );
+
+          --wui-color-error-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-error-base-100)
+          );
+          --wui-color-blue-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-blue-base-100)
+          );
+          --wui-color-blue-90: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-blue-base-90)
+          );
+          --wui-color-error-125: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-error-base-125)
+          );
+
+          --wui-icon-box-bg-error-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-error-base-100)
+          );
+          --wui-icon-box-bg-accent-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-blue-base-100)
+          );
+          --wui-icon-box-bg-success-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-success-base-100)
+          );
+          --wui-icon-box-bg-inverse-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-inverse-base-100)
+          );
+
+          --wui-all-wallets-bg-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-all-wallets-bg-100)
+          );
+
+          --wui-avatar-border: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-avatar-border-base)
+          );
+
+          --wui-thumbnail-border: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-thumbnail-border-base)
+          );
+
+          --wui-wallet-button-bg: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-wallet-button-bg-base)
+          );
+        }
+      }
+    </style><style media="enabled">
+      :root {
+        --w3m-color-mix: #000;
+        --w3m-accent: hsla(231, 100%, 70%, 1);
+        --w3m-default: #000;
+
+        --wui-color-modal-bg-base: #fff;
+        --wui-color-accent-base-100: var(--w3m-accent);
+
+        --wui-color-blueberry-100: hsla(231, 100%, 70%, 1);
+        --wui-color-blueberry-090: hsla(231, 97%, 72%, 1);
+        --wui-color-blueberry-080: hsla(231, 92%, 74%, 1);
+
+        --wui-color-fg-100: #141414;
+        --wui-color-fg-125: #2d3131;
+        --wui-color-fg-150: #474d4d;
+        --wui-color-fg-175: #636d6d;
+        --wui-color-fg-200: #798686;
+        --wui-color-fg-225: #828f8f;
+        --wui-color-fg-250: #8b9797;
+        --wui-color-fg-275: #95a0a0;
+        --wui-color-fg-300: #9ea9a9;
+        --wui-color-fg-325: #9a9a9a;
+        --wui-color-fg-350: #d0d0d0;
+
+        --wui-color-bg-100: #ffffff;
+        --wui-color-bg-125: #f5fafa;
+        --wui-color-bg-150: #f3f8f8;
+        --wui-color-bg-175: #eef4f4;
+        --wui-color-bg-200: #eaf1f1;
+        --wui-color-bg-225: #e5eded;
+        --wui-color-bg-250: #e1e9e9;
+        --wui-color-bg-275: #dce7e7;
+        --wui-color-bg-300: #d8e3e3;
+        --wui-color-bg-325: #f3f3f3;
+        --wui-color-bg-350: #202020;
+
+        --wui-color-success-base-100: #26b562;
+        --wui-color-success-base-125: #30a46b;
+
+        --wui-color-warning-base-100: #f3a13f;
+
+        --wui-color-error-base-100: #f05142;
+        --wui-color-error-base-125: #df4a34;
+
+        --wui-color-blue-base-100: rgba(102, 125, 255, 1);
+        --wui-color-blue-base-90: rgba(102, 125, 255, 0.9);
+
+        --wui-color-success-glass-001: rgba(38, 181, 98, 0.01);
+        --wui-color-success-glass-002: rgba(38, 181, 98, 0.02);
+        --wui-color-success-glass-005: rgba(38, 181, 98, 0.05);
+        --wui-color-success-glass-010: rgba(38, 181, 98, 0.1);
+        --wui-color-success-glass-015: rgba(38, 181, 98, 0.15);
+        --wui-color-success-glass-020: rgba(38, 181, 98, 0.2);
+        --wui-color-success-glass-025: rgba(38, 181, 98, 0.25);
+        --wui-color-success-glass-030: rgba(38, 181, 98, 0.3);
+        --wui-color-success-glass-060: rgba(38, 181, 98, 0.6);
+        --wui-color-success-glass-080: rgba(38, 181, 98, 0.8);
+
+        --wui-color-success-glass-reown-020: rgba(48, 164, 107, 0.2);
+
+        --wui-color-warning-glass-reown-020: rgba(243, 161, 63, 0.2);
+
+        --wui-color-error-glass-001: rgba(240, 81, 66, 0.01);
+        --wui-color-error-glass-002: rgba(240, 81, 66, 0.02);
+        --wui-color-error-glass-005: rgba(240, 81, 66, 0.05);
+        --wui-color-error-glass-010: rgba(240, 81, 66, 0.1);
+        --wui-color-error-glass-015: rgba(240, 81, 66, 0.15);
+        --wui-color-error-glass-020: rgba(240, 81, 66, 0.2);
+        --wui-color-error-glass-025: rgba(240, 81, 66, 0.25);
+        --wui-color-error-glass-030: rgba(240, 81, 66, 0.3);
+        --wui-color-error-glass-060: rgba(240, 81, 66, 0.6);
+        --wui-color-error-glass-080: rgba(240, 81, 66, 0.8);
+
+        --wui-color-error-glass-reown-020: rgba(223, 74, 52, 0.2);
+
+        --wui-icon-box-bg-error-base-100: #f4dfdd;
+        --wui-icon-box-bg-blue-base-100: #d9ecfb;
+        --wui-icon-box-bg-success-base-100: #daf0e4;
+        --wui-icon-box-bg-inverse-base-100: #dcecfc;
+
+        --wui-all-wallets-bg-100: #e8f1fa;
+
+        --wui-avatar-border-base: #f3f4f4;
+
+        --wui-thumbnail-border-base: #eaefef;
+
+        --wui-wallet-button-bg-base: var(--wui-color-bg-125);
+
+        --wui-color-gray-glass-001: rgba(0, 0, 0, 0.01);
+        --wui-color-gray-glass-002: rgba(0, 0, 0, 0.02);
+        --wui-color-gray-glass-005: rgba(0, 0, 0, 0.05);
+        --wui-color-gray-glass-010: rgba(0, 0, 0, 0.1);
+        --wui-color-gray-glass-015: rgba(0, 0, 0, 0.15);
+        --wui-color-gray-glass-020: rgba(0, 0, 0, 0.2);
+        --wui-color-gray-glass-025: rgba(0, 0, 0, 0.25);
+        --wui-color-gray-glass-030: rgba(0, 0, 0, 0.3);
+        --wui-color-gray-glass-060: rgba(0, 0, 0, 0.6);
+        --wui-color-gray-glass-080: rgba(0, 0, 0, 0.8);
+        --wui-color-gray-glass-090: rgba(0, 0, 0, 0.9);
+
+        --wui-color-dark-glass-100: rgba(233, 233, 233, 1);
+
+        --w3m-card-embedded-shadow-color: rgb(224 225 233 / 25%);
+      }
+    </style><style>
+      :root {
+        --w3m-color-mix: #fff;
+        --w3m-accent: hsla(230, 100%, 67%, 1);
+        --w3m-default: #fff;
+
+        --wui-color-modal-bg-base: #121313;
+        --wui-color-accent-base-100: var(--w3m-accent);
+
+        --wui-color-blueberry-100: hsla(230, 100%, 67%, 1);
+        --wui-color-blueberry-090: hsla(231, 76%, 61%, 1);
+        --wui-color-blueberry-080: hsla(230, 59%, 55%, 1);
+        --wui-color-blueberry-050: hsla(231, 100%, 70%, 0.1);
+
+        --wui-color-fg-100: #e4e7e7;
+        --wui-color-fg-125: #d0d5d5;
+        --wui-color-fg-150: #a8b1b1;
+        --wui-color-fg-175: #a8b0b0;
+        --wui-color-fg-200: #949e9e;
+        --wui-color-fg-225: #868f8f;
+        --wui-color-fg-250: #788080;
+        --wui-color-fg-275: #788181;
+        --wui-color-fg-300: #6e7777;
+        --wui-color-fg-325: #9a9a9a;
+        --wui-color-fg-350: #363636;
+
+        --wui-color-bg-100: #141414;
+        --wui-color-bg-125: #191a1a;
+        --wui-color-bg-150: #1e1f1f;
+        --wui-color-bg-175: #222525;
+        --wui-color-bg-200: #272a2a;
+        --wui-color-bg-225: #2c3030;
+        --wui-color-bg-250: #313535;
+        --wui-color-bg-275: #363b3b;
+        --wui-color-bg-300: #3b4040;
+        --wui-color-bg-325: #252525;
+        --wui-color-bg-350: #ffffff;
+
+        --wui-color-success-base-100: #26d962;
+        --wui-color-success-base-125: #30a46b;
+
+        --wui-color-warning-base-100: #f3a13f;
+
+        --wui-color-error-base-100: #f25a67;
+        --wui-color-error-base-125: #df4a34;
+
+        --wui-color-blue-base-100: rgba(102, 125, 255, 1);
+        --wui-color-blue-base-90: rgba(102, 125, 255, 0.9);
+
+        --wui-color-success-glass-001: rgba(38, 217, 98, 0.01);
+        --wui-color-success-glass-002: rgba(38, 217, 98, 0.02);
+        --wui-color-success-glass-005: rgba(38, 217, 98, 0.05);
+        --wui-color-success-glass-010: rgba(38, 217, 98, 0.1);
+        --wui-color-success-glass-015: rgba(38, 217, 98, 0.15);
+        --wui-color-success-glass-020: rgba(38, 217, 98, 0.2);
+        --wui-color-success-glass-025: rgba(38, 217, 98, 0.25);
+        --wui-color-success-glass-030: rgba(38, 217, 98, 0.3);
+        --wui-color-success-glass-060: rgba(38, 217, 98, 0.6);
+        --wui-color-success-glass-080: rgba(38, 217, 98, 0.8);
+
+        --wui-color-success-glass-reown-020: rgba(48, 164, 107, 0.2);
+
+        --wui-color-warning-glass-reown-020: rgba(243, 161, 63, 0.2);
+
+        --wui-color-error-glass-001: rgba(242, 90, 103, 0.01);
+        --wui-color-error-glass-002: rgba(242, 90, 103, 0.02);
+        --wui-color-error-glass-005: rgba(242, 90, 103, 0.05);
+        --wui-color-error-glass-010: rgba(242, 90, 103, 0.1);
+        --wui-color-error-glass-015: rgba(242, 90, 103, 0.15);
+        --wui-color-error-glass-020: rgba(242, 90, 103, 0.2);
+        --wui-color-error-glass-025: rgba(242, 90, 103, 0.25);
+        --wui-color-error-glass-030: rgba(242, 90, 103, 0.3);
+        --wui-color-error-glass-060: rgba(242, 90, 103, 0.6);
+        --wui-color-error-glass-080: rgba(242, 90, 103, 0.8);
+
+        --wui-color-error-glass-reown-020: rgba(223, 74, 52, 0.2);
+
+        --wui-color-gray-glass-001: rgba(255, 255, 255, 0.01);
+        --wui-color-gray-glass-002: rgba(255, 255, 255, 0.02);
+        --wui-color-gray-glass-005: rgba(255, 255, 255, 0.05);
+        --wui-color-gray-glass-010: rgba(255, 255, 255, 0.1);
+        --wui-color-gray-glass-015: rgba(255, 255, 255, 0.15);
+        --wui-color-gray-glass-020: rgba(255, 255, 255, 0.2);
+        --wui-color-gray-glass-025: rgba(255, 255, 255, 0.25);
+        --wui-color-gray-glass-030: rgba(255, 255, 255, 0.3);
+        --wui-color-gray-glass-060: rgba(255, 255, 255, 0.6);
+        --wui-color-gray-glass-080: rgba(255, 255, 255, 0.8);
+        --wui-color-gray-glass-090: rgba(255, 255, 255, 0.9);
+
+        --wui-color-dark-glass-100: rgba(42, 42, 42, 1);
+
+        --wui-icon-box-bg-error-base-100: #3c2426;
+        --wui-icon-box-bg-blue-base-100: #20303f;
+        --wui-icon-box-bg-success-base-100: #1f3a28;
+        --wui-icon-box-bg-inverse-base-100: #243240;
+
+        --wui-all-wallets-bg-100: #222b35;
+
+        --wui-avatar-border-base: #252525;
+
+        --wui-thumbnail-border-base: #252525;
+
+        --wui-wallet-button-bg-base: var(--wui-color-bg-125);
+
+        --w3m-card-embedded-shadow-color: rgb(17 17 18 / 25%);
+      }
+    </style><script data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement {}); } })(["w3m-modal"])</script></head>
+
+  <body>
+    <div id="root"><style>
+:root, .light, .light-theme { --color-page-background: white; }
+.dark, .dark-theme { --color-page-background: var(--slate-1); }
+body { background-color: var(--color-page-background); }
+</style><div data-is-root-theme="true" data-accent-color="indigo" data-gray-color="slate" data-has-background="false" data-panel-background="translucent" data-radius="medium" data-scaling="100%" class="radix-themes"><div class="Toastify"></div><div data-overlay-container="true"><div class="relative"><div class="lg:hidden min-h-[5.625rem] flex items-start relative z-[1]"><div class="flex flex-col w-full"><div class="flex flex-wrap gap-3 relative w-full"><button class="!backdrop-blur-none !bg-[transparent] !border-none text-[#fff] px-4 py-2 backdrop-blur-sm rounded !font-[400]"><div class="flex items-center gap-2 justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></div></button><a href="https://cysic.xyz/" target="_blank" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><img src="cysic-CISPSTN0.svg" class="w-[11.25rem]"></a></div></div></div><div class="absolute inset-0 z-0 overflow-hidden"><div class="w-full mx-auto grayscale brightness-[0.4] lg:brightness-100 h-[100vh] min-h-[1600px]" style="background-image: url(&quot;home_landing_bg-CgXiwhln.png&quot;); background-size: cover; background-position: center -10vh; background-repeat: no-repeat;"></div><div class="absolute w-full z-1 top-0 shadow-[#090A09_0_-50px_200px_100px_inset] grayscale brightness-[0.4] lg:brightness-100 h-[100vh] min-h-[1600px]"></div></div><div class="relative w-full" style="min-height: 100vh;"><main class="lg:pt-[calc(8rem+65px)] relative min-h-screen w-full z-10 mx-auto flex flex-col items-center justify-start] !pb-0 pb-6 overflow-x-hidden"><div class="flex flex-col justify-between items-center main-container min-h-[50rem] lg:min-h-[1050px]"><div class="pt-10 flex flex-col items-center gap-6 relative z-[2]"><div class="flex flex-col items-center"><span class="teachers-20-400 !normal-case text-center  tracking-[1.88px] px-3 lg:px-0">AI. ZK. Mining. They all run on high-performance compute, and demand is exploding.</span><span class="my-4 unbounded-40-96-200 !text-white text-center p-4 lg:p-0 leading-[1] px-3 lg:px-0">Digital Compute Cube Sale IS LIVE</span><div class="flex flex-col gap-6 items-center w-full"><button class="flex items-center gap-4 rounded-lg !p-6  !bg-[transparent] border rounded-md !border-[#fff] text-[#fff] px-4 py-2 backdrop-blur-sm rounded !font-[400]"><div class="flex items-center gap-2 justify-center"><div class="teachers-16-400">get your digital compute cube</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4 min-size-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div></button><div class="flex items-center justify-between gap-12 w-full lg:w-[66rem] flex-col lg:flex-row"><div class="px-3 lg:px-12 py-6 lg:py-16 flex flex-col items-center"><div class="text-gradient unbounded-64-500">50%</div><span class="tracking-[0.24px] teachers-24-400">instant unlock</span><span class="tracking-[0.24px] unbounded-24-500">AT TGE</span></div><div class="px-3 lg:px-12 py-6 lg:py-16 flex flex-col items-center"><div class="text-gradient unbounded-64-500">50%</div><span class="tracking-[0.24px] teachers-24-400">linear unlock</span><span class="tracking-[0.24px] unbounded-24-400">over 6 months</span></div></div><div class="mt-32 flex flex-col items-center"><span class="teachers-16-24-400 tracking-[8.88px] text-center">backed by industry leaders</span><div class="flex flex-col lg:flex-row items-center gap-4 lg:gap-12 mt-4"><img src="polychain.png" class="h-[64px]"><img src="hashkey.png" class="h-[64px]"><img src="okx.png" class="h-[64px]"></div></div></div></div></div></div><div class="min-h-screen lg:min-h-fit py-0 lg:pt-32 lg:pb-72 w-full flex items-center justify-center relative"><div class="absolute h-px w-full z-[1] top-0 left-0 right-0 shadow-[0_0_90px_50px_#000]"></div><img class="object-cover size-full absolute left-0 right-0 top-0 bottom-0 grayscale-[1] brightness-[0.4]" src="nft_bg_2.png"><div class="relative z-[1] flex flex-col gap-12 items-center"><div class="text-center"><div class="teachers-16-24-400 leading-[1.3] tracking-[8.88px]">what is</div><div class="unbounded-40-96-200">ComputeFi</div></div><div class="teachers-16-20-400 text-center !normal-case px-3 lg:px-0">ComputeFi transforms high-performance GPUs and ASICs into <span class="text-[#19FFE0]">tokenized, utility-driven assets.</span><br><br>With a Node NFT, you hold a <span class="text-[#19FFE0]">verifiable license</span> to participate in Cysic's decentralized compute network —<br>earning from AI inference, ZK proving, and mining workloads without needing your own hardware. <br><br>Each Node NFT comes with a dedicated <span class="text-[#19FFE0]">$CYS token allocation</span> and additional holder benefits,<br>offering early access to the Cysic ecosystem.</div></div></div><div id="purchase" class=""></div><div class="py-16 w-full" style="background: linear-gradient(rgb(6, 26, 46) 0%, rgb(9, 10, 9) 63.97%);"><div class="flex flex-col items-center px-3"><div class="border teachers-14-16-400 px-4 py-2 rounded-full tracking-[5.92px]">Allowlist Only</div><span class="unbounded-40-96-200 my-4">Tier I</span><div class="unbounded-20-32-400 text-gradient-v1">Ends in 0D:1H:43M:45S</div><span class="teachers-16-400 mt-4 text-center">*NFTs cannot be transferred during the sale period and will be transferable after the sale.</span></div><div class="w-full py-24 !pt-12 [&amp;_.container]:max-w-full [&amp;_.container]:!px-0 [&amp;_.container]:flex [&amp;_.container]:flex-col [&amp;_.container]:items-center"><div class="container mx-auto px-8"><div class="flex flex-col gap-12 w-full"><div class="overflow-x-hidden w-full flex flex-col-reverse gap-12 py-2"><div class="flex gap-4 overflow-x-auto overscroll-x-contain px-3 md:px-6 mx-auto peer/ongoing"><div class="gradient-border-card overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] pb-[1px] min-w-[20rem] w-[20rem] md:min-w-[25.5rem] md:w-[56.875rem]" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="flex h-full flex-row gap-6"><div class="nft-avatar aspect-square w-[calc(100%-2px)] mx-auto mt-[1px] overflow-hidden flex-[5] rounded-l-[8px] ml-px"><video playsinline="" class="aspect-square size-full bg-sub" loop="" autoplay=""><source src="Tier2_Monolith.mp4"></video></div><div class="px-6 py-4 flex flex-col gap-4 justify-between flex-[4]"><div class="flex flex-col gap-4 "><div class="flex flex-col gap-1"><div class="py-1 px-2 w-fit rounded-full border teachers-12-400">Tier 2</div><div class="flex flex-col"><span class="unbounded-24-400">Monolith</span><div class="flex teachers-32-36-600"><p>99</p>&nbsp;<p class="font-normal">USDC</p></div></div></div><div class="flex flex-col gap-2"><div class="flex items-center justify-between"><span class="teachers-14-16-400 text-sub !normal-case">Supply</span><div class="teachers-14-16-600 text-white flex"><span>1,260</span>/<span>7,000</span></div></div><div class="flex items-center justify-between"><span class="teachers-14-16-400 text-sub !normal-case">Corresponding CYS per NFT</span><span class="teachers-14-16-600 text-white">450</span></div><div class="flex flex-col gap-1"><span class="teachers-14-16-400 text-sub !normal-case">Unlocking Period</span><div class="flex flex-col md:flex-row gap-1 md:gap-6 items-center justify-between "><div class="flex flex-row md:flex-col gap-1 md:gap-0 ml-auto md:ml-0 text-right md:text-left"><span class="teachers-14-20-600">50%</span><span class="w-max md:w-fit teachers-14-400 !capitalize">Unlock at TGE</span></div><div class="flex flex-row md:flex-col gap-1 md:gap-0 ml-auto md:ml-0 text-right md:text-left"><span class="teachers-14-20-600">50%</span><span class="w-max md:w-fit teachers-14-400 !capitalize">Linear unlock over 6 months post-TGE</span></div></div><div class="my-2 border-t border-dashed h-0 w-full"></div><div class="flex flex-col gap-1 teachers-14-400 !normal-case"><p class="text-sub teachers-14-16-400 !normal-case">Additional Benefits</p><p class="leading-[1.2]">From Mainnet: Reserve NFT to get +100 Fire multiplier (Max. Advanced Speed 1.2x)<br></p><p class="leading-[1.2]">+ Other Benefits</p></div></div></div></div><button class="teachers-16-400 py-6 w-full disabled:![--tw-text-opacity:1] disabled:![--tw-bg-opacity:1] !opacity-100 disabled:bg-[#FFFFFF80] disabled:text-[#00000080] disabled:border-white bg-[#fff] border border-[transparent] text-[#000] hover:!opacity-80 px-4 py-2 backdrop-blur-sm rounded !font-[400]"><div class="flex items-center gap-2 justify-center connect-wallet ">Connect Wallet</div></button></div></div></div></div><div class="peer-empty/ongoing:hidden unbounded-32-64-300 text-center">available for sale</div></div><div class="overflow-x-auto w-screen flex flex-col-reverse gap-12 py-2 relative"><div class="flex justify-start w-fit mx-auto gap-4 overflow-x-auto overscroll-x-contain px-3 md:px-6 peer/soon"><div class="gradient-border-card overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] pb-[1px] min-w-[20rem] w-[20rem] md:min-w-[25.5rem] md:w-[25.5rem]" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="flex flex-col h-full"><div class="nft-avatar aspect-square w-[calc(100%-2px)] mx-auto mt-[1px] overflow-hidden rounded-t-[8px]"><video playsinline="" class="aspect-square size-full bg-sub" loop="" autoplay=""><source src="Tier2_Monolith.mp4"></video></div><div class="px-6 py-4 flex flex-col gap-4 flex-1 justify-between"><div class="flex flex-col gap-4 "><div class="flex flex-col gap-1"><div class="py-1 px-2 w-fit rounded-full border teachers-12-400">Tier 2</div><div class="flex flex-col"><span class="unbounded-24-400">Monolith</span><div class="flex teachers-32-36-600"><p>99</p>&nbsp;<p class="font-normal">USDC</p></div></div></div><div class="flex flex-col gap-2"><div class="flex items-center justify-between"><span class="teachers-14-16-400 text-sub !normal-case">Supply</span><div class="teachers-14-16-600 text-white flex"><span>0</span>/<span>7,000</span></div></div><div class="flex items-center justify-between"><span class="teachers-14-16-400 text-sub !normal-case">Corresponding CYS per NFT</span><span class="teachers-14-16-600 text-white">450</span></div><div class="flex flex-col gap-1"><span class="teachers-14-16-400 text-sub !normal-case">Unlocking Period</span><div class="flex flex-col md:flex-row gap-1 md:gap-6 items-center justify-between "><div class="flex flex-row md:flex-col gap-1 md:gap-0 ml-auto md:ml-0 text-right md:text-left"><span class="teachers-14-20-600">50%</span><span class="w-max md:w-fit teachers-14-400 !capitalize">Unlock at TGE</span></div><div class="flex flex-row md:flex-col gap-1 md:gap-0 ml-auto md:ml-0 text-right md:text-left"><span class="teachers-14-20-600">50%</span><span class="w-max md:w-fit teachers-14-400 !capitalize">Linear unlock over 6 months post-TGE</span></div></div><div class="my-2 border-t border-dashed h-0 w-full"></div><div class="flex flex-col gap-1 teachers-14-400 !normal-case"><p class="text-sub teachers-14-16-400 !normal-case">Additional Benefits</p><p class="leading-[1.2]">From Mainnet: Reserve NFT to get +100 Fire multiplier (Max. Advanced Speed 1.2x)<br></p><p class="leading-[1.2]">+ Other Benefits</p></div></div></div></div><button class="teachers-16-400 py-6 w-full disabled:![--tw-text-opacity:1] disabled:![--tw-bg-opacity:1] !opacity-100 disabled:bg-[#FFFFFF80] disabled:text-[#00000080] disabled:border-white bg-[#fff] border border-[transparent] text-[#000] hover:!opacity-80 px-4 py-2 backdrop-blur-sm rounded !font-[400]"><div class="connect-wallet flex items-center gap-2 justify-center">Connect Wallet</div></button></div></div></div><div class="gradient-border-card overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] pb-[1px] min-w-[20rem] w-[20rem] md:min-w-[25.5rem] md:w-[25.5rem]" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="flex flex-col h-full"><div class="nft-avatar aspect-square w-[calc(100%-2px)] mx-auto mt-[1px] overflow-hidden rounded-t-[8px]"><video playsinline="" class="aspect-square size-full bg-sub" loop="" autoplay=""><source src="Tier3_Allspark.mp4"></video></div><div class="px-6 py-4 flex flex-col gap-4 flex-1 justify-between"><div class="flex flex-col gap-4 "><div class="flex flex-col gap-1"><div class="py-1 px-2 w-fit rounded-full border teachers-12-400">Tier 3</div><div class="flex flex-col"><span class="unbounded-24-400">Allspark</span><div class="flex teachers-32-36-600"><p>139</p>&nbsp;<p class="font-normal">USDC</p></div></div></div><div class="flex flex-col gap-2"><div class="flex items-center justify-between"><span class="teachers-14-16-400 text-sub !normal-case">Supply</span><div class="teachers-14-16-600 text-white flex"><span>0</span>/<span>8,000</span></div></div><div class="flex items-center justify-between"><span class="teachers-14-16-400 text-sub !normal-case">Corresponding CYS per NFT</span><span class="teachers-14-16-600 text-white">600</span></div><div class="flex flex-col gap-1"><span class="teachers-14-16-400 text-sub !normal-case">Unlocking Period</span><div class="flex flex-col md:flex-row gap-1 md:gap-6 items-center justify-between "><div class="flex flex-row md:flex-col gap-1 md:gap-0 ml-auto md:ml-0 text-right md:text-left"><span class="teachers-14-20-600">50%</span><span class="w-max md:w-fit teachers-14-400 !capitalize">Unlock at TGE</span></div><div class="flex flex-row md:flex-col gap-1 md:gap-0 ml-auto md:ml-0 text-right md:text-left"><span class="teachers-14-20-600">50%</span><span class="w-max md:w-fit teachers-14-400 !capitalize">Linear unlock over 6 months post-TGE</span></div></div><div class="my-2 border-t border-dashed h-0 w-full"></div><div class="flex flex-col gap-1 teachers-14-400 !normal-case"><p class="text-sub teachers-14-16-400 !normal-case">Additional Benefits</p><p class="leading-[1.2]">From Mainnet: Reserve NFT to get +100 Fire multiplier (Max. Advanced Speed 1.2x)<br></p><p class="leading-[1.2]">+ Other Benefits</p></div></div></div></div><button class="teachers-16-400 py-6 w-full disabled:![--tw-text-opacity:1] disabled:![--tw-bg-opacity:1] !opacity-100 disabled:bg-[#FFFFFF80] disabled:text-[#00000080] disabled:border-white bg-[#fff] border border-[transparent] text-[#000] hover:!opacity-80 px-4 py-2 backdrop-blur-sm rounded !font-[400]"><div class="connect-wallet flex items-center gap-2 justify-center">Connect Wallet</div></button></div></div></div><div class="gradient-border-card overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] pb-[1px] min-w-[20rem] w-[20rem] md:min-w-[25.5rem] md:w-[25.5rem]" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="flex flex-col h-full"><div class="nft-avatar aspect-square w-[calc(100%-2px)] mx-auto mt-[1px] overflow-hidden rounded-t-[8px]"><video playsinline="" class="aspect-square size-full bg-sub" loop="" autoplay=""><source src="Tier4_MotherBox.mp4"></video></div><div class="px-6 py-4 flex flex-col gap-4 flex-1 justify-between"><div class="flex flex-col gap-4 "><div class="flex flex-col gap-1"><div class="py-1 px-2 w-fit rounded-full border teachers-12-400">Tier 4</div><div class="flex flex-col"><span class="unbounded-24-400">MotherBox</span><div class="flex teachers-32-36-600"><p>189</p>&nbsp;<p class="font-normal">USDC</p></div></div></div><div class="flex flex-col gap-2"><div class="flex items-center justify-between"><span class="teachers-14-16-400 text-sub !normal-case">Supply</span><div class="teachers-14-16-600 text-white flex"><span>0</span>/<span>9,000</span></div></div><div class="flex items-center justify-between"><span class="teachers-14-16-400 text-sub !normal-case">Corresponding CYS per NFT</span><span class="teachers-14-16-600 text-white">750</span></div><div class="flex flex-col gap-1"><span class="teachers-14-16-400 text-sub !normal-case">Unlocking Period</span><div class="flex flex-col md:flex-row gap-1 md:gap-6 items-center justify-between "><div class="flex flex-row md:flex-col gap-1 md:gap-0 ml-auto md:ml-0 text-right md:text-left"><span class="teachers-14-20-600">50%</span><span class="w-max md:w-fit teachers-14-400 !capitalize">Unlock at TGE</span></div><div class="flex flex-row md:flex-col gap-1 md:gap-0 ml-auto md:ml-0 text-right md:text-left"><span class="teachers-14-20-600">50%</span><span class="w-max md:w-fit teachers-14-400 !capitalize">Linear unlock over 6 months post-TGE</span></div></div><div class="my-2 border-t border-dashed h-0 w-full"></div><div class="flex flex-col gap-1 teachers-14-400 !normal-case"><p class="text-sub teachers-14-16-400 !normal-case">Additional Benefits</p><p class="leading-[1.2]">From Mainnet: Reserve NFT to get +100 Fire multiplier (Max. Advanced Speed 1.2x)<br></p><p class="leading-[1.2]">+ Other Benefits</p></div></div></div></div><button class="teachers-16-400 py-6 w-full disabled:![--tw-text-opacity:1] disabled:![--tw-bg-opacity:1] !opacity-100 disabled:bg-[#FFFFFF80] disabled:text-[#00000080] disabled:border-white bg-[#fff] border border-[transparent] text-[#000] hover:!opacity-80 px-4 py-2 backdrop-blur-sm rounded !font-[400]"><div class="connect-wallet flex items-center gap-2 justify-center">Connect Wallet</div></button></div></div></div></div><div class="peer-empty/soon:hidden unbounded-32-64-300 text-center sticky left-1/2 -translate-x-1/2 mx-auto">open soon</div></div><div class="overflow-x-auto w-screen flex flex-col-reverse gap-12 py-2 relative"><div class="flex justify-start w-fit mx-auto gap-4 overflow-x-auto overscroll-x-contain px-3 md:px-6 peer/end"></div><div class="peer-empty/end:hidden unbounded-32-64-300 text-center sticky left-1/2 -translate-x-1/2 mx-auto">ended</div></div></div></div></div></div><div class="relative w-full"><div class="absolute h-px w-full z-[1] top-0 left-0 right-0 shadow-[0_0_90px_50px_#000]"></div><img class="grayscale-[1] brightness-[0.2] absolute top-0 left-0 right-0 bottom-0 object-cover" src="nft_bg_3.png"><div class="px-3 lg:px-12 py-16 relative z-1 text-center"><div class="unbounded-40-96-200">purchased?</div><div class="mt-2 teachers-16-400 !normal-case">*NFTs are non-transferable during the sale period and will become transferable after the sale ends.</div><button class="mt-12 h-[67px] py-0 text-sub teachers-16-400 !bg-[transparent] border rounded-md !border-[#fff] text-[#fff] px-4 py-2 backdrop-blur-sm rounded !font-[400]"><div class="connect-wallet flex items-center gap-2 justify-center">sign in to check my nfts <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-3 min-size-3"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div></button></div><div class="px-3 lg:px-12 py-16 relative z-1 text-center main-container"><div class="teachers-24-400 tracking-[8.88px]">how the sale</div><div class="unbounded-40-96-200 mb-6">works</div><div class="teachers-16-400 !normal-case">The sale runs in exclusive tiers, starting with our earliest supporters and expanding out to the public.<br>Allocation is limited at every stage. Once a tier sells out, access rolls down to the next group.</div><div class="flex flex-col gap-4 mt-6"><div class="flex flex-col lg:flex-row gap-4"><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-4 lg:p-6 flex flex-col gap-4 items-center" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="relative teachers-14-400 px-4 py-2 rounded-full"><div class="relative z-10 tracking-[2.2px] gradient-color-static">OG Tier Allowlist</div><div class="size-full absolute top-0 bottom-0 left-0 right-0 gradient-sub-border rounded-full"></div></div><div class="unbounded-24-32-300">Tier 1</div><div class="unbounded-20-300">Opens August 26th 3PM UTC</div></div><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-4 lg:p-6 flex flex-col gap-4 items-center" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="relative teachers-14-400 px-4 py-2 rounded-full"><div class="relative z-10 tracking-[2.2px] gradient-color-static">OG Tier Allowlist</div><div class="size-full absolute top-0 bottom-0 left-0 right-0 gradient-sub-border rounded-full"></div></div><div class="unbounded-24-32-300">Tier 2</div><div class="unbounded-20-300">Opens August 27th 3PM UTC</div></div></div><div class="flex flex-col lg:flex-row gap-4"><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-4 lg:p-6 flex flex-col gap-4 items-center" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="relative teachers-14-400 px-4 py-2 rounded-full"><div class="relative z-10 tracking-[2.2px] gradient-color-static">Core Community</div><div class="size-full absolute top-0 bottom-0 left-0 right-0 gradient-sub-border rounded-full"></div></div><div class="unbounded-24-32-300">Tier 3</div><div class="unbounded-20-300">Opens August 28th 3PM UTC</div></div><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-4 lg:p-6 flex flex-col gap-4 items-center" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="relative teachers-14-400 px-4 py-2 rounded-full"><div class="relative z-10 tracking-[2.2px] gradient-color-static">Core Community</div><div class="size-full absolute top-0 bottom-0 left-0 right-0 gradient-sub-border rounded-full"></div></div><div class="unbounded-24-32-300">Tier 4</div><div class="unbounded-20-300">Opens August 29th 3PM UTC</div></div><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-4 lg:p-6 flex flex-col gap-4 items-center" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="relative teachers-14-400 px-4 py-2 rounded-full"><div class="relative z-10 tracking-[2.2px] gradient-color-static">Open To All</div><div class="size-full absolute top-0 bottom-0 left-0 right-0 gradient-sub-border rounded-full"></div></div><div class="unbounded-24-32-300">Public Sale</div><div class="unbounded-20-300">once it's gone, it's gone.</div></div></div></div></div><div class="px-3 lg:px-12 py-16 relative z-1 text-center main-container"><div class="unbounded-40-96-200 mb-6">THE BASICS</div><div class="flex flex-col lg:flex-row gap-4"><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-4 lg:p-6 flex flex-col gap-4 items-center" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="relative teachers-14-400 px-4 py-2 rounded-full"><div class="relative z-10 tracking-[2.2px] gradient-color-static">Priority</div><div class="size-full absolute top-0 bottom-0 left-0 right-0 gradient-sub-border rounded-full"></div></div><div class="unbounded-24-32-300">First-Come,<br>First-Served</div><div class="teachers--2020-400 !normal-case">Minting is processed in order of arrival within your tier.</div></div><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-4 lg:p-6 flex flex-col gap-4 items-center" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="relative teachers-14-400 px-4 py-2 rounded-full"><div class="relative z-10 tracking-[2.2px] gradient-color-static">exclusive</div><div class="size-full absolute top-0 bottom-0 left-0 right-0 gradient-sub-border rounded-full"></div></div><div class="unbounded-24-32-300">Cysic<br>Community first</div><div class="teachers--2020-400 !normal-case">Participation is reserved for verified Cysic community members.</div></div><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-4 lg:p-6 flex flex-col gap-4 items-center" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="relative teachers-14-400 px-4 py-2 rounded-full"><div class="relative z-10 tracking-[2.2px] gradient-color-static">flexible</div><div class="size-full absolute top-0 bottom-0 left-0 right-0 gradient-sub-border rounded-full"></div></div><div class="unbounded-24-32-300">Roll Down<br>If Sold Out</div><div class="teachers--2020-400 !normal-case">If your tier sells out, you can mint in the next tier while keeping your cap.</div></div></div></div><div class="px-3 lg:px-12 py-16 relative z-1 text-center main-container"><div class="teachers-24-400 tracking-[8.88px]">why own a</div><div class="unbounded-40-96-200 mb-6">ComputeFi node</div><div class="flex flex-col gap-4 mt-6"><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-4 lg:p-6 flex flex-col lg:flex-row gap-2 lg:gap-4 justify-between" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="unbounded-20-24-300">Priority Access to Compute</div><div class="teachers-16-20-400 !normal-case">Run ZK proofs, AI inference, and other high-value jobs before the public queue opens.</div></div><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-4 lg:p-6 flex flex-col lg:flex-row gap-2 lg:gap-4 justify-between" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="unbounded-20-24-300">Stream Rewards</div><div class="teachers-16-20-400 !normal-case">Earn $CYS emissions tied directly to workloads.</div></div><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-4 lg:p-6 flex flex-col lg:flex-row gap-2 lg:gap-4 justify-between" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="unbounded-20-24-300">Governance Power</div><div class="teachers-16-20-400 !normal-case">Stake your node to propose, vote, and steer protocol decisions.</div></div><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-4 lg:p-6 flex flex-col lg:flex-row gap-2 lg:gap-4 justify-between" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="unbounded-20-24-300">Yield Without Hardware</div><div class="teachers-16-20-400 !normal-case">Delegate to professional operators – no rigs required.</div></div><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-4 lg:p-6 flex flex-col lg:flex-row gap-2 lg:gap-4 justify-between" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><div class="unbounded-20-24-300">Compounding Participation Loop</div><div class="teachers-16-20-400 !normal-case flex flex-col lg:flex-row items-center">More jobs<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right my-1 lg:mx-2 size-3 min-size-3 rotate-90 lg:rotate-0"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>more rewards<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right my-1 lg:mx-2 size-3 min-size-3 rotate-90 lg:rotate-0"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>more influence.</div></div></div></div><div class="px-3 lg:px-12 py-16 relative z-1 text-center main-container"><div class="teachers-24-400 tracking-[8.88px]">The ComputeFi Node NFT</div><div class="unbounded-40-96-200 mb-6 text-gradient mx-auto">puts you upstream</div><div class="teachers-20-400 !capitalize">Earn from real workloads. Gain priority access. Grow with the network.</div><div class="flex flex-col gap-4 mt-6"><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-6 flex gap-4 items-center" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" class="min-size-6 size-6"><path d="M10.32 14.66L7.74 12.08C7.52 11.86 7.24 11.75 6.9 11.75C6.56 11.75 6.28 11.86 6.06 12.08C5.84 12.3 5.73 12.58 5.73 12.92C5.73 13.26 5.84 13.54 6.06 13.76L9.47999 17.18C9.71999 17.42 10 17.54 10.32 17.54C10.64 17.54 10.92 17.42 11.16 17.18L17.94 10.4C18.16 10.18 18.27 9.9 18.27 9.56C18.27 9.22 18.16 8.94 17.94 8.72C17.72 8.5 17.44 8.39 17.1 8.39C16.76 8.39 16.48 8.5 16.26 8.72L10.32 14.66ZM12 24.5C10.34 24.5 8.78 24.1848 7.32 23.5544C5.86 22.924 4.59 22.0692 3.51 20.99C2.43 19.9108 1.5752 18.6408 0.945601 17.18C0.316001 15.7192 0.000801518 14.1592 1.51899e-06 12.5C-0.00079848 10.8408 0.314401 9.2808 0.945601 7.82C1.5768 6.3592 2.4316 5.0892 3.51 4.01C4.5884 2.9308 5.8584 2.076 7.32 1.4456C8.7816 0.8152 10.3416 0.5 12 0.5C13.6584 0.5 15.2184 0.8152 16.68 1.4456C18.1416 2.076 19.4116 2.9308 20.49 4.01C21.5684 5.0892 22.4236 6.3592 23.0556 7.82C23.6876 9.2808 24.0024 10.8408 24 12.5C23.9976 14.1592 23.6824 15.7192 23.0544 17.18C22.4264 18.6408 21.5716 19.9108 20.49 20.99C19.4084 22.0692 18.1384 22.9244 16.68 23.5556C15.2216 24.1868 13.6616 24.5016 12 24.5Z" fill="url(#paint0_linear_12687_23421)"></path><defs><linearGradient id="paint0_linear_12687_23421" x1="21.2014" y1="-0.637742" x2="13.4337" y2="22.9853" gradientUnits="userSpaceOnUse"><stop offset="0.103627" stop-color="#19FFE0"></stop><stop offset="1" stop-color="#9D47FF"></stop></linearGradient></defs></svg><span class="unbounded-16-20-300 flex-1 leading-[1.2] !normal-case text-center md:text-left">Rewards that flow straight to your wallet from live workloads</span></div><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-6 flex gap-4 items-center" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" class="min-size-6 size-6"><path d="M10.32 14.66L7.74 12.08C7.52 11.86 7.24 11.75 6.9 11.75C6.56 11.75 6.28 11.86 6.06 12.08C5.84 12.3 5.73 12.58 5.73 12.92C5.73 13.26 5.84 13.54 6.06 13.76L9.47999 17.18C9.71999 17.42 10 17.54 10.32 17.54C10.64 17.54 10.92 17.42 11.16 17.18L17.94 10.4C18.16 10.18 18.27 9.9 18.27 9.56C18.27 9.22 18.16 8.94 17.94 8.72C17.72 8.5 17.44 8.39 17.1 8.39C16.76 8.39 16.48 8.5 16.26 8.72L10.32 14.66ZM12 24.5C10.34 24.5 8.78 24.1848 7.32 23.5544C5.86 22.924 4.59 22.0692 3.51 20.99C2.43 19.9108 1.5752 18.6408 0.945601 17.18C0.316001 15.7192 0.000801518 14.1592 1.51899e-06 12.5C-0.00079848 10.8408 0.314401 9.2808 0.945601 7.82C1.5768 6.3592 2.4316 5.0892 3.51 4.01C4.5884 2.9308 5.8584 2.076 7.32 1.4456C8.7816 0.8152 10.3416 0.5 12 0.5C13.6584 0.5 15.2184 0.8152 16.68 1.4456C18.1416 2.076 19.4116 2.9308 20.49 4.01C21.5684 5.0892 22.4236 6.3592 23.0556 7.82C23.6876 9.2808 24.0024 10.8408 24 12.5C23.9976 14.1592 23.6824 15.7192 23.0544 17.18C22.4264 18.6408 21.5716 19.9108 20.49 20.99C19.4084 22.0692 18.1384 22.9244 16.68 23.5556C15.2216 24.1868 13.6616 24.5016 12 24.5Z" fill="url(#paint0_linear_12687_23421)"></path><defs><linearGradient id="paint0_linear_12687_23421" x1="21.2014" y1="-0.637742" x2="13.4337" y2="22.9853" gradientUnits="userSpaceOnUse"><stop offset="0.103627" stop-color="#19FFE0"></stop><stop offset="1" stop-color="#9D47FF"></stop></linearGradient></defs></svg><span class="unbounded-16-20-300 flex-1 leading-[1.2] !normal-case text-center md:text-left">Priority access and governance power in the network</span></div><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-6 flex gap-4 items-center" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" class="min-size-6 size-6"><path d="M10.32 14.66L7.74 12.08C7.52 11.86 7.24 11.75 6.9 11.75C6.56 11.75 6.28 11.86 6.06 12.08C5.84 12.3 5.73 12.58 5.73 12.92C5.73 13.26 5.84 13.54 6.06 13.76L9.47999 17.18C9.71999 17.42 10 17.54 10.32 17.54C10.64 17.54 10.92 17.42 11.16 17.18L17.94 10.4C18.16 10.18 18.27 9.9 18.27 9.56C18.27 9.22 18.16 8.94 17.94 8.72C17.72 8.5 17.44 8.39 17.1 8.39C16.76 8.39 16.48 8.5 16.26 8.72L10.32 14.66ZM12 24.5C10.34 24.5 8.78 24.1848 7.32 23.5544C5.86 22.924 4.59 22.0692 3.51 20.99C2.43 19.9108 1.5752 18.6408 0.945601 17.18C0.316001 15.7192 0.000801518 14.1592 1.51899e-06 12.5C-0.00079848 10.8408 0.314401 9.2808 0.945601 7.82C1.5768 6.3592 2.4316 5.0892 3.51 4.01C4.5884 2.9308 5.8584 2.076 7.32 1.4456C8.7816 0.8152 10.3416 0.5 12 0.5C13.6584 0.5 15.2184 0.8152 16.68 1.4456C18.1416 2.076 19.4116 2.9308 20.49 4.01C21.5684 5.0892 22.4236 6.3592 23.0556 7.82C23.6876 9.2808 24.0024 10.8408 24 12.5C23.9976 14.1592 23.6824 15.7192 23.0544 17.18C22.4264 18.6408 21.5716 19.9108 20.49 20.99C19.4084 22.0692 18.1384 22.9244 16.68 23.5556C15.2216 24.1868 13.6616 24.5016 12 24.5Z" fill="url(#paint0_linear_12687_23421)"></path><defs><linearGradient id="paint0_linear_12687_23421" x1="21.2014" y1="-0.637742" x2="13.4337" y2="22.9853" gradientUnits="userSpaceOnUse"><stop offset="0.103627" stop-color="#19FFE0"></stop><stop offset="1" stop-color="#9D47FF"></stop></linearGradient></defs></svg><span class="unbounded-16-20-300 flex-1 leading-[1.2] !normal-case text-center md:text-left">Earn without running hardware – delegate and collect</span></div><div class="gradient-border-card w-full overflow-hidden z-[2] relative backdrop-blur bg-[#090A09CC] p-6 flex gap-4 items-center" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" class="min-size-6 size-6"><path d="M10.32 14.66L7.74 12.08C7.52 11.86 7.24 11.75 6.9 11.75C6.56 11.75 6.28 11.86 6.06 12.08C5.84 12.3 5.73 12.58 5.73 12.92C5.73 13.26 5.84 13.54 6.06 13.76L9.47999 17.18C9.71999 17.42 10 17.54 10.32 17.54C10.64 17.54 10.92 17.42 11.16 17.18L17.94 10.4C18.16 10.18 18.27 9.9 18.27 9.56C18.27 9.22 18.16 8.94 17.94 8.72C17.72 8.5 17.44 8.39 17.1 8.39C16.76 8.39 16.48 8.5 16.26 8.72L10.32 14.66ZM12 24.5C10.34 24.5 8.78 24.1848 7.32 23.5544C5.86 22.924 4.59 22.0692 3.51 20.99C2.43 19.9108 1.5752 18.6408 0.945601 17.18C0.316001 15.7192 0.000801518 14.1592 1.51899e-06 12.5C-0.00079848 10.8408 0.314401 9.2808 0.945601 7.82C1.5768 6.3592 2.4316 5.0892 3.51 4.01C4.5884 2.9308 5.8584 2.076 7.32 1.4456C8.7816 0.8152 10.3416 0.5 12 0.5C13.6584 0.5 15.2184 0.8152 16.68 1.4456C18.1416 2.076 19.4116 2.9308 20.49 4.01C21.5684 5.0892 22.4236 6.3592 23.0556 7.82C23.6876 9.2808 24.0024 10.8408 24 12.5C23.9976 14.1592 23.6824 15.7192 23.0544 17.18C22.4264 18.6408 21.5716 19.9108 20.49 20.99C19.4084 22.0692 18.1384 22.9244 16.68 23.5556C15.2216 24.1868 13.6616 24.5016 12 24.5Z" fill="url(#paint0_linear_12687_23421)"></path><defs><linearGradient id="paint0_linear_12687_23421" x1="21.2014" y1="-0.637742" x2="13.4337" y2="22.9853" gradientUnits="userSpaceOnUse"><stop offset="0.103627" stop-color="#19FFE0"></stop><stop offset="1" stop-color="#9D47FF"></stop></linearGradient></defs></svg><span class="unbounded-16-20-300 flex-1 leading-[1.2] !normal-case text-center md:text-left">1.64% of $CYS reserved for node holders</span></div></div><div class="mt-12"><button class="mt-12 h-[67px] py-0 text-sub teachers-16-400 !bg-[transparent] border rounded-md !border-[#fff] text-[#fff] px-4 py-2 backdrop-blur-sm rounded !font-[400]"><div class="flex items-center gap-2 justify-center">OWN A COMPUTEFI NODE <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-3 min-size-3"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div></button><div class="mt-2 teachers-14-400 !normal-case">Don't wait! Access is limited and tiers close quickly.</div></div></div><div class="px-3 lg:px-12 py-16 relative z-1 text-center main-container"><div class="unbounded-40-96-200 mb-12">FAQ</div><div class="flex flex-col gap-4 mt-6"><div class="w-full p-0" data-orientation="vertical"><div class="mt-4 border rounded-[8px] px-6 py-4 [&amp;_button]:p-0 [&amp;_span]:teachers-16-24-400 [&amp;_svg]:size-6" aria-label="What is a Compute Cube?"><h2><button class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity" type="button" id=":r1t:" aria-expanded="false"><div class="flex-1 flex flex-col text-start"><span class="text-foreground text-medium">What is a Compute Cube?</span></div><span aria-hidden="true" class="text-default-400 transition-transform rotate-0 data-[open=true]:-rotate-90 rtl:-rotate-180 rtl:data-[open=true]:-rotate-90"><svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em"><path d="M15.5 19l-7-7 7-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span></button></h2></div><hr class="shrink-0 bg-divider border-none w-full h-divider" role="separator"><div class="mt-4 border rounded-[8px] px-6 py-4 [&amp;_button]:p-0 [&amp;_span]:teachers-16-24-400 [&amp;_svg]:size-6" aria-label="How many Cubes are available, and what’s the allocation?"><h2><button class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity" type="button" id=":r1v:" aria-expanded="false"><div class="flex-1 flex flex-col text-start"><span class="text-foreground text-medium">How many Cubes are available, and what’s the allocation?</span></div><span aria-hidden="true" class="text-default-400 transition-transform rotate-0 data-[open=true]:-rotate-90 rtl:-rotate-180 rtl:data-[open=true]:-rotate-90"><svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em"><path d="M15.5 19l-7-7 7-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span></button></h2></div><hr class="shrink-0 bg-divider border-none w-full h-divider" role="separator"><div class="mt-4 border rounded-[8px] px-6 py-4 [&amp;_button]:p-0 [&amp;_span]:teachers-16-24-400 [&amp;_svg]:size-6" aria-label="How is the sale structured?"><h2><button class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity" type="button" id=":r21:" aria-expanded="false"><div class="flex-1 flex flex-col text-start"><span class="text-foreground text-medium">How is the sale structured?</span></div><span aria-hidden="true" class="text-default-400 transition-transform rotate-0 data-[open=true]:-rotate-90 rtl:-rotate-180 rtl:data-[open=true]:-rotate-90"><svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em"><path d="M15.5 19l-7-7 7-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span></button></h2></div><hr class="shrink-0 bg-divider border-none w-full h-divider" role="separator"><div class="mt-4 border rounded-[8px] px-6 py-4 [&amp;_button]:p-0 [&amp;_span]:teachers-16-24-400 [&amp;_svg]:size-6" aria-label="How can I pay?"><h2><button class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity" type="button" id=":r23:" aria-expanded="false"><div class="flex-1 flex flex-col text-start"><span class="text-foreground text-medium">How can I pay?</span></div><span aria-hidden="true" class="text-default-400 transition-transform rotate-0 data-[open=true]:-rotate-90 rtl:-rotate-180 rtl:data-[open=true]:-rotate-90"><svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em"><path d="M15.5 19l-7-7 7-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span></button></h2></div><hr class="shrink-0 bg-divider border-none w-full h-divider" role="separator"><div class="mt-4 border rounded-[8px] px-6 py-4 [&amp;_button]:p-0 [&amp;_span]:teachers-16-24-400 [&amp;_svg]:size-6" aria-label="What is the vesting schedule?"><h2><button class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity" type="button" id=":r25:" aria-expanded="false"><div class="flex-1 flex flex-col text-start"><span class="text-foreground text-medium">What is the vesting schedule?</span></div><span aria-hidden="true" class="text-default-400 transition-transform rotate-0 data-[open=true]:-rotate-90 rtl:-rotate-180 rtl:data-[open=true]:-rotate-90"><svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em"><path d="M15.5 19l-7-7 7-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span></button></h2></div><hr class="shrink-0 bg-divider border-none w-full h-divider" role="separator"><div class="mt-4 border rounded-[8px] px-6 py-4 [&amp;_button]:p-0 [&amp;_span]:teachers-16-24-400 [&amp;_svg]:size-6" aria-label="What does 'Roll Down' mean if a tier sells out?"><h2><button class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity" type="button" id=":r27:" aria-expanded="false"><div class="flex-1 flex flex-col text-start"><span class="text-foreground text-medium">What does 'Roll Down' mean if a tier sells out?</span></div><span aria-hidden="true" class="text-default-400 transition-transform rotate-0 data-[open=true]:-rotate-90 rtl:-rotate-180 rtl:data-[open=true]:-rotate-90"><svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em"><path d="M15.5 19l-7-7 7-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span></button></h2></div><hr class="shrink-0 bg-divider border-none w-full h-divider" role="separator"><div class="mt-4 border rounded-[8px] px-6 py-4 [&amp;_button]:p-0 [&amp;_span]:teachers-16-24-400 [&amp;_svg]:size-6" aria-label="What is a Mint Cap?"><h2><button class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity" type="button" id=":r29:" aria-expanded="false"><div class="flex-1 flex flex-col text-start"><span class="text-foreground text-medium">What is a Mint Cap?</span></div><span aria-hidden="true" class="text-default-400 transition-transform rotate-0 data-[open=true]:-rotate-90 rtl:-rotate-180 rtl:data-[open=true]:-rotate-90"><svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em"><path d="M15.5 19l-7-7 7-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span></button></h2></div><hr class="shrink-0 bg-divider border-none w-full h-divider" role="separator"><div class="mt-4 border rounded-[8px] px-6 py-4 [&amp;_button]:p-0 [&amp;_span]:teachers-16-24-400 [&amp;_svg]:size-6" aria-label="Who is eligible for the allowlist?"><h2><button class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity" type="button" id=":r2b:" aria-expanded="false"><div class="flex-1 flex flex-col text-start"><span class="text-foreground text-medium">Who is eligible for the allowlist?</span></div><span aria-hidden="true" class="text-default-400 transition-transform rotate-0 data-[open=true]:-rotate-90 rtl:-rotate-180 rtl:data-[open=true]:-rotate-90"><svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em"><path d="M15.5 19l-7-7 7-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span></button></h2></div><hr class="shrink-0 bg-divider border-none w-full h-divider" role="separator"><div class="mt-4 border rounded-[8px] px-6 py-4 [&amp;_button]:p-0 [&amp;_span]:teachers-16-24-400 [&amp;_svg]:size-6" aria-label="What happens if I'm not on the allowlist this time?"><h2><button class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity" type="button" id=":r2d:" aria-expanded="false"><div class="flex-1 flex flex-col text-start"><span class="text-foreground text-medium">What happens if I'm not on the allowlist this time?</span></div><span aria-hidden="true" class="text-default-400 transition-transform rotate-0 data-[open=true]:-rotate-90 rtl:-rotate-180 rtl:data-[open=true]:-rotate-90"><svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em"><path d="M15.5 19l-7-7 7-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span></button></h2></div><hr class="shrink-0 bg-divider border-none w-full h-divider" role="separator"><div class="mt-4 border rounded-[8px] px-6 py-4 [&amp;_button]:p-0 [&amp;_span]:teachers-16-24-400 [&amp;_svg]:size-6" aria-label="Is the allowlist guaranteed or first-come, first-served?"><h2><button class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity" type="button" id=":r2f:" aria-expanded="false"><div class="flex-1 flex flex-col text-start"><span class="text-foreground text-medium">Is the allowlist guaranteed or first-come, first-served?</span></div><span aria-hidden="true" class="text-default-400 transition-transform rotate-0 data-[open=true]:-rotate-90 rtl:-rotate-180 rtl:data-[open=true]:-rotate-90"><svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em"><path d="M15.5 19l-7-7 7-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span></button></h2></div><hr class="shrink-0 bg-divider border-none w-full h-divider" role="separator"><div class="mt-4 border rounded-[8px] px-6 py-4 [&amp;_button]:p-0 [&amp;_span]:teachers-16-24-400 [&amp;_svg]:size-6" aria-label="Can I combine multiple allowlists?"><h2><button class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity" type="button" id=":r2h:" aria-expanded="false"><div class="flex-1 flex flex-col text-start"><span class="text-foreground text-medium">Can I combine multiple allowlists?</span></div><span aria-hidden="true" class="text-default-400 transition-transform rotate-0 data-[open=true]:-rotate-90 rtl:-rotate-180 rtl:data-[open=true]:-rotate-90"><svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em"><path d="M15.5 19l-7-7 7-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span></button></h2></div><hr class="shrink-0 bg-divider border-none w-full h-divider" role="separator"><div class="mt-4 border rounded-[8px] px-6 py-4 [&amp;_button]:p-0 [&amp;_span]:teachers-16-24-400 [&amp;_svg]:size-6" aria-label="Are there additional benefits to holding a Cube NFT?"><h2><button class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity" type="button" id=":r2j:" aria-expanded="false"><div class="flex-1 flex flex-col text-start"><span class="text-foreground text-medium">Are there additional benefits to holding a Cube NFT?</span></div><span aria-hidden="true" class="text-default-400 transition-transform rotate-0 data-[open=true]:-rotate-90 rtl:-rotate-180 rtl:data-[open=true]:-rotate-90"><svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em"><path d="M15.5 19l-7-7 7-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span></button></h2></div><hr class="shrink-0 bg-divider border-none w-full h-divider" role="separator"><div class="mt-4 border rounded-[8px] px-6 py-4 [&amp;_button]:p-0 [&amp;_span]:teachers-16-24-400 [&amp;_svg]:size-6" aria-label="Where can I claim my Cube?"><h2><button class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity" type="button" id=":r2l:" aria-expanded="false"><div class="flex-1 flex flex-col text-start"><span class="text-foreground text-medium">Where can I claim my Cube?</span></div><span aria-hidden="true" class="text-default-400 transition-transform rotate-0 data-[open=true]:-rotate-90 rtl:-rotate-180 rtl:data-[open=true]:-rotate-90"><svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em"><path d="M15.5 19l-7-7 7-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span></button></h2></div></div></div></div></div></main></div></div><div class="flex flex-col items-center gap-6 py-12 border-t border-white relative z-[1]"><img src="cysic_light-Dx5EFXH6.svg" class="w-[6rem]"><div class="flex items-center flex-wrap flex-col lg:flex-row gap-4 lg:gap-6"><a class="tap-highlight-transparent no-underline hover:opacity-80 active:opacity-disabled transition-opacity z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 text-small gap-2 rounded-medium [&amp;&gt;svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none uppercase font-[400] text-sub hover:text-white h-fit" href="https://cysic.xyz/" target="_blank" tabindex="0" role="button">Home</a><a class="tap-highlight-transparent no-underline hover:opacity-80 active:opacity-disabled transition-opacity z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 text-small gap-2 rounded-medium [&amp;&gt;svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none uppercase font-[400] text-sub hover:text-white h-fit" href="https://app.cysic.xyz/" target="_blank" tabindex="0" role="button">Cysic ZK</a><a class="tap-highlight-transparent no-underline hover:opacity-80 active:opacity-disabled transition-opacity z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 text-small gap-2 rounded-medium [&amp;&gt;svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none uppercase font-[400] text-sub hover:text-white h-fit" href="https://cysic.xyz/hardware" target="_blank" tabindex="0" role="button">Hardware</a><a class="tap-highlight-transparent no-underline hover:opacity-80 active:opacity-disabled transition-opacity z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 text-small gap-2 rounded-medium [&amp;&gt;svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none uppercase font-[400] text-sub hover:text-white h-fit" href="https://explorer-testnet.prover.xyz/" target="_blank" tabindex="0" role="button">Explorer</a><a class="tap-highlight-transparent no-underline hover:opacity-80 active:opacity-disabled transition-opacity z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 text-small gap-2 rounded-medium [&amp;&gt;svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none uppercase font-[400] text-sub hover:text-white h-fit" href="https://cysic.xyz/academy" target="_blank" tabindex="0" role="button">Academy</a><a class="tap-highlight-transparent no-underline hover:opacity-80 active:opacity-disabled transition-opacity z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 text-small gap-2 rounded-medium [&amp;&gt;svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none uppercase font-[400] text-sub hover:text-white h-fit" href="https://hackmd.io/@Cysic" target="_blank" tabindex="0" role="button">Docs</a><a class="tap-highlight-transparent no-underline hover:opacity-80 active:opacity-disabled transition-opacity z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 text-small gap-2 rounded-medium [&amp;&gt;svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none uppercase font-[400] text-sub hover:text-white h-fit" href="https://medium.com/@cysic" target="_blank" tabindex="0" role="button">Blog</a><a class="tap-highlight-transparent no-underline hover:opacity-80 active:opacity-disabled transition-opacity z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 text-small gap-2 rounded-medium [&amp;&gt;svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none uppercase font-[400] text-sub hover:text-white h-fit" href="https://cysic.xyz/contactus" target="_blank" tabindex="0" role="button">Contact Us</a></div><div class="flex items-center gap-2 justify-center w-full"><a href="https://t.co/V7D83oIVWE" target="_blank" class="!text-black hover:!text-white group/item cursor-pointer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="white" class="group-hover/item:fill-black transition-colors duration-200"></circle><path d="M17.6602 7.00613C16.6541 6.53988 15.5825 6.19632 14.4537 6C14.3146 6.2454 14.151 6.58078 14.0447 6.85072C12.8504 6.67076 11.6643 6.67076 10.4946 6.85072C10.38 6.58078 10.2164 6.2454 10.0774 6C8.94855 6.19632 7.87698 6.53988 6.87085 7.00613C4.84222 10.0654 4.29416 13.0511 4.5641 15.9877C5.91379 16.9939 7.2144 17.5992 8.49866 18C8.81768 17.5665 9.09579 17.1002 9.34119 16.6176C8.87494 16.4458 8.43322 16.2249 8.01604 15.9714C8.13056 15.8896 8.2369 15.7996 8.34324 15.7178C10.9036 16.9121 13.6766 16.9121 16.2042 15.7178C16.3105 15.8078 16.4169 15.8896 16.5314 15.9714C16.1142 16.2249 15.6643 16.4376 15.2062 16.6176C15.4516 17.1002 15.7297 17.5665 16.0488 18C17.333 17.5992 18.6418 16.9939 19.9833 15.9877C20.3023 12.5767 19.4353 9.62372 17.6766 7.00613H17.6602ZM9.68475 14.1881C8.91584 14.1881 8.28598 13.4765 8.28598 12.6012C8.28598 11.726 8.89948 11.0143 9.68475 11.0143C10.47 11.0143 11.0917 11.726 11.0835 12.6012C11.0835 13.4683 10.47 14.1881 9.68475 14.1881ZM14.8463 14.1881C14.0774 14.1881 13.4475 13.4765 13.4475 12.6012C13.4475 11.726 14.061 11.0143 14.8463 11.0143C15.6316 11.0143 16.2533 11.726 16.2451 12.6012C16.2451 13.4683 15.6316 14.1881 14.8463 14.1881Z" fill="currentColor"></path></svg></a><a href="https://t.me/CysicHQ" target="_blank" class="!text-black hover:!text-white group/item cursor-pointer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="white" class="group-hover/item:fill-black transition-colors duration-200"></circle><path d="M17.9615 7.77392L15.9243 17.3209C15.7704 17.9946 15.3697 18.1623 14.8003 17.8451L11.6959 15.572L10.1982 17.0037C10.0323 17.1686 9.89394 17.3061 9.57424 17.3061L9.7975 14.1648L15.5506 8.9991C15.8008 8.77773 15.4961 8.65459 15.1619 8.87644L8.04954 13.3268L4.98761 12.3742C4.3217 12.1677 4.30965 11.7125 5.12648 11.3948L17.1027 6.80988C17.6573 6.60336 18.1423 6.93206 17.9615 7.77392Z" fill="currentColor"></path></svg></a><a href="https://x.com/cysic_xyz" target="_blank" class="!text-black hover:!text-white group/item cursor-pointer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="white" class="group-hover/item:fill-black transition-colors duration-200"></circle><path d="M12.9989 11.3988L16.9078 6H15.9815L12.5874 10.6877L9.87662 6H6.75L10.8493 13.0886L6.75 18.75H7.67633L11.2605 13.7997L14.1234 18.75H17.25L12.9987 11.3988H12.9989ZM11.7302 13.151L11.3148 12.4452L8.0101 6.82855H9.43288L12.0999 11.3613L12.5152 12.0672L15.9819 17.9591H14.5592L11.7302 13.1513V13.151Z" fill="currentColor"></path></svg></a><a href="https://github.com/cysic-labs" target="_blank" class="!text-black hover:!text-white group/item cursor-pointer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="white" class="group-hover/item:fill-black transition-colors duration-200"></circle><path d="M12 4.5004C9.8351 4.47947 7.75003 5.27728 6.20305 6.7185C4.65607 8.15972 3.77375 10.1264 3.75 12.1864C3.75834 13.8143 4.30871 15.3979 5.32205 16.7096C6.33539 18.0213 7.75956 18.9936 9.39 19.487C9.8025 19.5583 9.9525 19.3228 9.9525 19.1159C9.9525 18.9089 9.9525 18.4522 9.9525 17.8099C7.6575 18.2738 7.17 16.7822 7.17 16.7822C7.01722 16.314 6.69242 15.9138 6.255 15.6547C5.505 15.1837 6.315 15.1908 6.315 15.1908C6.57424 15.2238 6.82227 15.3122 7.04048 15.4494C7.2587 15.5866 7.44144 15.769 7.575 15.983C7.80775 16.367 8.18965 16.6487 8.63851 16.7675C9.08737 16.8863 9.5673 16.8326 9.975 16.6181C10.0169 16.2273 10.2029 15.8632 10.5 15.5905C8.67 15.3978 6.75 14.7412 6.75 11.7939C6.73364 11.025 7.03218 10.2803 7.5825 9.71715C7.33187 9.05708 7.36146 8.33005 7.665 7.6904C7.665 7.6904 8.3625 7.48344 9.915 8.47541C11.2664 8.13274 12.6886 8.13274 14.04 8.47541C15.615 7.48344 16.29 7.6904 16.29 7.6904C16.5935 8.33005 16.6231 9.05708 16.3725 9.71715C16.9356 10.27 17.2503 11.0097 17.25 11.7796C17.25 14.7341 15.315 15.3835 13.5 15.5762C13.6987 15.7598 13.8523 15.983 13.9495 16.2298C14.0468 16.4766 14.0854 16.7408 14.0625 17.0035V19.1087C14.0625 19.1087 14.2125 19.5583 14.625 19.4798C16.2508 18.9834 17.6702 18.0108 18.6804 16.701C19.6906 15.3911 20.24 13.811 20.25 12.1864C20.2263 10.1264 19.3439 8.15972 17.797 6.7185C16.25 5.27728 14.1649 4.47947 12 4.5004Z" fill="currentColor"></path></svg></a><a href="https://medium.com/@cysic" target="_blank" class="!text-black hover:!text-white group/item cursor-pointer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="white" class="group-hover/item:fill-black transition-colors duration-200"></circle><path d="M12.6337 11.9694C12.6337 14.4378 10.645 16.439 8.19179 16.439C5.73854 16.439 3.75 14.4385 3.75 11.9694C3.75 9.50039 5.73869 7.5 8.19179 7.5C10.6449 7.5 12.6337 9.501 12.6337 11.9694Z" fill="currentColor"></path><path d="M17.5083 11.971C17.5083 14.2947 16.5139 16.1783 15.2874 16.1783C14.0608 16.1783 13.0664 14.2941 13.0664 11.971C13.0664 9.64785 14.0608 7.76367 15.2874 7.76367C16.5139 7.76367 17.5083 9.64785 17.5083 11.971Z" fill="currentColor"></path><path d="M19.4979 11.9727C19.4979 14.0546 19.1481 15.7422 18.7167 15.7422C18.2853 15.7422 17.9355 14.054 17.9355 11.9727C17.9355 9.89135 18.2853 8.20312 18.7169 8.20312C19.1484 8.20312 19.4979 9.89089 19.4979 11.9727Z" fill="currentColor"></path></svg></a></div></div></div><iframe width="0" height="0" style="display: none; height: 0px; width: 0px;" src="index_1.html"></iframe></div></div>
+
+    <!-- Google tag (gtag.js) -->
+    
+    
+  
+
+<div class="hidden lg:block main-container fixed top-0 z-[11] h-[8rem] w-full left-1/2 -translate-x-1/2"><div class="relative py-6"><div class="gradient-border-card w-full overflow-hidden z-[2] relative pb-[1px] h-20 flex items-center backdrop-blur bg-[#090A09B2]" style="--gradient-direction: 90deg; --border-width: 1px; --gradient-from: #fff; --gradient-to: rgba(255, 255, 255, 0.2); border-radius: 16px;"><div class="w-full h-full flex justify-between items-center"><div class="flex items-center h-full flex-1"><a href="https://cysic.xyz/" target="_blank"><img src="cysic-CISPSTN0.svg" class="flex-1 max-w-[11.25rem]"></a><a class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 text-small gap-2 [&amp;&gt;svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-default-foreground data-[hover=true]:bg-default/40 uppercase font-[400] !text-sub h-full rounded-none flex-1 max-w-[11.25rem] text-center" role="button" tabindex="0" href="https://cube.cysicfoundation.org/claimPortal">Allowlist Claim Portal</a><a class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 text-small gap-2 [&amp;&gt;svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-default-foreground data-[hover=true]:bg-default/40 uppercase font-[400] !text-sub h-full rounded-none flex-1 max-w-[11.25rem] text-center" role="button" tabindex="0" href="">Cube sale</a></div><div class="h-full flex items-center justify-end w-[26.75rem]"><div class="px-10 w-fit h-full flex items-center justify-end gap-1 cursor-pointer hover:bg-gradient-to-r from-[#17D1B2] to-[#4C1F99] "><span class="connect-wallet text-sub font-[400] uppercase text-sm">SIGN IN</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div></div></div></div></div></div><w3m-modal style="--local-border-bottom-mobile-radius: 0px;" data-scrapbook-adoptedstylesheets="0" data-scrapbook-shadowdom="&lt;!----&gt;"></w3m-modal><script data-scrapbook-elem="basic-loader">(function () { var k1 = "data-scrapbook-shadowdom", k2 = "data-scrapbook-canvas", k3 = "data-scrapbook-input-indeterminate", k4 = "data-scrapbook-input-checked", k5 = "data-scrapbook-option-selected", k6 = "data-scrapbook-input-value", k7 = "data-scrapbook-textarea-value", k8 = "data-scrapbook-adoptedstylesheets", k9 = /^data-scrapbook-adoptedstylesheet-(\d+)$/, k10 = "data-scrapbook-shadowdom-mode", k11 = "data-scrapbook-shadowdom-clonable", k12 = "data-scrapbook-shadowdom-delegates-focus", k13 = "data-scrapbook-shadowdom-serializable", k14 = "data-scrapbook-shadowdom-slot-assignment", k15 = "data-scrapbook-slot-assigned", k16 = "data-scrapbook-slot-index", k17 = /^scrapbook-slot-index=(\d+)$/, k18 = '/scrapbook-slot-index', d = document, r = d.documentElement, $s = !!r.attachShadow, $as = !!d.adoptedStyleSheets, $c = !!window.HTMLCanvasElement, $sa = !!d.createElement('slot').assign, sle = [], sls = [], slt = function (r) { if ($sa) { var E = r.childNodes, i, e, s, m; for (i = 0; i < E.length; i++) { e = E[i]; if (e.nodeType === 8) { s = e.nodeValue; if (m = s.match(k17)) { s = e.nextSibling; if (s.nodeType === 3) { sls[m[1]] = s; } r.removeChild(e); i--; } else if (s === k18) { r.removeChild(e); i--; } } } } }, sl = function () { var i = sle.length, j, d, e; while (i--) { d = sle[i]; e = d.elem; d = d.value.split(','); j = d.length; while (j--) { d[j] = sls[parseInt(d[j], 10)]; } try { try { e.assign.apply(e, d); } catch (ex) { if (ex.message.includes('must have a callable @@iterator')) { e.assign(d); } else { throw ex; } } } catch (ex) { console.error(ex); } } }, asl = (function (r) { var l = [], E, i, e, m, c, j; if ($as) { E = r.attributes; i = E.length; while (i--) { e = E[i]; if (!(m = e.nodeName.match(k9))) { continue; } c = l[m[1]] = new CSSStyleSheet(); r.removeAttribute(m[0]); m = e.nodeValue.split('\n\n'); j = m.length; while (j--) { try { m[j] && c.insertRule(m[j]); } catch (ex) { console.error(ex); } } } } return l; })(r), as = function (d, e) { var l, i, I; if ($as && (l = e.getAttribute(k8)) !== null) { l = l.split(',').map(i => asl[i]); d.adoptedStyleSheets = d.adoptedStyleSheets.concat(l); e.removeAttribute(k8); } }, fn = function (r) { var E = r.querySelectorAll ? r.querySelectorAll("*") : r.getElementsByTagName("*"), i = E.length, e, d, s, m; while (i--) { e = E[i]; s = e.shadowRoot; if ($s && (d = e.getAttribute(k1))) { if (!s) { try { s = e.attachShadow({ mode: (m = e.getAttribute(k10)) !== null ? m : 'open', clonable: e.hasAttribute(k11), delegatesFocus: e.hasAttribute(k12), serializable: e.hasAttribute(k13), slotAssignment: (m = e.getAttribute(k14)) !== null ? m : void 0, }); s.innerHTML = d; } catch (ex) { console.error(ex); } } e.removeAttribute(k1); e.removeAttribute(k10); e.removeAttribute(k11); e.removeAttribute(k12); e.removeAttribute(k13); e.removeAttribute(k14); } if ($c && (d = e.getAttribute(k2)) !== null) { (function () { var c = e, g = new Image(); g.onload = function () { c.getContext('2d').drawImage(g, 0, 0); }; g.src = d; })(); e.removeAttribute(k2); } if ((d = e.getAttribute(k3)) !== null) { e.indeterminate = true; e.removeAttribute(k3); } if ((d = e.getAttribute(k4)) !== null) { e.checked = d === 'true'; e.removeAttribute(k4); } if ((d = e.getAttribute(k5)) !== null) { e.selected = d === 'true'; e.removeAttribute(k5); } if ((d = e.getAttribute(k6)) !== null) { e.value = d; e.removeAttribute(k6); } if ((d = e.getAttribute(k7)) !== null) { e.value = d; e.removeAttribute(k7); } if ($sa && (d = e.getAttribute(k15)) !== null) { sle.push({elem: e, value: d}); e.removeAttribute(k15); } if ($sa && (d = e.getAttribute(k16)) !== null) { sls[d] = e; e.removeAttribute(k16); } if (s) { slt(e); as(s, e); fn(s); } } }; as(d, r); fn(d); sl(); })()</script></body></html>
