@@ -1,0 +1,85 @@
+@media only screen and (max-width: 1170px) {
+  .layout {
+    padding-top: 1rem;
+  }
+
+  section.main-body {
+    margin-top: 1rem;
+  }
+
+  .ps-container {
+    gap: 1rem;
+    padding: 0rem 1rem;
+  }
+  header {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .ps-container {
+    flex-direction: column-reverse;
+  }
+
+  nav {
+    position: fixed;
+    flex-direction: row;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    justify-content: space-between;
+    border-radius: 0;
+    background: #dedede;
+    height: 4.5rem;
+    padding: 0 1rem;
+    align-items: center;
+  }
+
+  section.main-body {
+    display: block;
+  }
+
+  .ps-container {
+    padding: 0;
+  }
+
+  .card-1 {
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .content-space {
+    margin: 0 1rem;
+    padding-bottom: 10rem;
+  }
+  .contact-card-scr-lg {
+    display: none;
+  }
+  .contact-card-scr-sm {
+    display: block;
+    margin-top: 1rem;
+  }
+  .ni-icon {
+    font-size: 14pt;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .hddb-inner {
+    padding: 5px 0.5rem;
+    gap: 0.5rem;
+    font-size: 10pt;
+  }
+  img.header-logo {
+    height: 2rem;
+  }
+
+  img.lg-btn-ic {
+    height: 1.5rem;
+  }
+  header {
+    padding: 0 18px;
+  }
+}
